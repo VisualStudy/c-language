@@ -24,5 +24,8 @@
     <ClCompile Include="print_format_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="variable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
