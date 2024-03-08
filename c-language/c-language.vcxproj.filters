@@ -30,5 +30,8 @@
     <ClCompile Include="literal.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="string_literal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
