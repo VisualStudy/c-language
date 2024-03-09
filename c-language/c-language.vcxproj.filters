@@ -39,5 +39,8 @@
     <ClCompile Include="variable_same_value.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="constant_demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
