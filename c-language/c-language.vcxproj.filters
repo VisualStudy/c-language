@@ -42,5 +42,8 @@
     <ClCompile Include="constant_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="integear_type.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
