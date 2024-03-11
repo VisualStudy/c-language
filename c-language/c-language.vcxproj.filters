@@ -54,5 +54,8 @@
     <ClCompile Include="integer_overflow.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="character_demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
