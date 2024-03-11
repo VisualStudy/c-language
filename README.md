@@ -84,3 +84,24 @@ My name is VisualStudy
 HOWDY.
 123456789
 ```
+
+## 스트링 위드 캐릭터 어레이
+```C
+#include <stdio.h>
+
+int main(void)
+{
+    char s[5] = "Code";
+
+    printf("%s\n", s);
+
+    return 0;
+}
+```
+```output
+Code
+```
+
+
+
+
