@@ -63,5 +63,8 @@
     <ClCompile Include="string_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="string_with_char_array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
