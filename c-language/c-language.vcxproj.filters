@@ -72,5 +72,8 @@
     <ClCompile Include="bool_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="c_big_picture.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
