@@ -75,5 +75,13 @@
     <ClCompile Include="c_big_picture.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="twice.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="twice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
