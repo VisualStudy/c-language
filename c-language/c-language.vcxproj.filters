@@ -69,8 +69,19 @@
     <ClCompile Include="string.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="scanf.c">
+    <ClCompile Include="bool_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="c_big_picture.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="twice.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="twice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
