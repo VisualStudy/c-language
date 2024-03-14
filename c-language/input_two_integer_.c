@@ -9,5 +9,6 @@ int main(void)
     printf("input two number: _\b");
     _ = scanf("%d %d", &one, &two);
     printf("%d %d\n", one, two);
+
     return 0;
 }
