@@ -78,6 +78,15 @@
     <ClCompile Include="twice.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="input_two_integer_.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scanf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="input_real_number.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
