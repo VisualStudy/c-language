@@ -90,6 +90,9 @@
     <ClCompile Include="scanf_multi_line.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="getchar_putchar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
