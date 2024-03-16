@@ -99,7 +99,7 @@
     <ClCompile Include="char_to_int.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="recctangle_area.c">
+    <ClCompile Include="rectangle_area.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
