@@ -96,7 +96,7 @@
     <ClCompile Include="gets_puts.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="char_to_int.cpp">
+    <ClCompile Include="char_to_int.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="rectangle_area.c">
