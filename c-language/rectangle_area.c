@@ -13,7 +13,6 @@ int main(void)
 
     area = width * height;
 
-
     printf("사각형의 넓이: %.2lf\n", area);
 
     return 0;
