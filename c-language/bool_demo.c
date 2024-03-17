@@ -12,5 +12,4 @@ int main(void)
     printf("%d %d\n", bln1, bln2);  // 1 0
 
     return 0;
-
 }
