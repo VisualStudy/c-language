@@ -111,6 +111,9 @@
     <ClCompile Include="casting_operator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="remainder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
