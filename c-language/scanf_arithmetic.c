@@ -3,9 +3,9 @@
 
 int main(void)
 {
-    int i, j, k;
+    int i, j, k, _;
 
-    scanf("%d %d", &i, &j);
+    _ = scanf("%d %d", &i, &j);
 
     k = i + j;
 
