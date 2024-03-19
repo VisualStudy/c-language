@@ -105,6 +105,9 @@
     <ClCompile Include="example_calculate_area_circumference_of_circle.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="address_operator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
