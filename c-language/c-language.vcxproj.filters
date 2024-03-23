@@ -135,6 +135,9 @@
     <ClCompile Include="postfix_operator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="variable_operations_and_output.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
