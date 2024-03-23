@@ -123,6 +123,9 @@
     <ClCompile Include="swap_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="increment_number.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
