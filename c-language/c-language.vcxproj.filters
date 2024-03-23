@@ -129,6 +129,9 @@
     <ClCompile Include="shortcut_operator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="increment_operator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
