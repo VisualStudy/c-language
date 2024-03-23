@@ -117,6 +117,9 @@
     <ClCompile Include="scanf_arithmetic.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="assignment_operator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
