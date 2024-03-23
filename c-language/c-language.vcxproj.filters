@@ -132,6 +132,9 @@
     <ClCompile Include="increment_operator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="postfix_operator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
