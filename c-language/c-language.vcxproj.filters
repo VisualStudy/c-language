@@ -153,6 +153,9 @@
     <ClCompile Include="logical_test.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="relational_test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
