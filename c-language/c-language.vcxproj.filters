@@ -162,6 +162,9 @@
     <ClCompile Include="array_one1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="array_one2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
