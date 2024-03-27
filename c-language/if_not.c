@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 int main(void)
 {
-    int bln = 0;
+    int bln = false;
 
     if (!bln)
     {
