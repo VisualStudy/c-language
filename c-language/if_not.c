@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -9,5 +10,5 @@ int main(void)
         printf("bln: false(0) -> ! -> true(1)\n");
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }
