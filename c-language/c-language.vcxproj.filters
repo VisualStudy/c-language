@@ -174,6 +174,9 @@
     <ClCompile Include="compare_two_numbers.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="if_not.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
