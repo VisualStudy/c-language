@@ -186,6 +186,9 @@
     <ClCompile Include="switch_weather.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="switch_test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
