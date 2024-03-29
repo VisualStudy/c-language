@@ -1,4 +1,4 @@
-﻿
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main(void)
@@ -12,7 +12,7 @@ int main(void)
     printf("3. C#\t");
     printf("4. Java\n");
 
-    _ = scanf_s("%d", &choice); _ = getchar();
+    _ = scanf("%d", &choice); _ = getchar();
 
     switch (choice)
     {
