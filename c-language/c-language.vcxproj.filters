@@ -180,6 +180,9 @@
     <ClCompile Include="switch_expression.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="switch_statement.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
