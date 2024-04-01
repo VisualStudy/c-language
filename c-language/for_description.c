@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <Windows.h>
+#include <memory.h>
 
 int main(void)
 {
