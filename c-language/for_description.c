@@ -3,6 +3,7 @@
 #include <time.h>
 #include <Windows.h>
 #include <memory.h>
+#include <stdbool.h>
 
 int main(void)
 {
