@@ -198,6 +198,9 @@
     <ClCompile Include="break_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="for_if_continue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
