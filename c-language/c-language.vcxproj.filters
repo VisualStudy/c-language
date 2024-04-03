@@ -204,6 +204,9 @@
     <ClCompile Include="only_multiples.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="goto_demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
