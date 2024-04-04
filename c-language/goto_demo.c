@@ -4,6 +4,7 @@
 #include <memory.h>
 #include <time.h>
 #include <windows.h>
+#include <stdbool.h>
 
 int main(void)
 {
