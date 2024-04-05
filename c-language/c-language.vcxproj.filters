@@ -207,7 +207,7 @@
     <ClCompile Include="goto_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="character_and_integer_outputs.c">
+    <ClCompile Include="tests\character_and_integer_outputs.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
