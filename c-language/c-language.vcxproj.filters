@@ -210,6 +210,9 @@
     <ClCompile Include="tests\character_and_integer_outputs.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tests\currency_count.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
