@@ -216,6 +216,9 @@
     <ClCompile Include="tests\string_pointer_usage.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="function_demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
