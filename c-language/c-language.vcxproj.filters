@@ -225,6 +225,9 @@
     <ClCompile Include="function_parameter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="return_value.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
