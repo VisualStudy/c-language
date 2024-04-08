@@ -1,6 +1,7 @@
 ﻿#include <stdio.h>
 
-main() {
+int main(void) 
+{
     int m = 4620;
     int a = m / 1000;
     int b = m % 1000 / 500;
@@ -10,4 +11,6 @@ main() {
     printf(" 500Won Count : %d\n", b);
     printf(" 100Won Count : %d\n", c);
     printf("  10Won Count : %d\n", d);
+
+    return 0;
 }
