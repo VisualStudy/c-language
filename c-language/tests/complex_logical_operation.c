@@ -10,4 +10,6 @@ int main(void)
     // result = FALSE || TRUE && 1;
     // result = TRUE && 1(TRUE); => TRUE = 1
     printf("%d\n", result); // 1
+
+    return 0;
 }
