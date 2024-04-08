@@ -237,6 +237,9 @@
     <ClCompile Include="tests\logical_operators_test.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tests\complex_logical_operation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
