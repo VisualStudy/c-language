@@ -13,5 +13,5 @@ int main(void)
     printf(" 100Won Count : %d\n", c); // 1
     printf("  10Won Count : %d\n", d); // 2
 
-    return 0;
+    return EXIT_SUCCESS;
 }
