@@ -240,7 +240,10 @@
     <ClCompile Include="tests\complex_logical_operation.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tests\bit_and.c">
+    <ClCompile Include="bit_and.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shift_operator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
