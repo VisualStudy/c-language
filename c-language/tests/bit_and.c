@@ -13,5 +13,7 @@ int main(void)
 
     printf("%d\n", x | y); // 0b1110 => 8+4+2+0 = 14
 
+    printf("%d\n", x ^ y); // 0b0110 => 0+4+2+0 = 6
+
     return 0;
 }
