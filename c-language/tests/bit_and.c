@@ -15,5 +15,7 @@ int main(void)
 
     printf("%d\n", x ^ y); // 0b0110 => 0+4+2+0 = 6
 
+    printf("%d\n", ~x); // 0b1111_~~~_1111_0101 => -(10) - 1 
+
     return 0;
 }
