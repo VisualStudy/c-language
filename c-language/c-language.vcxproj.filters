@@ -246,6 +246,9 @@
     <ClCompile Include="shift_operator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bitwise_assignment.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
