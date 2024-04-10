@@ -9,5 +9,5 @@ int main(void)
 
     printf("%s\n", result);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
