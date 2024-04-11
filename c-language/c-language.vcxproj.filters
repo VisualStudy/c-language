@@ -252,6 +252,9 @@
     <ClCompile Include="conditional_operator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tests\conditional_operator_usage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
