@@ -7,5 +7,5 @@ int main(void)
     result = a < b ? b++ : --c;
     printf("%d, %d, %d\n", result, b, c); // 200, 201, 300
 
-    return 0;
+    return EXIT_SUCCESS;
 }
