@@ -261,6 +261,9 @@
     <ClCompile Include="tests\even_odd_count.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tests\sum_of_multiples_of_seven.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
