@@ -13,4 +13,6 @@ int main(void)
         default: c--; // -7
     } // - 8
     printf("%d", c); // -8
+
+    return 0;
 }
