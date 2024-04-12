@@ -258,6 +258,9 @@
     <ClCompile Include="tests\switch_execution_flow.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tests\even_odd_count.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
