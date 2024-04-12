@@ -3,7 +3,8 @@
 int main(void) 
 {
     int c = 1;
-    switch (3) {
+    switch (3) 
+    {
         case 1: c += 3;
         case 2: c++;
         case 3: c = 0; // 0
