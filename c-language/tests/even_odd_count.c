@@ -14,6 +14,7 @@ int main(void)
             oddcnt++;
         }
     }
-
     printf("%d %d", evencnt, oddcnt); // 17 18
+
+    return 0;
 }
