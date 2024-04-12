@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main() {
+int main() {
     int num = 35, evencnt = 0, oddcnt = 0;
     for (int i = 1; i <= num; i++) {
         if (i % 2 == 0)
