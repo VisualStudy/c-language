@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int c = 1;
     switch (3) {
         case 1: c += 3;
