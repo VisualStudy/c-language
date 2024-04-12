@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -16,5 +17,5 @@ int main(void)
     }
     printf("%d %d", evencnt, oddcnt); // 17 18
 
-    return 0;
+    return EXIT_SUCCESS;
 }
