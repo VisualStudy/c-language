@@ -130,6 +130,19 @@ string_length: 11
 C
 Z Language
 ```
+## 주소 연산자
+```C
+#include <stdio.h>
+
+int main(void)
+{
+    int number = 1234;
+
+    printf("%d, %p\n", number, &number);
+
+    return 0;
+}
+```
 
 
 
