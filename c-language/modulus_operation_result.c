@@ -3,8 +3,8 @@
 
 int main(void) 
 {
-    int a, b, r;
-    scanf("%d %d", &a, &b);
+    int a, b, r, _;
+    _ = scanf("%d %d", &a, &b);
     r = a % b;
     printf("%d", r);
 
