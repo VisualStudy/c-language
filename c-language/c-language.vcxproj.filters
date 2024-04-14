@@ -267,6 +267,9 @@
     <ClCompile Include="modulus_operation_result.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="increment_decrement_operation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
