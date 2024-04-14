@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) 
 {
@@ -7,5 +8,5 @@ int main(void)
     int b = --num2; // b = 43, num2 = 43 
     printf("%d", a + b); // 59
 
-    return 0;
+    return EXIT_SUCCESS;
 }
