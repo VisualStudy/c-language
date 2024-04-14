@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS // scanf 보안 경고 무시
 #include <stdio.h>
 
 main() {
