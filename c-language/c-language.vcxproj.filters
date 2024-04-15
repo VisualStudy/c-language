@@ -270,6 +270,9 @@
     <ClCompile Include="increment_decrement_operation.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bitwise_and_operation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
