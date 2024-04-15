@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) 
 {
@@ -8,5 +9,5 @@ int main(void)
     result = a & b; // 0100 = 4
     printf("%d", result); // 4
 
-    return 0;
+    return EXIT_SUCCESS;
 }
