@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main() {
+int main() {
     int a, b, result;
     a = 7; // a = 0111
     b = 4; // b = 0100 
