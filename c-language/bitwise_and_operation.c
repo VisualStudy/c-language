@@ -7,4 +7,6 @@ int main(void)
     b = 4; // b = 0100 
     result = a & b; // 0100 = 4
     printf("%d", result); // 4
+
+    return 0;
 }
