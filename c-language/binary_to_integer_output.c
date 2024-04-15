@@ -7,5 +7,5 @@ int main(void)
     num = 0b1001; // 9
     printf("%d", num); // 9
 
-    return 0;
+    return EXIT_SUCCESS;
 }
