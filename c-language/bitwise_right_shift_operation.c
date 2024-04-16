@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) 
 {
@@ -7,5 +8,5 @@ int main(void)
     printf("%d\n", num >> 2); // 1640 * (1 / 2^2) = 410
     printf("%d\n", num >> 3); // 1640 * (1 / 2^3) = 205
 
-    return 0;
+    return EXIT_SUCCESS;
 }
