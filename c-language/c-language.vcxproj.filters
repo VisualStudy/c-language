@@ -279,6 +279,9 @@
     <ClCompile Include="bitwise_right_shift_operation.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CWU_The_First_thing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
