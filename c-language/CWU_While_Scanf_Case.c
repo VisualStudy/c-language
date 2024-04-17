@@ -5,11 +5,11 @@
 
 int main(void)
 {
-    int i, menu;
+    int i, menu, _;
     while (1) // while문으로 반복!
     {
         printf("\n 메뉴 1) 2) 3) 4) 5) 6) 7)종료: ");
-        scanf("%d", &menu); if(menu == 7) break;
+        _ = scanf("%d", &menu); if(menu == 7) break;
         switch (menu) 
         {
             case 1:
