@@ -6,7 +6,7 @@
 #pragma warning (disable:4996) // 기본적으로 c++를 c처럼 쓰기 위해서
 //하지만 굳이 c++로 c를 돌릴 필요는 없지 않을까?
 
-void main()
+int main(void) // 현재 선호되는 스타일
 {
 
 }
