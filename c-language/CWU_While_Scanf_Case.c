@@ -3,7 +3,7 @@
 #include <memory.h> // 동적 할당
 #pragma warning (disable:4996) // c++은 해당 작업으로 c로 사용 가능
 
-int main(void)
+void main()
 {
     int i, menu;
     while (1) // while문으로 반복!
@@ -24,7 +24,7 @@ int main(void)
                 break;
             case 6:
                 break;
-            default: printf("\n 메뉴선택 오류. 다시 선택해주세요!\n\n")
+            default: printf("\n 메뉴선택 오류. 다시 선택해주세요!\n\n");
         }
     }
 }
