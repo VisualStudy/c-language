@@ -11,5 +11,9 @@ int main(void)
     printf("%e %e %Le\n", f, d, ld);
     printf("%llu %llu %llu\n", sizeof(float), sizeof(double), sizeof(long double));
 
-    
+    printf("float: %e\n", FLT_MIN);
+    printf("double: %e\n", DBL_MIN);
+    printf("long double: %Le\n", LDBL_MIN);
+
+    return 0;
 }
