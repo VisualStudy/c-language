@@ -1,6 +1,7 @@
 ﻿// 부호 있는 정수 데이터 타입 사용하기 
 #include <stdio.h>
 #include <limits.h> // 정수 데이터 타입의 최댓값과 최솟값에 대한 상수 정의
+#include <stdlib.h>
 
 int main(void)
 {
@@ -33,5 +34,5 @@ int main(void)
     //long long : -9223372036854775808 ~9223372036854775807
     printf("long long: %lld ~ %lld\n", LLONG_MIN, LLONG_MAX);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
