@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <float.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -15,5 +16,5 @@ int main(void)
     printf("double: %e\n", DBL_MIN);
     printf("long double: %Le\n", LDBL_MIN);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
