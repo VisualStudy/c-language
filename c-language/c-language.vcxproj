@@ -169,6 +169,7 @@
     <ClCompile Include="CWU_While_Scanf_Case.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="factorial_recursion.c" />
     <ClCompile Include="floating_point.c" />
     <ClCompile Include="function_call.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\eip">
+      <UniqueIdentifier>{eb16a963-5a92-4015-a9f8-c6a5442c8f7e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hello_world.c">
@@ -284,6 +287,15 @@
     </ClCompile>
     <ClCompile Include="CWU_While_Scanf_Case.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="floating_point.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="signed_integer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="factorial_recursion.c">
+      <Filter>Source Files\eip</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
