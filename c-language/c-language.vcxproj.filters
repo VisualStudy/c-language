@@ -300,6 +300,9 @@
     <ClCompile Include="prime_factor_max.c">
       <Filter>Source Files\eip</Filter>
     </ClCompile>
+    <ClCompile Include="power_function_example.c">
+      <Filter>Source Files\eip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
