@@ -297,6 +297,9 @@
     <ClCompile Include="factorial_recursion.c">
       <Filter>Source Files\eip</Filter>
     </ClCompile>
+    <ClCompile Include="prime_factor_max.c">
+      <Filter>Source Files\eip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
