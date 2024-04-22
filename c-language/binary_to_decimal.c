@@ -11,7 +11,7 @@ int main(void)
         {
             break;
         }
-        sum = sum + (input % 10) * di;
+        sum += (input % 10) * di;
         di *= 2;
         input /= 10;
     }
