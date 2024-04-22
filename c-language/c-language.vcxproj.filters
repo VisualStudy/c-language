@@ -309,6 +309,9 @@
     <ClCompile Include="binary_to_decimal.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ID.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
