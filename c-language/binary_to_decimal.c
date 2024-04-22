@@ -12,7 +12,7 @@ int main(void)
             break;
         }
         sum = sum + (input % 10) * di;
-        di = di * 2;
+        di *= 2;
         input /= 10;
     }
     printf("\"%d\'", sum);
