@@ -10,5 +10,5 @@ main() {
         di = di * 2;
         input = input / 10;
     }
-    printf("%d", sum);
+    printf("\"%d\'", sum);
 }
