@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-main() {
+int main(void) 
+{
     int input = 101110; // 2 + 4 + 8 + 32 = 46
     int di = 1;
     int sum = 0;
@@ -11,4 +12,6 @@ main() {
         input = input / 10;
     }
     printf("\"%d\'", sum);
+
+    return 0;
 }
