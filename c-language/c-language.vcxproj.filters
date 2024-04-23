@@ -315,6 +315,9 @@
     <ClCompile Include="conditional_bitwise_operation.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="calculate_cube.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
