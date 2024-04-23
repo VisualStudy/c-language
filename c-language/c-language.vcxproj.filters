@@ -312,6 +312,9 @@
     <ClCompile Include="ID.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="conditional_bitwise_operation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
