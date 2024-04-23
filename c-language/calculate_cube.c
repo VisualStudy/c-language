@@ -2,9 +2,12 @@
 #include <stdio.h>
 #include <math.h>
 
-main() {
-    int input, result;
-    scanf("%d", &input);
+int main(void) 
+{
+    int input, result, _;
+    _ = scanf("%d", &input);
     result = pow(input, 3);
     printf("%d", result);
+
+    return 0;
 }
