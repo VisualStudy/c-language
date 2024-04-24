@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    char c = 200;
+    unsigned char c = 200;
     
     printf("%d", c);
 
