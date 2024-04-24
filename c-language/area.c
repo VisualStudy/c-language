@@ -3,14 +3,15 @@
 
 int main(void)
 {
+    int _;
     float radius;
     float area;
 
     printf("원의 반지름 입력: ");
-    scanf("%f", &radius);
-
+    _ = scanf("%f", &radius);
     area = 3.14 * radius * radius;
-    printf("\n원의 면적 = %.2f\n", area);
+   
+   printf("\n원의 면적 = %.2f\n", area);
 
     return 0;
 }
