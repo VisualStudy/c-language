@@ -318,6 +318,42 @@
     <ClCompile Include="calculate_cube.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="area.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="char_type_overflow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="control.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="decimal_to_binary.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diamond_docs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="double_and.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hexa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slash_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sum_algorithm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unsigned_int.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="change.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h">
