@@ -3,9 +3,11 @@
 
 int main(void)
 {
-    int price, differ; int money, c5000, c1000, c500, c100, _;
-    printf("Insert price: ");   _ = scanf("%d", &money);
-    printf("Insert money you have: "); _ = scanf("%d", &price);
+    int price, differ; 
+    int money, c5000, c1000, c500, c100, _;
+    
+    printf("Insert price: ");            _ = scanf("%d", &money);
+    printf("Insert money you have: ");   _ = scanf("%d", &price);
 
     differ = price = money;
 
