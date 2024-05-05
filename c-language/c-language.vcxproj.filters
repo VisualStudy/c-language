@@ -1,366 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Source Files\eip">
-      <UniqueIdentifier>{eb16a963-5a92-4015-a9f8-c6a5442c8f7e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\fundamental">
-      <UniqueIdentifier>{aaa3c5e5-dd2e-4f8e-a765-5b218e161681}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="address_operator.c" />
+    <ClCompile Include="area.c" />
+    <ClCompile Include="array_one1.c" />
+    <ClCompile Include="array_one2.c" />
+    <ClCompile Include="array_one3.c" />
+    <ClCompile Include="assignment_operator.c" />
+    <ClCompile Include="binary_to_decimal.c" />
+    <ClCompile Include="binary_to_integer_output.c" />
+    <ClCompile Include="bitwise_and_operation.c" />
+    <ClCompile Include="bitwise_right_shift_operation.c" />
+    <ClCompile Include="bool_demo.c" />
+    <ClCompile Include="break_demo.c" />
+    <ClCompile Include="break_for.c" />
+    <ClCompile Include="calculate_cube.c" />
+    <ClCompile Include="casting_operator.c" />
+    <ClCompile Include="change.c" />
+    <ClCompile Include="char_type_overflow.c" />
+    <ClCompile Include="common_characters.c" />
+    <ClCompile Include="conditional_bitwise_operation.c" />
+    <ClCompile Include="control.c" />
+    <ClCompile Include="CWU_The_First_thing.c" />
+    <ClCompile Include="CWU_While_Scanf_Case.c" />
+    <ClCompile Include="decimal_to_binary.c" />
+    <ClCompile Include="diamond_docs.c" />
+    <ClCompile Include="double_and.c" />
+    <ClCompile Include="factorial_recursion.c" />
+    <ClCompile Include="floating_point.c" />
+    <ClCompile Include="function_call.c" />
+    <ClCompile Include="function_demo.c" />
+    <ClCompile Include="function_parameter.c" />
+    <ClCompile Include="function_return_value.c" />
+    <ClCompile Include="hexa.c" />
+    <ClCompile Include="ID.c" />
+    <ClCompile Include="increment_decrement_operation.c" />
+    <ClCompile Include="modulus_operation_result.c" />
+    <ClCompile Include="power_function_example.c" />
+    <ClCompile Include="prime_factor_max.c" />
+    <ClCompile Include="return_value.c" />
+    <ClCompile Include="bit_and.c" />
+    <ClCompile Include="bitwise_assignment.c" />
+    <ClCompile Include="signed_integer.c" />
+    <ClCompile Include="slash_n.c" />
+    <ClCompile Include="sum_algorithm.c" />
+    <ClCompile Include="tests\character_and_integer_outputs.c" />
+    <ClCompile Include="character_demo.c" />
+    <ClCompile Include="character_escape_sequence.c" />
+    <ClCompile Include="char_to_int.c" />
+    <ClCompile Include="compare_two_numbers.c" />
+    <ClCompile Include="constant_demo.c" />
+    <ClCompile Include="c_big_picture.c" />
+    <ClCompile Include="decrement_number.c" />
+    <ClCompile Include="empty_statement.c" />
+    <ClCompile Include="example_calculate_area_circumference_of_circle.c" />
+    <ClCompile Include="for_description.c" />
+    <ClCompile Include="for_if_continue.c" />
+    <ClCompile Include="garbage.c" />
+    <ClCompile Include="getchar_putchar.c" />
+    <ClCompile Include="gets_puts.c" />
+    <ClCompile Include="goto_demo.c" />
+    <ClCompile Include="hello_world.c" />
+    <ClCompile Include="if.c" />
+    <ClCompile Include="if_not.c" />
+    <ClCompile Include="increment_number.c" />
+    <ClCompile Include="increment_operator.c" />
+    <ClCompile Include="input_real_number.c" />
+    <ClCompile Include="input_two_integer_.c" />
+    <ClCompile Include="integear_type.c" />
+    <ClCompile Include="integer_overflow.c" />
+    <ClCompile Include="integer_size.c" />
+    <ClCompile Include="literal.c" />
+    <ClCompile Include="logical_and.c" />
+    <ClCompile Include="logical_not.c" />
+    <ClCompile Include="logical_or.c" />
+    <ClCompile Include="logical_test.c" />
+    <ClCompile Include="only_multiples.c" />
+    <ClCompile Include="postfix_operator.c" />
+    <ClCompile Include="print_format_demo.c" />
+    <ClCompile Include="rectangle_area.c" />
+    <ClCompile Include="relational_operator.c" />
+    <ClCompile Include="relational_test.c" />
+    <ClCompile Include="remainder.c" />
+    <ClCompile Include="scanf.c" />
+    <ClCompile Include="scanf_arithmetic.c" />
+    <ClCompile Include="scanf_multi_line.c" />
+    <ClCompile Include="shortcut_operator.c" />
+    <ClCompile Include="string.c" />
+    <ClCompile Include="string_demo.c" />
+    <ClCompile Include="string_literal.c" />
+    <ClCompile Include="string_with_char_array.c" />
+    <ClCompile Include="swap_demo.c" />
+    <ClCompile Include="switch_expression.c" />
+    <ClCompile Include="switch_statement.c" />
+    <ClCompile Include="switch_test.c" />
+    <ClCompile Include="switch_weather.c" />
+    <ClCompile Include="tests\complex_logical_operation.c" />
+    <ClCompile Include="conditional_operator.c" />
+    <ClCompile Include="tests\conditional_operator_usage.c" />
+    <ClCompile Include="tests\currency_count.c" />
+    <ClCompile Include="tests\even_odd_count.c" />
+    <ClCompile Include="tests\logical_operators_test.c" />
+    <ClCompile Include="tests\operator_usage.c" />
+    <ClCompile Include="shift_operator.c" />
+    <ClCompile Include="tests\string_pointer_usage.c" />
+    <ClCompile Include="tests\sum_of_multiples_of_seven.c" />
+    <ClCompile Include="tests\switch_execution_flow.c" />
+    <ClCompile Include="twice.c" />
+    <ClCompile Include="unsigned_int.c" />
+    <ClCompile Include="unsigned_integer_type.c" />
+    <ClCompile Include="variable.c" />
+    <ClCompile Include="variable_operations_and_output.c" />
+    <ClCompile Include="variable_same_value.c" />
+    <ClCompile Include="_.c" />
+    <ClCompile Include="array_element_circulation.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hello_world.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="empty_statement.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="print_format_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="variable.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="literal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="string_literal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="garbage.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="variable_same_value.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="constant_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="integear_type.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="unsigned_integer_type.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="integer_size.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="integer_overflow.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="character_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="character_escape_sequence.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="string_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="string_with_char_array.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="string.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bool_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="c_big_picture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="twice.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="input_two_integer_.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="scanf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="input_real_number.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="scanf_multi_line.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="getchar_putchar.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="gets_puts.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="char_to_int.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rectangle_area.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="example_calculate_area_circumference_of_circle.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="address_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="casting_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="remainder.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="scanf_arithmetic.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="assignment_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="swap_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="increment_number.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="shortcut_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="increment_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="postfix_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="variable_operations_and_output.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="relational_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="logical_and.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="logical_or.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="logical_not.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="logical_test.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="relational_test.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="decrement_number.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="array_one1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="array_one2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="array_one3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="if.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="compare_two_numbers.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="if_not.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="switch_expression.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="switch_statement.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="switch_weather.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="switch_test.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="for_description.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="break_for.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="break_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="for_if_continue.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="only_multiples.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="goto_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\character_and_integer_outputs.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\currency_count.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\string_pointer_usage.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="function_demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="function_call.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="function_parameter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="return_value.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="function_return_value.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\operator_usage.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\logical_operators_test.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\complex_logical_operation.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bit_and.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="shift_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bitwise_assignment.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="conditional_operator.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\conditional_operator_usage.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\switch_execution_flow.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\even_odd_count.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\sum_of_multiples_of_seven.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="modulus_operation_result.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="increment_decrement_operation.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bitwise_and_operation.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="binary_to_integer_output.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bitwise_right_shift_operation.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CWU_The_First_thing.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CWU_While_Scanf_Case.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="floating_point.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="signed_integer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="factorial_recursion.c">
-      <Filter>Source Files\eip</Filter>
-    </ClCompile>
-    <ClCompile Include="prime_factor_max.c">
-      <Filter>Source Files\eip</Filter>
-    </ClCompile>
-    <ClCompile Include="power_function_example.c">
-      <Filter>Source Files\eip</Filter>
-    </ClCompile>
-    <ClCompile Include="common_characters.c">
-      <Filter>Source Files\eip</Filter>
-    </ClCompile>
-    <ClCompile Include="binary_to_decimal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ID.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="conditional_bitwise_operation.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="calculate_cube.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="area.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="char_type_overflow.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="control.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="decimal_to_binary.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="diamond_docs.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="double_and.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hexa.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="slash_n.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="sum_algorithm.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="unsigned_int.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="_.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="basic_print.c">
-      <Filter>Source Files\fundamental</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="twice.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="twice.h" />
   </ItemGroup>
 </Project>
