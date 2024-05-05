@@ -114,6 +114,7 @@
     <ClCompile Include="variable_same_value.c" />
     <ClCompile Include="_.c" />
     <ClCompile Include="array_element_circulation.c" />
+    <ClCompile Include="even_index_sum.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
