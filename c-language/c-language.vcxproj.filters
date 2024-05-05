@@ -115,6 +115,7 @@
     <ClCompile Include="_.c" />
     <ClCompile Include="array_element_circulation.c" />
     <ClCompile Include="even_index_sum.c" />
+    <ClCompile Include="binary_array_to_integer_conversion.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
