@@ -16,6 +16,9 @@
     <Filter Include="Source Files\eip">
       <UniqueIdentifier>{eb16a963-5a92-4015-a9f8-c6a5442c8f7e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\fundamental">
+      <UniqueIdentifier>{aaa3c5e5-dd2e-4f8e-a765-5b218e161681}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hello_world.c">
@@ -317,6 +320,42 @@
     </ClCompile>
     <ClCompile Include="calculate_cube.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="area.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="char_type_overflow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="control.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="decimal_to_binary.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diamond_docs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="double_and.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hexa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slash_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sum_algorithm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unsigned_int.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="basic_print.c">
+      <Filter>Source Files\fundamental</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
