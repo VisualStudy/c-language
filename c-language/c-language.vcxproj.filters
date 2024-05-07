@@ -119,6 +119,7 @@
     <ClCompile Include="factorial_calculation.c" />
     <ClCompile Include="sequence_demo.c" />
     <ClCompile Include="if_example.c" />
+    <ClCompile Include="single_multiple.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
