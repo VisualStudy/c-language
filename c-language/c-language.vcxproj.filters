@@ -118,6 +118,7 @@
     <ClCompile Include="binary_array_to_integer_conversion.c" />
     <ClCompile Include="factorial_calculation.c" />
     <ClCompile Include="sequence_demo.c" />
+    <ClCompile Include="if_example.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
