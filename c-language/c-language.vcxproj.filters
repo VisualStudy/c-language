@@ -120,6 +120,7 @@
     <ClCompile Include="sequence_demo.c" />
     <ClCompile Include="if_example.c" />
     <ClCompile Include="single_multiple.c" />
+    <ClCompile Include="code_block.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
