@@ -121,6 +121,7 @@
     <ClCompile Include="if_example.c" />
     <ClCompile Include="single_multiple.c" />
     <ClCompile Include="code_block.c" />
+    <ClCompile Include="code_block_single_multiple.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
