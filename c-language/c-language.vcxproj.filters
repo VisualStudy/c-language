@@ -132,6 +132,7 @@
     <ClCompile Include="switch.c" />
     <ClCompile Include="switch_demo.c" />
     <ClCompile Include="for_loop.c" />
+    <ClCompile Include="for_description_up.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
