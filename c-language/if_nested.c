@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    char name = 'c';
+    char name = 'C';
     int version = 22;
 
-    if (name == 'c') // 첫 번째 조건 검사
+    if (name == 'C') // 첫 번째 조건 검사
     {
         if (version == 22) // 두 번째 조건 검사
         {
