@@ -140,6 +140,7 @@
     <ClCompile Include="while_sum_break.c" />
     <ClCompile Include="continue_demo.c" />
     <ClCompile Include="goto.c" />
+    <ClCompile Include="switch_if_for_while.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
