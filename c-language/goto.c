@@ -28,6 +28,7 @@ int main(void)
 
 Chapter1:
     printf("1장입니다.\n");
+    goto Start;
 Chapter2:
     printf("2장입니다.\n");
     goto Start;
