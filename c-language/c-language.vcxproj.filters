@@ -137,6 +137,7 @@
     <ClCompile Include="for_increment.c" />
     <ClCompile Include="while_description.c" />
     <ClCompile Include="while_demo.c" />
+    <ClCompile Include="while_sum_break.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
