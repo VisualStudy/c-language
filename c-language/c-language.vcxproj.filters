@@ -130,6 +130,7 @@
     <ClCompile Include="if_nested.c" />
     <ClCompile Include="else_nested.c" />
     <ClCompile Include="switch.c" />
+    <ClCompile Include="switch_demo.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
