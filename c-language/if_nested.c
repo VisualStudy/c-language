@@ -8,7 +8,7 @@ int main(void)
 
     if (name == 'c') // 첫 번째 조건 검사
     {
-        if (vesrion == 22) // 두 번째 조건 검사
+        if (version == 22) // 두 번째 조건 검사
         {
             printf("%c %d\n", name, version); // 두 조건 모두 만족 시 실행
         }
