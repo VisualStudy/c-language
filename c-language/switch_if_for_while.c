@@ -20,7 +20,15 @@ int main(void)
         _ = scanf("%d", &start);
 
         if (start == 1)
+        { 
+            
             printf("\n정상 작동!\n\n");
+
+            for (int i = 0; i < 5; i++)
+            {
+                printf("다섯 번 출력되는 문자열입니다.");
+            }
+        }
         else if (start == 2)
             printf("\n종료 중...\n\n");
                 
@@ -35,7 +43,14 @@ int main(void)
         _ = scanf("%d", &start2);
 
         if (start2 == 1)
+        { 
             printf("\n정상 작동!\n\n");
+
+            for (int j = 0; j < 10; j++)
+            {
+                printf("열 번 출력되는 문자열입니다.");
+            }
+        }
         else if (start2 == 2)
             printf("\n종료 중...\n\n");
                 
