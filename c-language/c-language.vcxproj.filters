@@ -129,6 +129,7 @@
     <ClCompile Include="if_else.c" />
     <ClCompile Include="if_nested.c" />
     <ClCompile Include="else_nested.c" />
+    <ClCompile Include="switch.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
