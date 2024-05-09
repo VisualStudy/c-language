@@ -26,7 +26,7 @@ int main(void)
 
             for (int i = 0; i < 5; i++)
             {
-                printf("다섯 번 출력되는 문자열입니다.");
+                printf("다섯 번 출력되는 문자열입니다.\n");
             }
         }
         else if (start == 2)
@@ -48,7 +48,7 @@ int main(void)
 
             for (int j = 0; j < 10; j++)
             {
-                printf("열 번 출력되는 문자열입니다.");
+                printf("열 번 출력되는 문자열입니다.\n");
             }
         }
         else if (start2 == 2)
