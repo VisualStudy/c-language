@@ -122,6 +122,13 @@
     <ClCompile Include="single_multiple.c" />
     <ClCompile Include="code_block.c" />
     <ClCompile Include="code_block_single_multiple.c" />
+    <ClCompile Include="else.c" />
+    <ClCompile Include="else_note.c" />
+    <ClCompile Include="if_and.c" />
+    <ClCompile Include="if_demo.c" />
+    <ClCompile Include="if_else.c" />
+    <ClCompile Include="if_nested.c" />
+    <ClCompile Include="else_nested.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
