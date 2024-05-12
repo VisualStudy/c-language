@@ -141,6 +141,9 @@
     <ClCompile Include="continue_demo.c" />
     <ClCompile Include="goto.c" />
     <ClCompile Include="switch_if_for_while.c" />
+    <ClCompile Include="array_initializer.c" />
+    <ClCompile Include="why_array.c" />
+    <ClCompile Include="array_description.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
