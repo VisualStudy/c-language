@@ -144,6 +144,7 @@
     <ClCompile Include="array_initializer.c" />
     <ClCompile Include="why_array.c" />
     <ClCompile Include="array_description.c" />
+    <ClCompile Include="ArrayOne1.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
