@@ -148,6 +148,7 @@
     <ClCompile Include="ArrayOne2.c" />
     <ClCompile Include="ArrayOne3.c" />
     <ClCompile Include="array_init.c" />
+    <ClCompile Include="character_array.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
