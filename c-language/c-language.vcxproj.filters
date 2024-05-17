@@ -151,6 +151,7 @@
     <ClCompile Include="character_array.c" />
     <ClCompile Include="array_index.c" />
     <ClCompile Include="odd_even_ten.c" />
+    <ClCompile Include="adventure.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
