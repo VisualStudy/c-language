@@ -152,6 +152,7 @@
     <ClCompile Include="array_index.c" />
     <ClCompile Include="odd_even_ten.c" />
     <ClCompile Include="adventure.c" />
+    <ClCompile Include="find_gem.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
