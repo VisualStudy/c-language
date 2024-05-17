@@ -53,6 +53,7 @@ int main() {
 
     // 게임 루프
     while (1) {
+        printf("(좌표값(0, 0)은 제일 왼쪽 하단 점부터)\n");
         printf("보석을 찾아주세요!\n");
         printBoard(); // 보드 출력
 
