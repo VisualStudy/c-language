@@ -51,10 +51,9 @@ int main() {
     Gem gem = placeGem();
     board[gem.y][gem.x] = 'G';
 
-    printf("보석을 찾아주세요! (보석의 위치: %d, %d)\n", gem.x, gem.y); // 좌표 출력
-
     // 게임 루프
     while (1) {
+        printf("보석을 찾아주세요!\n");
         printBoard(); // 보드 출력
 
         // 플레이어 입력 받기
@@ -73,6 +72,7 @@ int main() {
         }
         else {
             printf("보석이 여기 있지 않습니다. 다시 찾아보세요!\n");
+            printf("보석의 위치: %d, %d\n", gem.x, gem.y); // 오답 시 보석의 위치 출력
         }
     }
 
