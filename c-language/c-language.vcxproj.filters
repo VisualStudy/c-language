@@ -153,6 +153,8 @@
     <ClCompile Include="odd_even_ten.c" />
     <ClCompile Include="adventure.c" />
     <ClCompile Include="find_gem.c" />
+    <ClCompile Include="seetris.c" />
+    <ClCompile Include="array_total_avg.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
