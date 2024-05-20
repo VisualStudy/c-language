@@ -155,6 +155,7 @@
     <ClCompile Include="find_gem.c" />
     <ClCompile Include="seetris.c" />
     <ClCompile Include="array_total_avg.c" />
+    <ClCompile Include="array_student.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
