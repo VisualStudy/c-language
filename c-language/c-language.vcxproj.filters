@@ -156,6 +156,7 @@
     <ClCompile Include="seetris.c" />
     <ClCompile Include="array_total_avg.c" />
     <ClCompile Include="array_student.c" />
+    <ClCompile Include="array_while.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
