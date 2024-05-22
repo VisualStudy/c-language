@@ -157,6 +157,7 @@
     <ClCompile Include="array_total_avg.c" />
     <ClCompile Include="array_student.c" />
     <ClCompile Include="array_while.c" />
+    <ClCompile Include="array_two_description.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
