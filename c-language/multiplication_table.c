@@ -1,7 +1,6 @@
 #include <stdio.h>
 #pragma warning(disable:4996)
 
-
 int main(void)
 {
     int i = 0; // 단 입력 받을 값 초기화
