@@ -1,5 +1,5 @@
 #include <stdio.h>
-#pragma warning ( disable:4996 )
+#pragma warning ( disable:4996 ) // 경고 무시 통해 빌드 작동 O
 
 int main(void)
 {
