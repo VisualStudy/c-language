@@ -13,5 +13,5 @@ int main(void)
         printf("\n %d * %d = %d", i, j, i * j); // 구구단 구현
     }
 
-    return 0;
+    return 0; // 값 반환
 }
