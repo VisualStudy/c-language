@@ -10,7 +10,7 @@ int main(void)
 
     for (int j = 1; j <= 9; j++) // 입력 받은 단에 1 ~ 9까지 곱하기
     {
-        printf("\n %d * %d = %d", i, j, i * j);
+        printf("\n %d * %d = %d", i, j, i * j); // 구구단 구현
     }
 
     return 0;
