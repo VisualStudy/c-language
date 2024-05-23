@@ -158,6 +158,7 @@
     <ClCompile Include="array_student.c" />
     <ClCompile Include="array_while.c" />
     <ClCompile Include="array_two_description.c" />
+    <ClCompile Include="multiplication_table.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
