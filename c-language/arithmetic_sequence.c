@@ -1,4 +1,5 @@
 #include <stdio.h>
+#pragma warning(disable:4996)
 
 int main(void)
 {
@@ -16,7 +17,7 @@ int main(void)
     _ = scanf("%d", &n);
 
     sum = (n * ( f + l )) / 2;
-    printf("등차수열 합 :  %d", sum);
+    printf("\n\n등차수열 합 :  %d", sum);
 
     return 0;
 }
