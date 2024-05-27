@@ -161,6 +161,7 @@
     <ClCompile Include="multiplication_table.c" />
     <ClCompile Include="sum_of_arithmetic_sequences.c" />
     <ClCompile Include="arithmetic_sequence.c" />
+    <ClCompile Include="int_average_not_negative.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
