@@ -1,5 +1,5 @@
 #include <stdio.h>
-#pragma warning ( disable : 4996 )
+#pragma warning ( disable:4996 )
 
 int main(void)
 {
@@ -14,7 +14,10 @@ int main(void)
         printf("\n 정수 입력 :  ");
         _ = scanf("%d", &n);
 
-        if (n < 0) break;
+        if (n < 0)
+        {
+            break;
+        }
 
         sum = sum + n;
         i++;
