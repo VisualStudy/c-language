@@ -162,6 +162,7 @@
     <ClCompile Include="sum_of_arithmetic_sequences.c" />
     <ClCompile Include="arithmetic_sequence.c" />
     <ClCompile Include="int_average_not_negative.c" />
+    <ClCompile Include="plus_one.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
