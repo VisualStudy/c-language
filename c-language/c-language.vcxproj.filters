@@ -163,6 +163,7 @@
     <ClCompile Include="arithmetic_sequence.c" />
     <ClCompile Include="int_average_not_negative.c" />
     <ClCompile Include="plus_one.c" />
+    <ClCompile Include="minus_one.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
