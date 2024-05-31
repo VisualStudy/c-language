@@ -165,6 +165,7 @@
     <ClCompile Include="plus_one.c" />
     <ClCompile Include="minus_one.c" />
     <ClCompile Include="multiple_two.c" />
+    <ClCompile Include="the_greatest_common_measure.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
