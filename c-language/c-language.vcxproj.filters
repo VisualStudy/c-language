@@ -166,6 +166,7 @@
     <ClCompile Include="minus_one.c" />
     <ClCompile Include="multiple_two.c" />
     <ClCompile Include="the_greatest_common_measure.c" />
+    <ClCompile Include="do_while_not_negative_number.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
