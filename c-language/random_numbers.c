@@ -8,9 +8,11 @@ int main(void) // 1~100 사이의 난수를 가정하고 이분검색 방식으로 찾아가기
 {
     srand((unsigned)time(NULL)); //현재 시간 기준 시드값 설정하기
     
+    int answer = 0;
+
     int cnt = 0;
     int guess = 0;
-    int answer = (rand() % 100) + 1;
+    answer = (rand() % 100) + 1;
 
     do
     {
