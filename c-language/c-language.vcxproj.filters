@@ -169,6 +169,7 @@
     <ClCompile Include="do_while_not_negative_number.c" />
     <ClCompile Include="random_numbers.c" />
     <ClCompile Include="star_square.c" />
+    <ClCompile Include="CW\convert.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
