@@ -170,6 +170,7 @@
     <ClCompile Include="random_numbers.c" />
     <ClCompile Include="star_square.c" />
     <ClCompile Include="CW\convert.c" />
+    <ClCompile Include="division_two.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
