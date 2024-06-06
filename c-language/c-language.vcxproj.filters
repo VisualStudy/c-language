@@ -175,6 +175,7 @@
     <ClCompile Include="function_repeat.c" />
     <ClCompile Include="function_argument.c" />
     <ClCompile Include="function_return.c" />
+    <ClCompile Include="function_return_call.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
