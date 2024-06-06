@@ -173,6 +173,7 @@
     <ClCompile Include="division_two.c" />
     <ClCompile Include="function.c" />
     <ClCompile Include="function_repeat.c" />
+    <ClCompile Include="function_argument.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
