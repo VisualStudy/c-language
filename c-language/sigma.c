@@ -1,4 +1,5 @@
 #include <stdio.h>
+#pragma warning(disable:4996)
 
 // 시그마 계산 함수
 int sigma(int 시작값, int 끝값) {
