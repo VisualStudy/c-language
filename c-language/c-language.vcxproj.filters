@@ -178,6 +178,7 @@
     <ClCompile Include="function_return_call.c" />
     <ClCompile Include="CW\c_cw_semester_one.c" />
     <ClCompile Include="CW\c_cw_semester_one_with_blackwall.c" />
+    <ClCompile Include="sigma.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
