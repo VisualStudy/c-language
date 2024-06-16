@@ -29,7 +29,7 @@ int max(int a, int b, int c)
 }
 
 // main ÇÔ¼ö
-int main()
+int main(void)
 {
     int _, a, b, c;
 
