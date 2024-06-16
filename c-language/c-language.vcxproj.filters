@@ -179,6 +179,7 @@
     <ClCompile Include="CW\c_cw_semester_one.c" />
     <ClCompile Include="CW\c_cw_semester_one_with_blackwall.c" />
     <ClCompile Include="sigma.c" />
+    <ClCompile Include="max_of_three.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
