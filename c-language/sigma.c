@@ -11,7 +11,7 @@ int sigma(int 시작값, int 끝값) {
 }
 
 // 메인 함수
-int main() {
+int main(void) {
     int _, 시작값, 끝값;
 
     // 사용자로부터 시작 값과 끝 값을 입력받음
