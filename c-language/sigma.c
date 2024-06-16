@@ -2,16 +2,19 @@
 #pragma warning(disable:4996)
 
 // 시그마 계산 함수
-int sigma(int 시작값, int 끝값) {
+int sigma(int 시작값, int 끝값) 
+{
     int 합 = 0;
-    for (int i = 시작값; i <= 끝값; i++) {
+    for (int i = 시작값; i <= 끝값; i++) 
+    {
         합 += i;  // 현재 값을 더함
     }
     return 합;  // 최종 합을 반환
 }
 
 // 메인 함수
-int main(void) {
+int main(void) 
+{
     int _, 시작값, 끝값;
 
     // 사용자로부터 시작 값과 끝 값을 입력받음
