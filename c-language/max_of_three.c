@@ -31,11 +31,11 @@ int max(int a, int b, int c)
 // main 함수
 int main()
 {
-    int a, b, c;
+    int _, a, b, c;
 
     // 사용자로부터 세 정수를 입력 받음
     printf("세 개의 정수를 입력하세요: ");
-    scanf("%d %d %d", &a, &b, &c);
+    _ = scanf("%d %d %d", &a, &b, &c);
 
     // 최댓값을 계산하고 출력
     int maximum = max(a, b, c);
