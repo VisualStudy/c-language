@@ -180,6 +180,7 @@
     <ClCompile Include="CW\c_cw_semester_one_with_blackwall.c" />
     <ClCompile Include="sigma.c" />
     <ClCompile Include="max_of_three.c" />
+    <ClCompile Include="CW\all_in_one.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
