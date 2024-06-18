@@ -3,16 +3,16 @@
 
 void arith_sum()
 {
-    int f, l, d, p, sum = 0;
+    int _, f, l, d, p, sum = 0;
     
     printf("초항 입력 : ");
-    scanf("%d", &f);
+    _ = scanf("%d", &f);
 
     printf("말항 입력 :  ");
-    scanf("%d", &l);
+    _ = scanf("%d", &l);
 
     printf("등차 입력 :  ");
-    scanf("%d", &d);
+    _ = scanf("%d", &d);
 
     for (p = f; p <= l; p = p + d)
     {
