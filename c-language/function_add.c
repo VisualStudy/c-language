@@ -8,6 +8,7 @@ int add(int a, int b);
 int add(int a, int b)
 {
     printf("첫 번째 값과 두 번째 값 더하기\n");
+
     printf("첫 번째 값 :  ");
     scanf("%d", &a);
     printf("두 번쨰 값 :  ");
