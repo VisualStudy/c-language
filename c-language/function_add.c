@@ -11,6 +11,7 @@ int add(int a, int b)
 
     printf("첫 번째 값 :  ");
     scanf("%d", &a);
+
     printf("두 번쨰 값 :  ");
     scanf("%d", &b);
     
