@@ -7,13 +7,15 @@ int add(int a, int b);
 //함수 정의
 int add(int a, int b)
 {
+    int _ = 0;
+
     printf("첫 번째 값과 두 번째 값 더하기\n");
 
     printf("첫 번째 값 :  ");
-    scanf("%d", &a);
+    _ = scanf("%d", &a);
 
     printf("두 번쨰 값 :  ");
-    scanf("%d", &b);
+    _ = scanf("%d", &b);
     
     return a + b;
 }
