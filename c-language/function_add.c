@@ -13,5 +13,6 @@ int main(void)
 {
     int result = add(3, 4); // 함수 호출
     printf("결과 : %d\n", result); // 결과: 7
+
     return 0;
 }
