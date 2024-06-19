@@ -181,6 +181,7 @@
     <ClCompile Include="sigma.c" />
     <ClCompile Include="max_of_three.c" />
     <ClCompile Include="CW\all_in_one.c" />
+    <ClCompile Include="function_add.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
