@@ -31,7 +31,7 @@ void ran_num()
 {
     int answer, guess, cnt;
 
-    srand((unsigned)time(NULL));
+    srand((unsigned)time(NULL)); // srand((unsigned)time(null)) == srand(0)
     answer = (rand() % 100) + 1;
     cnt = 0;
 
