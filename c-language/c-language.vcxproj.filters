@@ -28,10 +28,10 @@
     <ClCompile Include="double_and.c" />
     <ClCompile Include="factorial_recursion.c" />
     <ClCompile Include="floating_point.c" />
-    <ClCompile Include="function_call.c" />
-    <ClCompile Include="function_demo.c" />
-    <ClCompile Include="function_parameter.c" />
-    <ClCompile Include="function_return_value.c" />
+    <ClCompile Include="Functions\function_call.c" />
+    <ClCompile Include="Functions\function_demo.c" />
+    <ClCompile Include="Functions\function_parameter.c" />
+    <ClCompile Include="Functions\function_return_value.c" />
     <ClCompile Include="hexa.c" />
     <ClCompile Include="ID.c" />
     <ClCompile Include="increment_decrement_operation.c" />
@@ -171,17 +171,17 @@
     <ClCompile Include="star_square.c" />
     <ClCompile Include="CW\convert.c" />
     <ClCompile Include="division_two.c" />
-    <ClCompile Include="function.c" />
-    <ClCompile Include="function_repeat.c" />
-    <ClCompile Include="function_argument.c" />
-    <ClCompile Include="function_return.c" />
-    <ClCompile Include="function_return_call.c" />
+    <ClCompile Include="Functions\function.c" />
+    <ClCompile Include="Functions\function_repeat.c" />
+    <ClCompile Include="Functions\function_argument.c" />
+    <ClCompile Include="Functions\function_return.c" />
+    <ClCompile Include="Functions\function_return_call.c" />
     <ClCompile Include="CW\c_cw_semester_one.c" />
     <ClCompile Include="CW\c_cw_semester_one_with_blackwall.c" />
     <ClCompile Include="sigma.c" />
     <ClCompile Include="max_of_three.c" />
     <ClCompile Include="CW\all_in_one.c" />
-    <ClCompile Include="function_add.c" />
+    <ClCompile Include="Functions\function_add.c" />
     <ClCompile Include="CW\test_semester_one_last.c" />
   </ItemGroup>
   <ItemGroup>
