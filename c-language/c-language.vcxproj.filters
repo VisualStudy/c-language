@@ -54,8 +54,8 @@
     <ClCompile Include="decrement_number.c" />
     <ClCompile Include="empty_statement.c" />
     <ClCompile Include="example_calculate_area_circumference_of_circle.c" />
-    <ClCompile Include="for_description.c" />
-    <ClCompile Include="for_if_continue.c" />
+    <ClCompile Include="For\for_description.c" />
+    <ClCompile Include="For\for_if_continue.c" />
     <ClCompile Include="garbage.c" />
     <ClCompile Include="getchar_putchar.c" />
     <ClCompile Include="gets_puts.c" />
@@ -131,10 +131,10 @@
     <ClCompile Include="else_nested.c" />
     <ClCompile Include="switch.c" />
     <ClCompile Include="switch_demo.c" />
-    <ClCompile Include="for_loop.c" />
-    <ClCompile Include="for_description_up.c" />
-    <ClCompile Include="for.c" />
-    <ClCompile Include="for_increment.c" />
+    <ClCompile Include="For\for_loop.c" />
+    <ClCompile Include="For\for_description_up.c" />
+    <ClCompile Include="For\for.c" />
+    <ClCompile Include="For\for_increment.c" />
     <ClCompile Include="while_description.c" />
     <ClCompile Include="while_demo.c" />
     <ClCompile Include="while_sum_break.c" />
