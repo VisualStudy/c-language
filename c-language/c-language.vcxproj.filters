@@ -183,6 +183,7 @@
     <ClCompile Include="CW\all_in_one.c" />
     <ClCompile Include="Functions\function_add.c" />
     <ClCompile Include="CW\test_semester_one_last.c" />
+    <ClCompile Include="review\review_basic_structure.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
