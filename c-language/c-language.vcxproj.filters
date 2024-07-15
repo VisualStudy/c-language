@@ -184,6 +184,7 @@
     <ClCompile Include="Functions\function_add.c" />
     <ClCompile Include="CW\test_semester_one_last.c" />
     <ClCompile Include="review\review_basic_structure.c" />
+    <ClCompile Include="quiz.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
