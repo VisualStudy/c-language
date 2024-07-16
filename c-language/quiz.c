@@ -19,6 +19,11 @@ int main(void)
                 printf("오답");
                 break;
             }
+            case(3):
+            {
+                printf("오답");
+                break;
+            }
         }
     }
 
