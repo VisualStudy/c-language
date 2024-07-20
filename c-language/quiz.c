@@ -46,6 +46,7 @@ void ask_questions(Question questions[]) {
             }
             else {
                 printf("오답! 다시 생각해보세요.\n");
+                printf("모든 문제를 랜덤으로 재배치하여 다시 시작합니다.\n\n\n");
                 i = -1;  // 문제를 처음부터 다시 시작
                 break;
             }
