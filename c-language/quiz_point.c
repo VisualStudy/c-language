@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#pragma warning(disable:4996)
 
 // 문제의 총 개수
 #define TOTAL_QUESTIONS 10
