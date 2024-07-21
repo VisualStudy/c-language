@@ -7,15 +7,19 @@
 // 문제의 총 개수
 #define TOTAL_QUESTIONS 10
 
-typedef struct {
+typedef struct 
+{
     char question[100];
     char options[4][20];
     int correct_option;
 } Question;
 
-void shuffle(int* array, int n) {
-    if (n > 1) {
-        for (int i = 0; i < n - 1; i++) {
+void shuffle(int* array, int n) 
+{
+    if (n > 1) 
+    {
+        for (int i = 0; i < n - 1; i++) 
+        {
             int j = i + rand() / (RAND_MAX / (n - i) + 1);
             int t = array[j];
             array[j] = array[i];
@@ -24,62 +28,76 @@ void shuffle(int* array, int n) {
     }
 }
 
-void ask_questions(Question questions[]) {
+void ask_questions(Question questions[]) 
+{
     int order[TOTAL_QUESTIONS];
-    for (int i = 0; i < TOTAL_QUESTIONS; i++) {
+    for (int i = 0; i < TOTAL_QUESTIONS; i++) 
+    {
         order[i] = i;
     }
 
     int score = 0;
 
-    while (1) {
+    while (1) 
+    {
         shuffle(order, TOTAL_QUESTIONS);
-        for (int i = 0; i < TOTAL_QUESTIONS; i++) {
+        for (int i = 0; i < TOTAL_QUESTIONS; i++) 
+        {
             int question_index = order[i];
             int a;
 
             printf("%s\n", questions[question_index].question);
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < 4; j++) 
+            {
                 printf("%d) %s ", j + 1, questions[question_index].options[j]);
             }
             printf("\n");
-            if (scanf("%d", &a) != 1) {
+            if (scanf("%d", &a) != 1) 
+            {
                 printf("잘못된 입력입니다. 프로그램을 종료합니다.\n");
                 return;
             }
 
-            if (a == questions[question_index].correct_option) {
+            if (a == questions[question_index].correct_option) 
+            {
                 printf("정답! 10점을 획득하였습니다.\n\n");
                 score += 10;
             }
-            else {
+            else 
+            {
                 printf("오답! 다시 생각해보세요.\n\n");
             }
         }
 
-        if (score == 100) {
+        if (score == 100) 
+        {
             printf("모든 문제를 맞추셨습니다! 정말 훌륭합니다! 총 점수: %d점. 프로그램을 종료합니다.\n", score);
             break;
         }
-        else if (score >= 80) {
+        else if (score >= 80) 
+        {
             printf("훌륭합니다! 하지만 다음에는 더 좋은 점수를 받도록 노력하세요. 총 점수: %d점. 프로그램을 종료합니다.\n", score);
             break;
         }
-        else if (score >= 60) {
+        else if (score >= 60) 
+        {
             printf("노력이 필요합니다. 총 점수: %d점. 프로그램을 종료합니다.\n", score);
             break;
         }
-        else {
+        else 
+        {
             printf("부족합니다. 다시 도전하세요. 총 점수: %d점. 모든 문제를 랜덤으로 재배치하여 다시 시작합니다.\n\n", score);
             score = 0;  // 점수 초기화
         }
     }
 }
 
-int main(void) {
+int main(void) 
+{
     srand(time(NULL));  // 랜덤 초기화는 main 함수에서 한 번만 호출합니다.
 
-    Question questions[TOTAL_QUESTIONS] = {
+    Question questions[TOTAL_QUESTIONS] = 
+    {
         {"다음 중 생물학적 과일이 아닌 것은?", {"수박", "토마토", "오이", "루바브"}, 4},
         {"다음 중 포유류가 아닌 것은?", {"고양이", "상어", "사람", "코끼리"}, 2},
         {"다음 중 대륙이 아닌 것은?", {"아프리카", "아시아", "유럽", "하와이"}, 4},
