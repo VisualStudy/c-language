@@ -16,8 +16,10 @@ typedef struct
 
 void shuffle(int* array, int n)
 {
-    if (n > 1) {
-        for (int i = 0; i < n - 1; i++) {
+    if (n > 1) 
+    {
+        for (int i = 0; i < n - 1; i++) 
+        {
             int j = i + rand() / (RAND_MAX / (n - i) + 1);
             int t = array[j];
             array[j] = array[i];
@@ -50,7 +52,8 @@ void ask_questions(Question questions[])
                 printf("%d) %s ", j + 1, questions[question_index].options[j]);
             }
             printf("\n");
-            if (scanf("%d", &a) != 1) {
+            if (scanf("%d", &a) != 1) 
+            {
                 printf("잘못된 입력입니다. 프로그램을 종료합니다.\n");
                 return;
             }
@@ -100,7 +103,8 @@ void ask_questions(Question questions[])
     }
 }
 
-int main(void) {
+int main(void) 
+{
     srand(time(NULL));  // 랜덤 초기화는 main 함수에서 한 번만 호출합니다.
 
     Question questions[TOTAL_QUESTIONS] =
