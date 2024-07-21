@@ -77,12 +77,12 @@ void ask_questions(Question questions[])
         }
         else if (score >= 80) 
         {
-            printf("훌륭합니다! 하지만 더 잘할 수 있습니다. 프로그램을 종료합니다.\n");
+            printf("훌륭합니다! 하지만 다음에는 더 좋은 점수를 받도록 노력하세요. 프로그램을 종료합니다.\n");
             break;
         }
         else if (score >= 60) 
         {
-            printf("노력하셨습니다. 하지만 더 노력하세요. 프로그램을 종료합니다.\n");
+            printf("노력이 필요합니다. 프로그램을 종료합니다.\n");
             break;
         }
         else 
