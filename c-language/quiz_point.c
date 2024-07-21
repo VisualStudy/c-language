@@ -6,13 +6,15 @@
 // 문제의 총 개수
 #define TOTAL_QUESTIONS 10
 
-typedef struct {
+typedef struct 
+{
     char question[100];
     char options[4][20];
     int correct_option;
 } Question;
 
-void shuffle(int* array, int n) {
+void shuffle(int* array, int n) 
+{
     if (n > 1) {
         srand(time(NULL));
         for (int i = 0; i < n - 1; i++) {
@@ -24,39 +26,47 @@ void shuffle(int* array, int n) {
     }
 }
 
-void ask_questions(Question questions[]) {
+void ask_questions(Question questions[]) 
+{
     int order[TOTAL_QUESTIONS];
-    for (int i = 0; i < TOTAL_QUESTIONS; i++) {
+    for (int i = 0; i < TOTAL_QUESTIONS; i++) 
+    {
         order[i] = i;
     }
 
     int score = 0;
 
-    while (1) {
+    while (1) 
+    {
         shuffle(order, TOTAL_QUESTIONS);
-        for (int i = 0; i < TOTAL_QUESTIONS; i++) {
+        for (int i = 0; i < TOTAL_QUESTIONS; i++) 
+        {
             int question_index = order[i];
             int a;
 
             printf("%s\n", questions[question_index].question);
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < 4; j++) 
+            {
                 printf("%d) %s ", j + 1, questions[question_index].options[j]);
             }
             printf("\n");
             scanf("%d", &a);
 
-            if (a == questions[question_index].correct_option) {
+            if (a == questions[question_index].correct_option) 
+            {
                 printf("정답! 10점을 획득하였습니다.\n\n");
                 score += 10;
             }
             else {
                 printf("오답! 다시 생각해보세요.\n");
-                if (score == 0) {
+                if (score == 0) 
+                {
                     printf("점수가 0점이므로 모든 문제를 랜덤으로 재배치하여 다시 시작합니다.\n\n\n");
                     i = -1;  // 문제를 처음부터 다시 시작
                     break;
                 }
-                else {
+                else 
+                {
                     score = 0;  // 점수 초기화
                     printf("점수가 초기화되었습니다. 처음부터 다시 시작합니다.\n\n");
                     i = TOTAL_QUESTIONS; // 현재 루프 종료
@@ -65,18 +75,23 @@ void ask_questions(Question questions[]) {
             }
         }
 
-        if (score == 100) {
+        if (score == 100) 
+        {
             printf("모든 문제를 맞추셨습니다! 정말 훌륭합니다! 프로그램을 종료합니다.\n");
             break;
         }
-        else if (i == TOTAL_QUESTIONS) {
-            if (score >= 80) {
+        else if (i == TOTAL_QUESTIONS) 
+        {
+            if (score >= 80) 
+            {
                 printf("훌륭합니다! 하지만 더 분발하세요. 프로그램을 종료합니다.\n");
             }
-            else if (score >= 60) {
+            else if (score >= 60) 
+            {
                 printf("노력하셨습니다. 하지만 더 노력하세요. 프로그램을 종료합니다.\n");
             }
-            else {
+            else 
+            {
                 printf("부족합니다. 다시 도전하세요. 프로그램을 종료합니다.\n");
             }
             break;
@@ -85,7 +100,8 @@ void ask_questions(Question questions[]) {
 }
 
 int main(void) {
-    Question questions[TOTAL_QUESTIONS] = {
+    Question questions[TOTAL_QUESTIONS] = 
+    {
         {"다음 중 생물학적 과일이 아닌 것은?", {"수박", "토마토", "오이", "루바브"}, 4},
         {"다음 중 포유류가 아닌 것은?", {"고양이", "상어", "사람", "코끼리"}, 2},
         {"다음 중 대륙이 아닌 것은?", {"아프리카", "아시아", "유럽", "하와이"}, 4},
