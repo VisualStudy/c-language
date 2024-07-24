@@ -1,6 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>  // Windows용 헤더. Unix-like 시스템에서는 <ncurses.h> 사용
+#include <conio.h>  // Windows 전용 헤더 파일
 
 #define ROWS 5
 #define COLS 5
@@ -20,7 +21,7 @@ int playerX = startX, playerY = startY; // 플레이어 위치
 
 // 미로를 출력하는 함수
 void printMaze() {
-    system("cls"); // 화면 지우기 (Windows용. Unix-like 시스템에서는 "clear")
+    system("cls"); // 화면 지우기 (Windows용. Unix-like 시스템에서는 "clear" 사용)
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < COLS; j++) {
             if (i == playerX && j == playerY)
@@ -62,7 +63,7 @@ int main() {
             break;
         }
 
-        input = getch(); // 방향키 입력 대기
+        input = _getch(); // 방향키 입력 대기
         if (input == 'q') break; // 'q' 입력시 게임 종료
         movePlayer(input);
     }
