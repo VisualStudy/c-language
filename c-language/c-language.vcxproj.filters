@@ -188,6 +188,7 @@
     <ClCompile Include="rand\quiz_point.c" />
     <ClCompile Include="generate_message.c" />
     <ClCompile Include="ultimate.c" />
+    <ClCompile Include="maze.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
