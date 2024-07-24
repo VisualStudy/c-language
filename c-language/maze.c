@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>  // Windows 전용 헤더 파일
@@ -17,7 +16,7 @@ int maze[ROWS][COLS] = {
 
 int startX = 0, startY = 0; // 시작 지점
 int endX = 4, endY = 4;     // 목표 지점
-int playerX = startX, playerY = startY; // 플레이어 위치
+int playerX = 0, playerY = 0; // 플레이어 초기 위치
 
 // 미로를 출력하는 함수
 void printMaze() {
@@ -56,6 +55,9 @@ void movePlayer(char direction) {
 
 int main() {
     char input;
+    playerX = startX; // 플레이어 초기 위치 설정
+    playerY = startY;
+
     while (1) {
         printMaze();
         if (playerX == endX && playerY == endY) {
