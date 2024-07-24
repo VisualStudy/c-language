@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>  // Windows용 헤더. Unix-like 시스템에서는 <ncurses.h> 사용
 
 #define ROWS 5
 #define COLS 5
@@ -13,17 +14,18 @@ int maze[ROWS][COLS] = {
     {0, 0, 0, 0, 0}
 };
 
-// 방문 배열: 방문한 위치를 기록합니다.
-int visited[ROWS][COLS] = { 0 };
-
 int startX = 0, startY = 0; // 시작 지점
 int endX = 4, endY = 4;     // 목표 지점
+int playerX = startX, playerY = startY; // 플레이어 위치
 
 // 미로를 출력하는 함수
 void printMaze() {
+    system("cls"); // 화면 지우기 (Windows용. Unix-like 시스템에서는 "clear")
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < COLS; j++) {
-            if (i == startX && j == startY)
+            if (i == playerX && j == playerY)
+                printf("P "); // 플레이어 위치 표시
+            else if (i == startX && j == startY)
                 printf("S ");
             else if (i == endX && j == endY)
                 printf("E ");
@@ -36,53 +38,33 @@ void printMaze() {
     }
 }
 
-// 미로를 해결하는 함수
-int solveMaze(int x, int y) {
-    if (x == endX && y == endY) { // 목표 지점에 도달하면
-        printf("목표 지점에 도달했습니다: (%d, %d)\n", x, y);
-        return 1;
+// 플레이어 이동 처리 함수
+void movePlayer(char direction) {
+    int newX = playerX, newY = playerY;
+    if (direction == 'w') newX--;
+    if (direction == 's') newX++;
+    if (direction == 'a') newY--;
+    if (direction == 'd') newY++;
+
+    // 이동 가능한지 확인
+    if (newX >= 0 && newX < ROWS && newY >= 0 && newY < COLS && maze[newX][newY] == 0) {
+        playerX = newX;
+        playerY = newY;
     }
-
-    // 범위를 벗어나거나, 벽이거나, 이미 방문한 경우
-    if (x < 0 || x >= ROWS || y < 0 || y >= COLS || maze[x][y] == 1 || visited[x][y]) {
-        return 0;
-    }
-
-    visited[x][y] = 1; // 현재 위치를 방문했다고 표시
-
-    // 오른쪽으로 이동
-    if (solveMaze(x, y + 1)) {
-        return 1;
-    }
-
-    // 아래쪽으로 이동
-    if (solveMaze(x + 1, y)) {
-        return 1;
-    }
-
-    // 왼쪽으로 이동
-    if (solveMaze(x, y - 1)) {
-        return 1;
-    }
-
-    // 위쪽으로 이동
-    if (solveMaze(x - 1, y)) {
-        return 1;
-    }
-
-    visited[x][y] = 0; // 다른 경로를 찾기 위해 현재 위치를 미방문 상태로 되돌림
-    return 0;
 }
 
 int main() {
-    printf("미로:\n");
-    printMaze();
+    char input;
+    while (1) {
+        printMaze();
+        if (playerX == endX && playerY == endY) {
+            printf("축하합니다! 목표 지점에 도달했습니다!\n");
+            break;
+        }
 
-    if (solveMaze(startX, startY)) {
-        printf("경로를 찾았습니다!\n");
-    }
-    else {
-        printf("경로를 찾지 못했습니다.\n");
+        input = getch(); // 방향키 입력 대기
+        if (input == 'q') break; // 'q' 입력시 게임 종료
+        movePlayer(input);
     }
 
     return 0;
