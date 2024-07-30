@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <time.h>   // 플레이 타임 계산
 #include <conio.h>  // Windows 전용 헤더 파일
 #include <string.h> // 문자열 비교를 위한 헤더 파일
 
