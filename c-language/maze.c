@@ -128,6 +128,7 @@ int main()
         scanf("%s", input);
 
         if (strcmp(input, "start") == 0) {
+            clock_t startTime = clock(); // 게임 시작 시간 기록
             while (1)
             {
                 initializeMaze();
@@ -143,11 +144,19 @@ int main()
                     if (playerX == endX && playerY == endY)
                     {
                         printf("축하합니다! 목표 지점에 도달했습니다!\n");
+                        clock_t endTime = clock(); // 게임 종료 시간 기록
+                        double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+                        printf("플레이 시간: %.2f 초\n", playTime);
                         break;
                     }
 
                     input[0] = _getch(); // 방향키 입력 대기
-                    if (input[0] == 'q') break; // 'q' 입력시 게임 종료
+                    if (input[0] == 'q') {
+                        clock_t endTime = clock(); // 게임 종료 시간 기록
+                        double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+                        printf("게임이 종료되었습니다. 플레이 시간: %.2f 초\n", playTime);
+                        break;
+                    }
                     movePlayer(input[0]);
                 }
 
@@ -157,7 +166,10 @@ int main()
                 scanf("%s", input);
 
                 if (strcmp(input, "quit") == 0) break;
-                else if (strcmp(input, "continue") == 0) continue;
+                else if (strcmp(input, "continue") == 0) {
+                    startTime = clock(); // 게임 다시 시작 시간 기록
+                    continue;
+                }
             }
         }
         else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) {
