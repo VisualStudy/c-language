@@ -1,8 +1,8 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <conio.h>  // Windows 전용 헤더 파일
+#include <string.h> // 문자열 비교를 위한 헤더 파일
 
 #define ROWS 10
 #define COLS 10
@@ -110,6 +110,12 @@ int main()
 {
     char input;
     srand(time(NULL));
+
+    printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
+    printf("사용자의 현재 위치는 'P'(player)로 표현됩니다.\n\n");
+    printf("목표는 목표 지점인 'E'(end point)까지 이동하는 것입니다.\n\n");
+    printf("언제든 게임을 종료하고 싶다면 'q'를 입력하여 빠져나갈 수 있습니다.\n\n");
+    printf("행운을 빕니다. Good Luck!\n\n\n\n\n");
 
     while (1)
     {
