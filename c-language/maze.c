@@ -30,6 +30,9 @@ void initializeMaze()
 }
 
 // 깊이 우선 탐색을 이용한 미로 생성 함수
+// DFS(Depth-First Search)를 이용하여 미로를 생성합니다.
+// 현재 위치에서 무작위로 방향을 선택하고, 해당 방향으로 2칸 이동하여 길을 만듭니다.
+// 이동한 위치에서 다시 무작위 방향으로 길을 만듭니다. 더 이상 이동할 수 없을 때까지 반복합니다.
 void generateMaze(int x, int y)
 {
     maze[x][y] = 0;
@@ -109,46 +112,61 @@ void movePlayer(char direction)
 
 int main()
 {
-    char input;
+    char input[10];
     srand(time(NULL));
 
     printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
     printf("사용자의 현재 위치는 'P'(player)로 표현됩니다.\n\n");
     printf("목표는 목표 지점인 'E'(end point)까지 이동하는 것입니다.\n\n");
-    printf("언제든 게임을 종료하고 싶다면 'q'를 입력하여 빠져나갈 수 있습니다.\n\n");
-    printf("행운을 빕니다. Good Luck!\n\n\n\n\n");
+    printf("언제든 게임을 종료하고 싶다면 'q'를 입력하여 종료하고 선택창으로 넘어갈 수 있습니다.\n\n");
+    printf("행운을 빕니다. Good Luck!\n\n");
+    printf("게임을 시작하려면 'start'를 입력하세요.\n");
+    printf("게임을 종료하려면 'quit' 또는 'q'를 입력하세요.\n");
 
     while (1)
     {
-        initializeMaze();
-        generateMaze(startX, startY);
-        setEndPoint(); // 목표 지점 설정
+        scanf("%s", input);
 
-        playerX = startX; // 플레이어 초기 위치 설정
-        playerY = startY;
-
-        while (1)
-        {
-            printMaze();
-            if (playerX == endX && playerY == endY)
+        if (strcmp(input, "start") == 0) {
+            while (1)
             {
-                printf("축하합니다! 목표 지점에 도달했습니다!\n");
-                break;
+                initializeMaze();
+                generateMaze(startX, startY);
+                setEndPoint(); // 목표 지점 설정
+
+                playerX = startX; // 플레이어 초기 위치 설정
+                playerY = startY;
+
+                while (1)
+                {
+                    printMaze();
+                    if (playerX == endX && playerY == endY)
+                    {
+                        printf("축하합니다! 목표 지점에 도달했습니다!\n");
+                        break;
+                    }
+
+                    input[0] = _getch(); // 방향키 입력 대기
+                    if (input[0] == 'q') break; // 'q' 입력시 게임 종료
+                    movePlayer(input[0]);
+                }
+
+                printf("게임을 종료하려면 'quit'를 입력하세요.\n");
+                printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
+
+                scanf("%s", input);
+
+                if (strcmp(input, "quit") == 0) break;
+                else if (strcmp(input, "continue") == 0) continue;
             }
-
-            input = _getch(); // 방향키 입력 대기
-            if (input == 'q') break; // 'q' 입력시 게임 종료
-            movePlayer(input);
         }
-
-        printf("게임을 종료하려면 'quit'를 입력하세요.\n");
-        printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
-
-        char command[10];
-        scanf("%s", command);
-
-        if (strcmp(command, "quit") == 0) break;
-        else if (strcmp(command, "continue") == 0) continue;
+        else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) {
+            printf("게임을 종료합니다.\n");
+            break;
+        }
+        else {
+            printf("잘못된 입력입니다. 'start' 또는 'quit'을 입력하세요.\n");
+        }
     }
 
     return 0;
