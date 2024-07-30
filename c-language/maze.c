@@ -110,30 +110,25 @@ int main()
     char input;
     srand(time(NULL));
 
+    initializeMaze();
+    generateMaze(startX, startY);
+    setEndPoint(); // 목표 지점 설정
+
+    playerX = startX; // 플레이어 초기 위치 설정
+    playerY = startY;
+
     while (1)
     {
-        initializeMaze();
-        generateMaze(startX, startY);
-        setEndPoint(); // 목표 지점 설정
-
-        playerX = startX; // 플레이어 초기 위치 설정
-        playerY = startY;
-
-        while (1)
+        printMaze();
+        if (playerX == endX && playerY == endY)
         {
-            printMaze();
-            if (playerX == endX && playerY == endY)
-            {
-                printf("축하합니다! 목표 지점에 도달했습니다!\n");
-                break;
-            }
-
-            input = _getch(); // 방향키 입력 대기
-            if (input == 'q') break; // 'q' 입력시 게임 종료
-            movePlayer(input);
+            printf("축하합니다! 목표 지점에 도달했습니다!\n");
+            break;
         }
 
-        if (input == 'q') break; // 게임 종료 확인
+        input = _getch(); // 방향키 입력 대기
+        if (input == 'q') break; // 'q' 입력시 게임 종료
+        movePlayer(input);
     }
 
     return 0;
