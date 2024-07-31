@@ -172,11 +172,13 @@ int main()
             printf("총 플레이 시간: %.2f 초\n", playTime);
             break;
         }
-        else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) {
+        else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) 
+        {
             printf("게임을 종료합니다.\n");
             break;
         }
-        else {
+        else 
+        {
             printf("잘못된 입력입니다. 'start' 또는 'quit'을 입력하세요.\n");
         }
     }
