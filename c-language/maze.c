@@ -7,6 +7,7 @@
 
 #define ROWS 10
 #define COLS 10
+#define TOTAL_LEVELS 5
 
 int maze[ROWS][COLS];
 int startX = 0, startY = 0; // 시작 지점
@@ -128,9 +129,16 @@ int main()
         scanf("%s", input);
 
         if (strcmp(input, "start") == 0) {
-            clock_t startTime = clock(); // 게임 시작 시간 기록
-            while (1)
-            {
+            clock_t startTime = clock(); // 전체 게임 시작 시간 기록
+            for (int level = 1; level <= TOTAL_LEVELS; level++) {
+                printf("%d단계 미로를 시작합니다.\n", level);
+                printf("미로를 시작하려면 'yes'를 입력하세요.\n");
+                while (1) {
+                    scanf("%s", input);
+                    if (strcmp(input, "yes") == 0) break;
+                    else printf("잘못된 입력입니다. 'yes'를 입력하세요.\n");
+                }
+
                 initializeMaze();
                 generateMaze(startX, startY);
                 setEndPoint(); // 목표 지점 설정
@@ -143,10 +151,7 @@ int main()
                     printMaze();
                     if (playerX == endX && playerY == endY)
                     {
-                        printf("축하합니다! 목표 지점에 도달했습니다!\n");
-                        clock_t endTime = clock(); // 게임 종료 시간 기록
-                        double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-                        printf("플레이 시간: %.2f 초\n", playTime);
+                        printf("축하합니다! %d단계 미로를 클리어했습니다!\n", level);
                         break;
                     }
 
@@ -154,23 +159,18 @@ int main()
                     if (input[0] == 'q') {
                         clock_t endTime = clock(); // 게임 종료 시간 기록
                         double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-                        printf("게임이 종료되었습니다. 플레이 시간: %.2f 초\n", playTime);
-                        break;
+                        printf("게임이 종료되었습니다. 총 플레이 시간: %.2f 초\n", playTime);
+                        return 0;
                     }
                     movePlayer(input[0]);
                 }
-
-                printf("게임을 종료하려면 'quit'를 입력하세요.\n");
-                printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
-
-                scanf("%s", input);
-
-                if (strcmp(input, "quit") == 0) break;
-                else if (strcmp(input, "continue") == 0) {
-                    startTime = clock(); // 게임 다시 시작 시간 기록
-                    continue;
-                }
             }
+
+            clock_t endTime = clock(); // 전체 게임 종료 시간 기록
+            double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+            printf("축하합니다! 모든 미로를 클리어했습니다!\n");
+            printf("총 플레이 시간: %.2f 초\n", playTime);
+            break;
         }
         else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) {
             printf("게임을 종료합니다.\n");
