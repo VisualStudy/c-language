@@ -93,8 +93,6 @@ void setEndPoint()
 // 미로를 출력하는 함수
 void printMaze()
 {
-    system("cls");
-
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -112,8 +110,13 @@ void printMaze()
         }
         printf("\n");
     }
+}
 
-    printf("\n사용자의 현재 위치는 'P'(player)로 표현됩니다.\n");
+// 게임 메시지를 출력하는 함수
+void printMessage(int level)
+{
+    printf("\n%d단계 미로입니다.\n", level);
+    printf("사용자의 현재 위치는 'P'(player)로 표현됩니다.\n");
     printf("목표는 목표 지점인 'E'(end point)까지 이동하는 것입니다.\n");
     printf("방향키를 이용하여 이동하세요 (w: 위, s: 아래, a: 왼쪽, d: 오른쪽).\n");
     printf("게임을 종료하려면 'q'를 입력하세요.\n");
@@ -130,8 +133,14 @@ void movePlayer(char direction)
 
     if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && maze[newX][newY] == 0)
     {
+        // 이전 위치 출력
+        printf("\033[%d;%dH□", playerX + 1, (playerY * 2) + 1);
+
         playerX = newX;
         playerY = newY;
+
+        // 새로운 위치 출력
+        printf("\033[%d;%dHP", playerX + 1, (playerY * 2) + 1);
     }
 }
 
@@ -173,7 +182,9 @@ int main()
                 playerX = startX;
                 playerY = startY;
 
+                system("cls");
                 printMaze();
+                printMessage(level);
 
                 while (1)
                 {
@@ -212,7 +223,6 @@ int main()
                         }
                     }
                     movePlayer(input[0]);
-                    printMaze();
                 }
 
                 freeMaze(maze, rows);
