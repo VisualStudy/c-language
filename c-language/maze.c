@@ -205,7 +205,7 @@ int main()
 
             clock_t endTime = clock(); // 전체 게임 종료 시간 기록
             double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-            printf("축하합니다! 모든 미로를 클리어했습니다!\n");
+            printf("\n\n축하합니다! 모든 미로를 클리어했습니다!\n");
             printf("총 플레이 시간: %.2f 초\n", playTime);
 
             while (1) 
