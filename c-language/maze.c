@@ -74,24 +74,20 @@ void setEndPoint()
 // 미로를 출력하는 함수
 void printMaze()
 {
-    system("cls"); // 화면 지우기 (Windows용. Unix-like 시스템에서는 "clear" 사용)
-    for (int i = 0; i < ROWS; i++)
-    {
-        for (int j = 0; j < COLS; j++)
-        {
-            if (i == playerX && j == playerY)
-                printf("P "); // 플레이어 위치 표시
-            else if (i == startX && j == startY)
-                printf("S ");
-            else if (i == endX && j == endY)
-                printf("E ");
-            else if (maze[i][j] == 0)
-                printf("□ ");
-            else
-                printf("■ ");
-        }
-        printf("\n");
+    // 화면 지우기 대신에, 현재 위치와 지우기 정보를 기록하여 변경된 부분만 업데이트
+    static int prevPlayerX = -1, prevPlayerY = -1;
+
+    if (prevPlayerX != -1 && prevPlayerY != -1) {
+        // 이전 플레이어 위치를 지움
+        printf("\033[%d;%dH□", prevPlayerX + 1, prevPlayerY * 2 + 1);
     }
+
+    // 새로운 플레이어 위치를 출력
+    printf("\033[%d;%dHP", playerX + 1, playerY * 2 + 1);
+
+    // 화면 커서 이동을 위한 위치 기록
+    prevPlayerX = playerX;
+    prevPlayerY = playerY;
 }
 
 // 플레이어 이동 처리 함수
@@ -146,6 +142,26 @@ int main()
                 playerX = startX; // 플레이어 초기 위치 설정
                 playerY = startY;
 
+                // 화면 초기화 및 미로 출력
+                system("cls");
+                for (int i = 0; i < ROWS; i++)
+                {
+                    for (int j = 0; j < COLS; j++)
+                    {
+                        if (i == playerX && j == playerY)
+                            printf("P ");
+                        else if (i == startX && j == startY)
+                            printf("S ");
+                        else if (i == endX && j == endY)
+                            printf("E ");
+                        else if (maze[i][j] == 0)
+                            printf("□ ");
+                        else
+                            printf("■ ");
+                    }
+                    printf("\n");
+                }
+
                 while (1)
                 {
                     printMaze();
@@ -160,7 +176,20 @@ int main()
                         clock_t endTime = clock(); // 게임 종료 시간 기록
                         double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
                         printf("게임이 종료되었습니다. 총 플레이 시간: %.2f 초\n", playTime);
-                        return 0;
+                        while (1) {
+                            printf("게임을 종료하려면 'quit'을 입력하세요.\n");
+                            printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
+                            scanf("%s", input);
+                            if (strcmp(input, "quit") == 0) return 0;
+                            else if (strcmp(input, "continue") == 0) {
+                                startTime = clock(); // 게임 다시 시작 시간 기록
+                                level = 1; // 첫 번째 단계부터 다시 시작
+                                break;
+                            }
+                            else {
+                                printf("잘못된 입력입니다. 'quit' 또는 'continue'를 입력하세요.\n");
+                            }
+                        }
                     }
                     movePlayer(input[0]);
                 }
@@ -170,14 +199,29 @@ int main()
             double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
             printf("축하합니다! 모든 미로를 클리어했습니다!\n");
             printf("총 플레이 시간: %.2f 초\n", playTime);
-            break;
+
+            while (1) {
+                printf("게임을 종료하려면 'quit'을 입력하세요.\n");
+                printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
+                scanf("%s", input);
+                if (strcmp(input, "quit") == 0) break;
+                else if (strcmp(input, "continue") == 0) {
+                    startTime = clock(); // 게임 다시 시작 시간 기록
+                    break;
+                }
+                else {
+                    printf("잘못된 입력입니다. 'quit' 또는 'continue'를 입력하세요.\n");
+                }
+            }
+
+            if (strcmp(input, "quit") == 0) break;
         }
-        else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) 
+        else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0)
         {
             printf("게임을 종료합니다.\n");
             break;
         }
-        else 
+        else
         {
             printf("잘못된 입력입니다. 'start' 또는 'quit'을 입력하세요.\n");
         }
