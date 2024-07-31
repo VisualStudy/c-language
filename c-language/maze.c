@@ -93,27 +93,7 @@ void setEndPoint()
 // 미로를 출력하는 함수
 void printMaze()
 {
-    static int prevPlayerX = -1, prevPlayerY = -1;
-
-    if (prevPlayerX != -1 && prevPlayerY != -1)
-    {
-        printf("\033[%d;%dH□", prevPlayerX + 1, prevPlayerY * 2 + 1);
-    }
-
-    printf("\033[%d;%dHP", playerX + 1, playerY * 2 + 1);
-
-    prevPlayerX = playerX;
-    prevPlayerY = playerY;
-}
-
-// 미로와 메시지를 출력하는 함수
-void display()
-{
     system("cls");
-    printf("사용자의 현재 위치는 'P'(player)로 표현됩니다.\n");
-    printf("목표는 목표 지점인 'E'(end point)까지 이동하는 것입니다.\n");
-    printf("방향키를 이용하여 이동하세요 (w: 위, s: 아래, a: 왼쪽, d: 오른쪽).\n");
-    printf("게임을 종료하려면 'q'를 입력하세요.\n\n");
 
     for (int i = 0; i < rows; i++)
     {
@@ -132,6 +112,11 @@ void display()
         }
         printf("\n");
     }
+
+    printf("\n사용자의 현재 위치는 'P'(player)로 표현됩니다.\n");
+    printf("목표는 목표 지점인 'E'(end point)까지 이동하는 것입니다.\n");
+    printf("방향키를 이용하여 이동하세요 (w: 위, s: 아래, a: 왼쪽, d: 오른쪽).\n");
+    printf("게임을 종료하려면 'q'를 입력하세요.\n");
 }
 
 // 플레이어 이동 처리 함수
@@ -156,10 +141,6 @@ int main()
     srand(time(NULL));
 
     printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
-    printf("사용자의 현재 위치는 'P'(player)로 표현됩니다.\n\n");
-    printf("목표는 목표 지점인 'E'(end point)까지 이동하는 것입니다.\n\n");
-    printf("언제든 게임을 종료하고 싶다면 'q'를 입력하여 종료하고 선택창으로 넘어갈 수 있습니다.\n\n");
-    printf("행운을 빕니다. Good Luck!\n\n");
     printf("게임을 시작하려면 'start'를 입력하세요.\n");
     printf("게임을 종료하려면 'quit' 또는 'q'를 입력하세요.\n");
 
@@ -192,7 +173,7 @@ int main()
                 playerX = startX;
                 playerY = startY;
 
-                display();
+                printMaze();
 
                 while (1)
                 {
