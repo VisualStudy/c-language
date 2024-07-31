@@ -166,7 +166,7 @@ int main()
                 cols = INITIAL_COLS + (level - 1) * LEVEL_INCREASE;
                 maze = createMaze(rows, cols);
 
-                printf("\n\n%d단계 미로를 시작합니다.\n", level);
+                printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%d단계 미로를 시작합니다.\n", level);
                 printf("미로를 시작하려면 'yes'를 입력하세요.\n");
                 while (1)
                 {
@@ -190,7 +190,7 @@ int main()
                 {
                     if (playerX == endX && playerY == endY)
                     {
-                        printf("\n\n축하합니다! %d단계 미로를 클리어했습니다!\n", level);
+                        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n축하합니다! %d단계 미로를 클리어했습니다!\n", level);
                         break;
                     }
 
