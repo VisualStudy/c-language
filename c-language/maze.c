@@ -171,7 +171,7 @@ int main()
                     printMaze();
                     if (playerX == endX && playerY == endY)
                     {
-                        printf("축하합니다! %d단계 미로를 클리어했습니다!\n", level);
+                        printf("\n\n축하합니다! %d단계 미로를 클리어했습니다!\n", level);
                         break;
                     }
 
