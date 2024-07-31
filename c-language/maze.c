@@ -21,48 +21,59 @@ int dx[] = { -1, 1, 0, 0 };
 int dy[] = { 0, 0, -1, 1 };
 
 // 동적 2차원 배열 생성 함수
-int** createMaze(int rows, int cols) {
+int** createMaze(int rows, int cols) 
+{
     int** maze = (int**)malloc(rows * sizeof(int*));
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++) 
+    {
         maze[i] = (int*)malloc(cols * sizeof(int));
     }
     return maze;
 }
 
 // 동적 2차원 배열 해제 함수
-void freeMaze(int** maze, int rows) {
-    for (int i = 0; i < rows; i++) {
+void freeMaze(int** maze, int rows) 
+{
+    for (int i = 0; i < rows; i++) 
+    {
         free(maze[i]);
     }
     free(maze);
 }
 
 // 미로를 초기화하는 함수
-void initializeMaze() {
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+void initializeMaze() 
+{
+    for (int i = 0; i < rows; i++) 
+    {
+        for (int j = 0; j < cols; j++) 
+        {
             maze[i][j] = 1; // 벽으로 초기화
         }
     }
 }
 
 // 깊이 우선 탐색을 이용한 미로 생성 함수
-void generateMaze(int x, int y) {
+void generateMaze(int x, int y) 
+{
     maze[x][y] = 0;
 
     int directions[4] = { 0, 1, 2, 3 };
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++) 
+    {
         int r = rand() % 4;
         int temp = directions[i];
         directions[i] = directions[r];
         directions[r] = temp;
     }
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++) 
+    {
         int nx = x + dx[directions[i]] * 2;
         int ny = y + dy[directions[i]] * 2;
 
-        if (nx >= 0 && nx < rows && ny >= 0 && ny < cols && maze[nx][ny] == 1) {
+        if (nx >= 0 && nx < rows && ny >= 0 && ny < cols && maze[nx][ny] == 1) 
+        {
             maze[x + dx[directions[i]]][y + dy[directions[i]]] = 0;
             generateMaze(nx, ny);
         }
@@ -70,18 +81,23 @@ void generateMaze(int x, int y) {
 }
 
 // 목표 지점 설정 함수
-void setEndPoint() {
-    do {
+void setEndPoint() 
+{
+    do 
+    {
         endX = rand() % (rows - 2) + 1;
         endY = rand() % (cols - 2) + 1;
     } while (maze[endX][endY] == 1 || (endX == startX && endY == startY));
 }
 
 // 미로를 출력하는 함수
-void printMaze() {
+void printMaze() 
+{
     system("cls");
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    for (int i = 0; i < rows; i++) 
+    {
+        for (int j = 0; j < cols; j++) 
+        {
             if (i == playerX && j == playerY)
                 printf("P ");
             else if (i == startX && j == startY)
@@ -98,20 +114,23 @@ void printMaze() {
 }
 
 // 플레이어 이동 처리 함수
-void movePlayer(char direction) {
+void movePlayer(char direction) 
+{
     int newX = playerX, newY = playerY;
     if (direction == 'w') newX--;
     if (direction == 's') newX++;
     if (direction == 'a') newY--;
     if (direction == 'd') newY++;
 
-    if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && maze[newX][newY] == 0) {
+    if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && maze[newX][newY] == 0) 
+    {
         playerX = newX;
         playerY = newY;
     }
 }
 
-int main() {
+int main() 
+{
     char input[10];
     srand(time(NULL));
 
@@ -123,19 +142,23 @@ int main() {
     printf("게임을 시작하려면 'start'를 입력하세요.\n");
     printf("게임을 종료하려면 'quit' 또는 'q'를 입력하세요.\n");
 
-    while (1) {
+    while (1) 
+    {
         scanf("%s", input);
 
-        if (strcmp(input, "start") == 0) {
+        if (strcmp(input, "start") == 0) 
+        {
             clock_t startTime = clock();
-            for (int level = 1; level <= TOTAL_LEVELS; level++) {
+            for (int level = 1; level <= TOTAL_LEVELS; level++) 
+            {
                 rows = INITIAL_ROWS + (level - 1) * LEVEL_INCREASE;
                 cols = INITIAL_COLS + (level - 1) * LEVEL_INCREASE;
                 maze = createMaze(rows, cols);
 
                 printf("\n\n%d단계 미로를 시작합니다.\n", level);
                 printf("미로를 시작하려면 'yes'를 입력하세요.\n");
-                while (1) {
+                while (1) 
+                {
                     scanf("%s", input);
                     if (strcmp(input, "yes") == 0) break;
                     else printf("잘못된 입력입니다. 'yes'를 입력하세요.\n");
@@ -150,31 +173,38 @@ int main() {
 
                 printMaze();
 
-                while (1) {
-                    if (playerX == endX && playerY == endY) {
+                while (1) 
+                {
+                    if (playerX == endX && playerY == endY) 
+                    {
                         printf("\n\n축하합니다! %d단계 미로를 클리어했습니다!\n", level);
                         break;
                     }
 
                     input[0] = _getch();
-                    if (input[0] == 'q') {
+                    if (input[0] == 'q') 
+                    {
                         clock_t endTime = clock();
                         double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
                         printf("\n\n게임이 종료되었습니다. 총 플레이 시간: %.2f 초\n", playTime);
-                        while (1) {
+                        while (1) 
+                        {
                             printf("게임을 종료하려면 'quit'을 입력하세요.\n");
                             printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
                             scanf("%s", input);
-                            if (strcmp(input, "quit") == 0) {
+                            if (strcmp(input, "quit") == 0) 
+                            {
                                 freeMaze(maze, rows);
                                 return 0;
                             }
-                            else if (strcmp(input, "continue") == 0) {
+                            else if (strcmp(input, "continue") == 0) 
+                            {
                                 startTime = clock();
                                 level = 1;
                                 break;
                             }
-                            else {
+                            else 
+                            {
                                 printf("잘못된 입력입니다. 'quit' 또는 'continue'를 입력하세요.\n");
                             }
                         }
@@ -191,27 +221,32 @@ int main() {
             printf("\n\n축하합니다! 모든 미로를 클리어했습니다!\n");
             printf("총 플레이 시간: %.2f 초\n", playTime);
 
-            while (1) {
+            while (1) 
+            {
                 printf("게임을 종료하려면 'quit'을 입력하세요.\n");
                 printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
                 scanf("%s", input);
                 if (strcmp(input, "quit") == 0) break;
-                else if (strcmp(input, "continue") == 0) {
+                else if (strcmp(input, "continue") == 0) 
+                {
                     startTime = clock();
                     break;
                 }
-                else {
+                else 
+                {
                     printf("잘못된 입력입니다. 'quit' 또는 'continue'를 입력하세요.\n");
                 }
             }
 
             if (strcmp(input, "quit") == 0) break;
         }
-        else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) {
+        else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0) 
+        {
             printf("게임을 종료합니다.\n");
             break;
         }
-        else {
+        else 
+        {
             printf("잘못된 입력입니다. 'start' 또는 'quit'을 입력하세요.\n");
         }
     }
