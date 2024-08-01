@@ -4,6 +4,7 @@
 #include <time.h>
 #include <conio.h>
 #include <string.h>
+#include <windows.h> // 커서 숨기기 위해 필요
 
 #define INITIAL_ROWS 10
 #define INITIAL_COLS 10
@@ -90,6 +91,26 @@ void setEndPoint()
     } while (maze[endX][endY] == 1 || (endX == startX && endY == startY));
 }
 
+// 커서 숨기기 함수
+void hideCursor()
+{
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_CURSOR_INFO info;
+    info.dwSize = 100;
+    info.bVisible = FALSE;
+    SetConsoleCursorInfo(consoleHandle, &info);
+}
+
+// 커서 위치 설정 함수
+void setCursorPosition(int x, int y)
+{
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD cursorPosition;
+    cursorPosition.X = y * 2;
+    cursorPosition.Y = x;
+    SetConsoleCursorPosition(consoleHandle, cursorPosition);
+}
+
 // 미로를 출력하는 함수
 void printMaze()
 {
@@ -134,13 +155,15 @@ void movePlayer(char direction)
     if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && maze[newX][newY] == 0)
     {
         // 이전 위치 출력
-        printf("\033[%d;%dH□", playerX + 1, (playerY * 2) + 1);
+        setCursorPosition(playerX, playerY);
+        printf("□");
 
         playerX = newX;
         playerY = newY;
 
         // 새로운 위치 출력
-        printf("\033[%d;%dHP", playerX + 1, (playerY * 2) + 1);
+        setCursorPosition(playerX, playerY);
+        printf("P");
     }
 }
 
@@ -148,6 +171,8 @@ int main()
 {
     char input[10];
     srand(time(NULL));
+
+    hideCursor(); // 커서 숨기기
 
     printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
     printf("게임을 시작하려면 'start'를 입력하세요.\n");
