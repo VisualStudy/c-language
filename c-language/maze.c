@@ -5,11 +5,13 @@
 #include <conio.h>
 #include <string.h>
 #include <windows.h> // 커서 숨기기 위해 필요
+#include <stdbool.h> // bool 타입 사용을 위해 필요
 
 #define INITIAL_ROWS 10
 #define INITIAL_COLS 10
 #define TOTAL_LEVELS 5
 #define LEVEL_INCREASE 2 // 단계당 증가할 미로 크기 (제한)
+#define MIN_DISTANCE 10 // 시작 지점과 목표 지점 사이의 최소 거리
 
 int** maze;
 int startX = 0, startY = 0;
@@ -81,14 +83,65 @@ void generateMaze(int x, int y)
     }
 }
 
-// 목표 지점 설정 함수
+// 목표 지점 설정 함수 (최소 거리 보장)
 void setEndPoint()
 {
-    do
+    int** distances = createMaze(rows, cols);
+    for (int i = 0; i < rows; i++)
     {
-        endX = rand() % (rows - 2) + 1;
-        endY = rand() % (cols - 2) + 1;
-    } while (maze[endX][endY] == 1 || (endX == startX && endY == startY));
+        for (int j = 0; j < cols; j++)
+        {
+            distances[i][j] = -1;
+        }
+    }
+
+    // BFS를 사용하여 시작 지점에서 모든 지점까지의 최단 거리 계산
+    int queueX[rows * cols];
+    int queueY[rows * cols];
+    int front = 0, rear = 0;
+
+    queueX[rear] = startX;
+    queueY[rear] = startY;
+    rear++;
+    distances[startX][startY] = 0;
+
+    while (front < rear)
+    {
+        int x = queueX[front];
+        int y = queueY[front];
+        front++;
+
+        for (int i = 0; i < 4; i++)
+        {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (nx >= 0 && nx < rows && ny >= 0 && ny < cols && maze[nx][ny] == 0 && distances[nx][ny] == -1)
+            {
+                distances[nx][ny] = distances[x][y] + 1;
+                queueX[rear] = nx;
+                queueY[rear] = ny;
+                rear++;
+            }
+        }
+    }
+
+    // 최소 거리를 만족하는 목표 지점 찾기
+    int maxDist = 0;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            if (distances[i][j] >= MIN_DISTANCE && distances[i][j] > maxDist)
+            {
+                maxDist = distances[i][j];
+                endX = i;
+                endY = j;
+            }
+        }
+    }
+
+    freeMaze(distances, rows);
 }
 
 // 커서 숨기기 함수
