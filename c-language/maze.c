@@ -9,7 +9,7 @@
 #define INITIAL_ROWS 10
 #define INITIAL_COLS 10
 #define TOTAL_LEVELS 5
-#define LEVEL_INCREASE 5 // 단계당 증가할 미로 크기
+#define LEVEL_INCREASE 2 // 단계당 증가할 미로 크기 (제한)
 
 int** maze;
 int startX = 0, startY = 0;
@@ -101,6 +101,16 @@ void hideCursor()
     SetConsoleCursorInfo(consoleHandle, &info);
 }
 
+// 커서 보이기 함수
+void showCursor()
+{
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_CURSOR_INFO info;
+    info.dwSize = 100;
+    info.bVisible = TRUE;
+    SetConsoleCursorInfo(consoleHandle, &info);
+}
+
 // 커서 위치 설정 함수
 void setCursorPosition(int x, int y)
 {
@@ -114,6 +124,7 @@ void setCursorPosition(int x, int y)
 // 미로를 출력하는 함수
 void printMaze()
 {
+    setCursorPosition(0, 0); // 출력 시작 위치로 커서 이동
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -156,14 +167,14 @@ void movePlayer(char direction)
     {
         // 이전 위치 출력
         setCursorPosition(playerX, playerY);
-        printf("□");
+        printf("□ ");
 
         playerX = newX;
         playerY = newY;
 
         // 새로운 위치 출력
         setCursorPosition(playerX, playerY);
-        printf("P");
+        printf("P ");
     }
 }
 
@@ -172,14 +183,13 @@ int main()
     char input[10];
     srand(time(NULL));
 
-    hideCursor(); // 커서 숨기기
-
     printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
     printf("게임을 시작하려면 'start'를 입력하세요.\n");
     printf("게임을 종료하려면 'quit' 또는 'q'를 입력하세요.\n");
 
     while (1)
     {
+        showCursor(); // 입력 받을 때 커서 보이기
         scanf("%s", input);
 
         if (strcmp(input, "start") == 0)
@@ -210,6 +220,7 @@ int main()
                 system("cls");
                 printMaze();
                 printMessage(level);
+                hideCursor(); // 게임 중 커서 숨기기
 
                 while (1)
                 {
@@ -229,6 +240,7 @@ int main()
                         {
                             printf("게임을 종료하려면 'quit'을 입력하세요.\n");
                             printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
+                            showCursor(); // 입력 받을 때 커서 보이기
                             scanf("%s", input);
                             if (strcmp(input, "quit") == 0)
                             {
@@ -262,6 +274,7 @@ int main()
             {
                 printf("게임을 종료하려면 'quit'을 입력하세요.\n");
                 printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
+                showCursor(); // 입력 받을 때 커서 보이기
                 scanf("%s", input);
                 if (strcmp(input, "quit") == 0) break;
                 else if (strcmp(input, "continue") == 0)
