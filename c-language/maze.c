@@ -96,8 +96,8 @@ void setEndPoint()
     }
 
     // BFS를 사용하여 시작 지점에서 모든 지점까지의 최단 거리 계산
-    int queueX[rows * cols];
-    int queueY[rows * cols];
+    int* queueX = (int*)malloc(rows * cols * sizeof(int));
+    int* queueY = (int*)malloc(rows * cols * sizeof(int));
     int front = 0, rear = 0;
 
     queueX[rear] = startX;
@@ -141,6 +141,8 @@ void setEndPoint()
         }
     }
 
+    free(queueX);
+    free(queueY);
     freeMaze(distances, rows);
 }
 
