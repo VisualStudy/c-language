@@ -178,18 +178,23 @@ void movePlayer(char direction)
     }
 }
 
+void printWelcomeMessage()
+{
+    printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
+    printf("게임을 시작하려면 'start'를 입력하세요.\n");
+    printf("게임을 종료하려면 'quit' 또는 'q'를 입력하세요.\n");
+}
+
 int main()
 {
     char input[10];
     srand(time(NULL));
 
-    printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
-    printf("게임을 시작하려면 'start'를 입력하세요.\n");
-    printf("게임을 종료하려면 'quit' 또는 'q'를 입력하세요.\n");
-
     while (1)
     {
         showCursor(); // 입력 받을 때 커서 보이기
+        printWelcomeMessage(); // 초기 메시지 출력
+
         scanf("%s", input);
 
         if (strcmp(input, "start") == 0)
@@ -201,7 +206,8 @@ int main()
                 cols = INITIAL_COLS + (level - 1) * LEVEL_INCREASE;
                 maze = createMaze(rows, cols);
 
-                printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%d단계 미로를 시작합니다.\n", level);
+                system("cls");
+                printf("%d단계 미로를 시작합니다.\n", level);
                 printf("미로를 시작하려면 'yes'를 입력하세요.\n");
                 while (1)
                 {
@@ -249,8 +255,9 @@ int main()
                             }
                             else if (strcmp(input, "continue") == 0)
                             {
+                                system("cls");
                                 startTime = clock();
-                                level = 1;
+                                level = 0; // level을 0으로 설정하여 for 루프에서 1부터 다시 시작
                                 break;
                             }
                             else
@@ -276,9 +283,14 @@ int main()
                 printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
                 showCursor(); // 입력 받을 때 커서 보이기
                 scanf("%s", input);
-                if (strcmp(input, "quit") == 0) break;
+                if (strcmp(input, "quit") == 0)
+                {
+                    system("cls");
+                    break;
+                }
                 else if (strcmp(input, "continue") == 0)
                 {
+                    system("cls");
                     startTime = clock();
                     break;
                 }
