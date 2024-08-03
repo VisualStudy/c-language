@@ -12,12 +12,15 @@
 #define TOTAL_LEVELS 5
 #define LEVEL_INCREASE 2 // 단계당 증가할 미로 크기 (제한)
 #define MIN_DISTANCE 10 // 시작 지점과 목표 지점 사이의 최소 거리
+#define CHALLENGE_COUNT 10 // 챌린지 단계 수
+#define ROUND_COUNT 10 // 라운드 단계 수
 
 int** maze;
 int startX = 0, startY = 0;
 int endX, endY;
 int playerX = 0, playerY = 0;
 int rows, cols;
+char input[10];
 
 // 상하좌우 방향 정의
 int dx[] = { -1, 1, 0, 0 };
@@ -233,6 +236,7 @@ void movePlayer(char direction)
     }
 }
 
+// 환영 메시지 출력 함수
 void printWelcomeMessage()
 {
     printf("콘로(콘솔 미로)에 오신 것을 환영합니다!\n\n");
@@ -240,131 +244,91 @@ void printWelcomeMessage()
     printf("게임을 종료하려면 'quit' 또는 'q'를 입력하세요.\n");
 }
 
+// 숨겨진 메시지를 출력하는 함수
+void printSecretMessage()
+{
+    // 숨겨진 메시지 출력 코드 위치
+    printf("정말로 끝이라고 생각하나?\n");
+    printf("이렇게 시시하게 끝낼 생각이었다면 시작도 안 했다.\n");
+    printf("유희는 끝. 제대로 해보자고.");
+}
+
+// 메인 게임 루프
+void gameLoop()
+{
+    int level = 1;
+    while (level <= TOTAL_LEVELS)
+    {
+        rows = INITIAL_ROWS + (level - 1) * LEVEL_INCREASE;
+        cols = INITIAL_COLS + (level - 1) * LEVEL_INCREASE;
+
+        maze = createMaze(rows, cols);
+        initializeMaze();
+        generateMaze(startX, startY);
+        setEndPoint();
+
+        playerX = startX;
+        playerY = startY;
+
+        system("cls"); // 콘솔 화면을 지웁니다
+        hideCursor();
+        printMaze();
+        printMessage(level);
+
+        while (1)
+        {
+            if (_kbhit())
+            {
+                char direction = _getch();
+                if (direction == 'q')
+                {
+                    showCursor();
+                    freeMaze(maze, rows);
+                    printf("\n게임이 종료되었습니다.\n");
+                    return;
+                }
+                movePlayer(direction);
+
+                if (playerX == endX && playerY == endY)
+                {
+                    showCursor();
+                    printf("\n%d단계를 완료하였습니다!\n", level);
+                    freeMaze(maze, rows);
+                    level++;
+                    break;
+                }
+            }
+        }
+    }
+
+    showCursor();
+    printSecretMessage(); // 모든 단계를 완료했을 때 숨겨진 메시지 출력
+    printf("\n축하합니다! 모든 단계를 완료하였습니다!\n");
+}
+
 int main()
 {
-    char input[10];
-    srand(time(NULL));
+    srand((unsigned int)time(NULL));
+    printWelcomeMessage();
 
     while (1)
     {
-        showCursor(); // 입력 받을 때 커서 보이기
-        printWelcomeMessage(); // 초기 메시지 출력
-
+        printf("\n명령을 입력하세요: ");
         scanf("%s", input);
 
         if (strcmp(input, "start") == 0)
         {
-            clock_t startTime = clock();
-            for (int level = 1; level <= TOTAL_LEVELS; level++)
-            {
-                rows = INITIAL_ROWS + (level - 1) * LEVEL_INCREASE;
-                cols = INITIAL_COLS + (level - 1) * LEVEL_INCREASE;
-                maze = createMaze(rows, cols);
-
-                system("cls");
-                printf("%d단계 미로를 시작합니다.\n", level);
-                printf("미로를 시작하려면 'yes'를 입력하세요.\n");
-                while (1)
-                {
-                    scanf("%s", input);
-                    if (strcmp(input, "yes") == 0) break;
-                    else printf("잘못된 입력입니다. 'yes'를 입력하세요.\n");
-                }
-
-                initializeMaze();
-                generateMaze(startX, startY);
-                setEndPoint();
-
-                playerX = startX;
-                playerY = startY;
-
-                system("cls");
-                printMaze();
-                printMessage(level);
-                hideCursor(); // 게임 중 커서 숨기기
-
-                while (1)
-                {
-                    if (playerX == endX && playerY == endY)
-                    {
-                        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n축하합니다! %d단계 미로를 클리어했습니다!\n", level);
-                        break;
-                    }
-
-                    input[0] = _getch();
-                    if (input[0] == 'q')
-                    {
-                        clock_t endTime = clock();
-                        double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-                        printf("\n\n게임이 종료되었습니다. 총 플레이 시간: %.2f 초\n", playTime);
-                        while (1)
-                        {
-                            printf("게임을 종료하려면 'quit'을 입력하세요.\n");
-                            printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
-                            showCursor(); // 입력 받을 때 커서 보이기
-                            scanf("%s", input);
-                            if (strcmp(input, "quit") == 0)
-                            {
-                                freeMaze(maze, rows);
-                                return 0;
-                            }
-                            else if (strcmp(input, "continue") == 0)
-                            {
-                                system("cls");
-                                startTime = clock();
-                                level = 0; // level을 0으로 설정하여 for 루프에서 1부터 다시 시작
-                                break;
-                            }
-                            else
-                            {
-                                printf("잘못된 입력입니다. 'quit' 또는 'continue'를 입력하세요.\n");
-                            }
-                        }
-                    }
-                    movePlayer(input[0]);
-                }
-
-                freeMaze(maze, rows);
-            }
-
-            clock_t endTime = clock();
-            double playTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
-            printf("\n\n축하합니다! 모든 미로를 클리어했습니다!\n");
-            printf("총 플레이 시간: %.2f 초\n", playTime);
-
-            while (1)
-            {
-                printf("게임을 종료하려면 'quit'을 입력하세요.\n");
-                printf("게임을 다시 시작하려면 'continue'를 입력하세요.\n");
-                showCursor(); // 입력 받을 때 커서 보이기
-                scanf("%s", input);
-                if (strcmp(input, "quit") == 0)
-                {
-                    system("cls");
-                    break;
-                }
-                else if (strcmp(input, "continue") == 0)
-                {
-                    system("cls");
-                    startTime = clock();
-                    break;
-                }
-                else
-                {
-                    printf("잘못된 입력입니다. 'quit' 또는 'continue'를 입력하세요.\n");
-                }
-            }
-
-            if (strcmp(input, "quit") == 0) break;
+            gameLoop();
+            break;
         }
         else if (strcmp(input, "quit") == 0 || strcmp(input, "q") == 0)
         {
-            printf("게임을 종료합니다.\n");
+            printf("게임이 종료되었습니다.\n");
             break;
         }
         else
         {
-            printf("잘못된 입력입니다. 'start' 또는 'quit'을 입력하세요.\n");
+            printf("알 수 없는 명령입니다. 다시 시도하세요.\n");
         }
     }
 
