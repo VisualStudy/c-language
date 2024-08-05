@@ -193,7 +193,7 @@ void printMaze()
             else if (maze[i][j] == 0)
                 printf("□ ");
             else
-                printf("■ ");
+                printf("■ "); // ㅁ한자에서 아스키 코드 검색
         }
         printf("\n");
     }
