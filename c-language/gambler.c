@@ -7,6 +7,7 @@
 void toss(int stage);
 void checkResult(int coinState, int stage);
 void finalMessage();
+void resetGame();
 
 int main()
 {
@@ -61,8 +62,17 @@ void toss(int stage)
 void checkResult(int coinState, int stage)
 {
     char guess[10];
+    const char* stageName = stage <= 5 ? "단계" : "Challenge";
 
-    printf("\n%d단계: 동전의 앞뒷면을 맞춰보세요 ('앞면' 또는 '뒷면'을 입력하세요): ", stage);
+    if (stage > 5)
+    {
+        printf("\n%s %d: 동전의 앞뒷면을 맞춰보세요 ('앞면' 또는 '뒷면'을 입력하세요): ", stageName, stage - 5);
+    }
+    else
+    {
+        printf("\n%d단계: 동전의 앞뒷면을 맞춰보세요 ('앞면' 또는 '뒷면'을 입력하세요): ", stage);
+    }
+
     scanf("%s", guess);
 
     if ((coinState == 1 && strcmp(guess, "앞면") == 0) ||
@@ -72,9 +82,15 @@ void checkResult(int coinState, int stage)
     }
     else
     {
-        printf("오답입니다! 다시 처음부터 시작하세요.\n");
-        main(); // 게임을 처음부터 다시 시작
-        exit(0);
+        if (stage > 5)
+        {
+            printf("그대는 이치를 극복하지 못했다...\n");
+        }
+        else
+        {
+            printf("오답입니다! 다시 처음부터 시작하세요.\n");
+        }
+        resetGame();
     }
 
     if (stage == 10)
@@ -85,5 +101,18 @@ void checkResult(int coinState, int stage)
 
 void finalMessage()
 {
-    printf("\n축하합니다! 10단계를 모두 클리어했습니다!\n");
+    char decision[4];
+    printf("\n그대는 집념을 보여 이치를 부수었으니.. 이를 기억하여 나아가라! (yes를 입력하면 종료): ");
+    scanf("%s", decision);
+    if (strcmp(decision, "yes") == 0)
+    {
+        printf("게임을 종료합니다.\n");
+        exit(0);
+    }
+}
+
+void resetGame()
+{
+    main();
+    exit(0);
 }
