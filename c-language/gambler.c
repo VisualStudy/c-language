@@ -106,7 +106,7 @@ void finalMessage()
     scanf("%s", decision);
     if (strcmp(decision, "yes") == 0)
     {
-        printf("게임을 종료합니다.\n");
+        printf("세계의 끝에 도달했다.\n");
         exit(0);
     }
 }
