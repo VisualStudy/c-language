@@ -4,7 +4,8 @@
 #include <string.h>
 #include <time.h>
 
-typedef struct {
+typedef struct 
+{
     char name[50];
     int level;
     int hp;
@@ -15,7 +16,8 @@ typedef struct {
     int gold;
 } Character;
 
-typedef struct {
+typedef struct 
+{
     char name[50];
     int hp;
     int max_hp;
@@ -25,7 +27,8 @@ typedef struct {
     int gold_reward;
 } Enemy;
 
-void explainWorld() {
+void explainWorld() 
+{
     printf("======================================\n");
 
     printf("======================================\n\n");
@@ -47,7 +50,8 @@ void createCharacter(Character* player) {
     printf("환영합니다, %s!\n", player->name);
 }
 
-void createEnemy(Enemy* enemy, int player_level) {
+void createEnemy(Enemy* enemy, int player_level) 
+{
     strcpy(enemy->name, "고블린");
     enemy->max_hp = 50 + rand() % 20 + player_level * 5;
     enemy->hp = enemy->max_hp;
@@ -57,8 +61,10 @@ void createEnemy(Enemy* enemy, int player_level) {
     enemy->gold_reward = 10 + rand() % 10 + player_level * 2;
 }
 
-void levelUp(Character* player) {
-    if (player->experience >= player->level * 100) {
+void levelUp(Character* player) 
+{
+    if (player->experience >= player->level * 100) 
+    {
         player->level++;
         player->max_hp += 20;
         player->hp = player->max_hp;
@@ -70,17 +76,20 @@ void levelUp(Character* player) {
     }
 }
 
-void battle(Character* player, Enemy* enemy) {
+void battle(Character* player, Enemy* enemy) 
+{
     printf("\n전투가 시작되었습니다! %s vs %s\n", player->name, enemy->name);
 
-    while (player->hp > 0 && enemy->hp > 0) {
+    while (player->hp > 0 && enemy->hp > 0) 
+    {
         int player_damage = player->attack - enemy->defense;
         if (player_damage < 0) player_damage = 0;
         enemy->hp -= player_damage;
         printf("%s이(가) %s에게 %d의 피해를 입혔습니다! %s의 HP: %d/%d\n",
             player->name, enemy->name, player_damage, enemy->name, enemy->hp, enemy->max_hp);
 
-        if (enemy->hp <= 0) {
+        if (enemy->hp <= 0) 
+        {
             printf("%s이(가) 승리했습니다!\n", player->name);
             player->experience += enemy->experience_reward;
             player->gold += enemy->gold_reward;
@@ -95,7 +104,8 @@ void battle(Character* player, Enemy* enemy) {
         printf("%s이(가) %s에게 %d의 피해를 입혔습니다! %s의 HP: %d/%d\n",
             enemy->name, player->name, enemy_damage, player->name, player->hp, player->max_hp);
 
-        if (player->hp <= 0) {
+        if (player->hp <= 0) 
+        {
             printf("%s이(가) 쓰러졌습니다...\n", player->name);
             printf("게임 오버!\n");
             exit(0);
@@ -103,7 +113,8 @@ void battle(Character* player, Enemy* enemy) {
     }
 }
 
-void adventure(Character* player) {
+void adventure(Character* player) 
+{
     printf("\n모험을 떠납니다...\n");
 
     Enemy enemy;
@@ -111,10 +122,12 @@ void adventure(Character* player) {
     battle(player, &enemy);
 }
 
-void gameLoop(Character* player) {
+void gameLoop(Character* player) 
+{
     int choice;
 
-    while (1) {
+    while (1) 
+    {
         printf("\n무엇을 하시겠습니까?\n");
         printf("1. 모험 떠나기\n");
         printf("2. 내 상태 보기\n");
@@ -123,7 +136,8 @@ void gameLoop(Character* player) {
         scanf("%d", &choice);
         getchar();
 
-        switch (choice) {
+        switch (choice) 
+        {
         case 1:
             adventure(player);
             break;
@@ -145,7 +159,8 @@ void gameLoop(Character* player) {
     }
 }
 
-int main() {
+int main() 
+{
     srand(time(NULL));
 
     explainWorld(); // 세계관 설명 출력
