@@ -25,6 +25,12 @@ typedef struct {
     int gold_reward;
 } Enemy;
 
+void explainWorld() {
+    printf("======================================\n");
+
+    printf("======================================\n\n");
+}
+
 void createCharacter(Character* player) {
     printf("캐릭터 이름을 입력하세요: ");
     fgets(player->name, 50, stdin);
@@ -141,8 +147,10 @@ void gameLoop(Character* player) {
 
 int main() {
     srand(time(NULL));
-    Character player;
 
+    explainWorld(); // 세계관 설명 출력
+
+    Character player;
     createCharacter(&player);
     gameLoop(&player);
 
