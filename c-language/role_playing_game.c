@@ -4,7 +4,7 @@
 #include <string.h>
 #include <time.h>
 
-typedef struct 
+typedef struct
 {
     char name[50];
     int level;
@@ -14,9 +14,10 @@ typedef struct
     int defense;
     int experience;
     int gold;
+    int potions; // 회복 아이템 수량
 } Character;
 
-typedef struct 
+typedef struct
 {
     char name[50];
     int hp;
@@ -25,9 +26,10 @@ typedef struct
     int defense;
     int experience_reward;
     int gold_reward;
+    int drop_potion_chance; // 포션 드롭 확률
 } Enemy;
 
-void explainWorld() 
+void explainWorld()
 {
     printf("======================================\n");
     printf("푸른 녹음과 맑고 청명한 물줄기가 가로지르는 아름다운 땅, 엘라\n\n");
@@ -38,7 +40,8 @@ void explainWorld()
     printf("======================================\n\n");
 }
 
-void createCharacter(Character* player) {
+void createCharacter(Character* player)
+{
     printf("캐릭터 이름을 입력하세요: ");
     fgets(player->name, 50, stdin);
     player->name[strcspn(player->name, "\n")] = '\0';
@@ -50,11 +53,12 @@ void createCharacter(Character* player) {
     player->defense = 5;
     player->experience = 0;
     player->gold = 0;
+    player->potions = 1; // 초기 포션 1개 지급
 
     printf("환영합니다, %s!\n", player->name);
 }
 
-void createEnemy(Enemy* enemy, int player_level) 
+void createEnemy(Enemy* enemy, int player_level)
 {
     strcpy(enemy->name, "고블린");
     enemy->max_hp = 50 + rand() % 20 + player_level * 5;
@@ -63,11 +67,12 @@ void createEnemy(Enemy* enemy, int player_level)
     enemy->defense = 3 + rand() % 3 + player_level;
     enemy->experience_reward = 20 + rand() % 10 + player_level * 5;
     enemy->gold_reward = 10 + rand() % 10 + player_level * 2;
+    enemy->drop_potion_chance = 20; // 포션 드롭 확률 20%
 }
 
-void levelUp(Character* player) 
+void levelUp(Character* player)
 {
-    if (player->experience >= player->level * 100) 
+    if (player->experience >= player->level * 100)
     {
         player->level++;
         player->max_hp += 20;
@@ -80,11 +85,25 @@ void levelUp(Character* player)
     }
 }
 
-void battle(Character* player, Enemy* enemy) 
+void usePotion(Character* player)
+{
+    if (player->potions > 0)
+    {
+        player->hp = player->max_hp;
+        player->potions--;
+        printf("%s이(가) 포션을 사용하여 HP를 전부 회복했습니다! 남은 포션: %d\n", player->name, player->potions);
+    }
+    else
+    {
+        printf("포션이 없습니다!\n");
+    }
+}
+
+void battle(Character* player, Enemy* enemy)
 {
     printf("\n전투가 시작되었습니다! %s vs %s\n", player->name, enemy->name);
 
-    while (player->hp > 0 && enemy->hp > 0) 
+    while (player->hp > 0 && enemy->hp > 0)
     {
         int player_damage = player->attack - enemy->defense;
         if (player_damage < 0) player_damage = 0;
@@ -92,13 +111,19 @@ void battle(Character* player, Enemy* enemy)
         printf("%s이(가) %s에게 %d의 피해를 입혔습니다! %s의 HP: %d/%d\n",
             player->name, enemy->name, player_damage, enemy->name, enemy->hp, enemy->max_hp);
 
-        if (enemy->hp <= 0) 
+        if (enemy->hp <= 0)
         {
             printf("%s이(가) 승리했습니다!\n", player->name);
             player->experience += enemy->experience_reward;
             player->gold += enemy->gold_reward;
             printf("경험치 +%d, 골드 +%d\n", enemy->experience_reward, enemy->gold_reward);
             levelUp(player);
+
+            if (rand() % 100 < enemy->drop_potion_chance)
+            {
+                player->potions++;
+                printf("포션을 획득했습니다! 현재 포션 수량: %d\n", player->potions);
+            }
             break;
         }
 
@@ -108,7 +133,7 @@ void battle(Character* player, Enemy* enemy)
         printf("%s이(가) %s에게 %d의 피해를 입혔습니다! %s의 HP: %d/%d\n",
             enemy->name, player->name, enemy_damage, player->name, player->hp, player->max_hp);
 
-        if (player->hp <= 0) 
+        if (player->hp <= 0)
         {
             printf("%s이(가) 쓰러졌습니다...\n", player->name);
             printf("게임 오버!\n");
@@ -117,7 +142,22 @@ void battle(Character* player, Enemy* enemy)
     }
 }
 
-void adventure(Character* player) 
+void tutorial(Character* player)
+{
+    printf("\n[튜토리얼]\n");
+    printf("이곳은 엘라의 작은 마을입니다.\n");
+    printf("당신은 마을 밖으로 나가 모험을 시작할 준비가 되었습니다.\n");
+    printf("우선 기본적인 전투 방법을 배워봅시다.\n");
+
+    Enemy enemy;
+    createEnemy(&enemy, player->level);
+    battle(player, &enemy);
+
+    printf("\n좋습니다! 전투에서 승리했습니다.\n");
+    printf("이제부터 진정한 모험을 시작할 수 있습니다.\n");
+}
+
+void adventure(Character* player)
 {
     printf("\n모험을 떠납니다...\n");
 
@@ -126,21 +166,22 @@ void adventure(Character* player)
     battle(player, &enemy);
 }
 
-void gameLoop(Character* player) 
+void gameLoop(Character* player)
 {
     int choice;
 
-    while (1) 
+    while (1)
     {
         printf("\n무엇을 하시겠습니까?\n");
         printf("1. 모험 떠나기\n");
         printf("2. 내 상태 보기\n");
-        printf("3. 게임 종료\n");
+        printf("3. 포션 사용하기\n");
+        printf("4. 게임 종료\n");
         printf("선택: ");
         scanf("%d", &choice);
         getchar();
 
-        switch (choice) 
+        switch (choice)
         {
         case 1:
             adventure(player);
@@ -153,8 +194,12 @@ void gameLoop(Character* player)
             printf("방어력: %d\n", player->defense);
             printf("경험치: %d\n", player->experience);
             printf("골드: %d\n", player->gold);
+            printf("포션: %d\n", player->potions);
             break;
         case 3:
+            usePotion(player);
+            break;
+        case 4:
             printf("게임을 종료합니다. 안녕히 가세요!\n");
             exit(0);
         default:
@@ -163,7 +208,7 @@ void gameLoop(Character* player)
     }
 }
 
-int main() 
+int main()
 {
     srand(time(NULL));
 
@@ -171,7 +216,10 @@ int main()
 
     Character player;
     createCharacter(&player);
-    gameLoop(&player);
+
+    tutorial(&player); // 튜토리얼 에피소드
+
+    gameLoop(&player); // 본격적인 게임 시작
 
     return 0;
 }
