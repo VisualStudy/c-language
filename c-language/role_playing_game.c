@@ -363,14 +363,14 @@ int main()
     Skill* fireball_skill = (Skill*)malloc(sizeof(Skill));
     strcpy(fireball_skill->name, "화염구");
     fireball_skill->mp_cost = 20;
-    fireball_skill->power = 50; // 이 값은 현재 사용되지 않지만, 필요한 경우 적절히 사용해야 합니다.
+    fireball_skill->power = 0; // 현재 사용되지 않음
     fireball_skill->effect = fireball;
     addSkill(&player, fireball_skill);
 
     Skill* healing_skill = (Skill*)malloc(sizeof(Skill));
     strcpy(healing_skill->name, "치유");
     healing_skill->mp_cost = 15;
-    healing_skill->power = 40; // 이 값은 현재 사용되지 않지만, 필요한 경우 적절히 사용해야 합니다.
+    healing_skill->power = 0; // 현재 사용되지 않음
     healing_skill->effect = healing;
     addSkill(&player, healing_skill);
 
