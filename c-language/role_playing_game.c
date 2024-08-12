@@ -4,6 +4,12 @@
 #include <string.h>
 #include <time.h>
 
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif
+
 // Skill 구조체 정의
 typedef struct
 {
@@ -46,8 +52,18 @@ typedef struct
     int drop_potion_chance;
 } Enemy;
 
+void clearScreen()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
 void explainWorld()
 {
+    clearScreen();
     printf("======================================\n");
     printf("푸른 녹음과 맑고 청명한 물줄기가 가로지르는 아름다운 땅, 엘라\n\n");
     printf("======================================\n\n");
@@ -55,6 +71,7 @@ void explainWorld()
 
 void createCharacter(Character* player)
 {
+    clearScreen();
     printf("캐릭터 이름을 입력하세요: ");
     fgets(player->name, 50, stdin);
     player->name[strcspn(player->name, "\n")] = '\0';
@@ -74,6 +91,10 @@ void createCharacter(Character* player)
     player->skill_count = 0; // 처음엔 스킬이 없음
 
     printf("환영합니다, %s!\n", player->name);
+    printf("캐릭터 생성 완료!\n");
+    printf("잠시 후 게임이 시작됩니다...\n");
+    sleep(2); // 잠시 대기
+    clearScreen();
 }
 
 void createEnemy(Enemy* enemy, int player_level)
@@ -257,6 +278,7 @@ void flee(Character* player, Enemy* enemy)
 
 void battle(Character* player, Enemy* enemy)
 {
+    clearScreen();
     printf("\n전투 시작! %s vs %s\n", player->name, enemy->name);
 
     while (player->hp > 0 && enemy->hp > 0)
@@ -303,6 +325,7 @@ void battle(Character* player, Enemy* enemy)
 
     if (player->hp > 0)
     {
+        clearScreen();
         printf("\n%s이(가) 승리했습니다!\n", player->name);
         player->experience += enemy->experience_reward;
         player->gold += enemy->gold_reward;
@@ -315,8 +338,11 @@ void battle(Character* player, Enemy* enemy)
     }
     else
     {
+        clearScreen();
         printf("\n%s이(가) 패배했습니다...\n", player->name);
     }
+
+    sleep(2); // 잠시 대기
 }
 
 int main()
