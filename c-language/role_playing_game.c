@@ -46,14 +46,6 @@ typedef struct
     int drop_potion_chance;
 } Enemy;
 
-typedef struct
-{
-    char name[50];
-    int mp_cost;
-    int power;
-    void (*effect)(Character*, Enemy*); // 스킬 효과 함수 포인터
-} Skill;
-
 void explainWorld()
 {
     printf("======================================\n");
@@ -247,6 +239,23 @@ void addSkill(Character* player, Skill* new_skill)
     }
 }
 
+void flee(Character* player, Enemy* enemy)
+{
+    int flee_chance = player->agility * 3;
+    if (rand() % 100 < flee_chance)
+    {
+        printf("%s이(가) 전투에서 도망쳤습니다!\n", player->name);
+        return;
+    }
+    else
+    {
+        int damage = enemy->attack - player->defense;
+        if (damage < 0) damage = 0;
+        player->hp -= damage;
+        printf("도망치지 못했습니다! %s이(가) %s에게 %d의 피해를 입었습니다! HP: %d/%d\n", player->name, enemy->name, damage, player->hp, player->max_hp);
+    }
+}
+
 void battle(Character* player, Enemy* enemy)
 {
     printf("\n전투 시작! %s vs %s\n", player->name, enemy->name);
@@ -254,7 +263,7 @@ void battle(Character* player, Enemy* enemy)
     while (player->hp > 0 && enemy->hp > 0)
     {
         printf("\n[플레이어 상태] HP: %d/%d, MP: %d/%d\n", player->hp, player->max_hp, player->mp, player->max_mp);
-        printf("1. 공격\n2. 방어\n3. 회피\n4. 스킬\n5. 포션 사용\n선택: ");
+        printf("1. 공격\n2. 방어\n3. 회피\n4. 스킬\n5. 포션 사용\n6. 도망\n선택: ");
         int choice;
         scanf("%d", &choice);
         getchar();
@@ -276,6 +285,9 @@ void battle(Character* player, Enemy* enemy)
         case 5:
             usePotion(player);
             break;
+        case 6:
+            flee(player, enemy);
+            return; // 도망쳤을 경우 전투를 종료합니다.
         default:
             printf("잘못된 선택입니다.\n");
             continue;
