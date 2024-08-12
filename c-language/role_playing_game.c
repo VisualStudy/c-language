@@ -10,16 +10,20 @@
 #include <unistd.h>
 #endif
 
+// 전방 선언
+typedef struct Character Character;
+typedef struct Enemy Enemy;
+
 // Skill 구조체 정의
 typedef struct
 {
     char name[50];
     int mp_cost;
     int power;
-    void (*effect)(struct Character*, struct Enemy*);
+    void (*effect)(Character*, Enemy*);
 } Skill;
 
-typedef struct
+struct Character
 {
     char name[50];
     int level;
@@ -36,9 +40,9 @@ typedef struct
     int potions;
     int skill_count;
     Skill* skills[10]; // Skill 구조체에 대한 포인터 배열
-} Character;
+};
 
-typedef struct
+struct Enemy
 {
     char name[50];
     int hp;
@@ -50,7 +54,7 @@ typedef struct
     int experience_reward;
     int gold_reward;
     int drop_potion_chance;
-} Enemy;
+};
 
 void clearScreen()
 {
@@ -355,9 +359,20 @@ int main()
     explainWorld();
     createCharacter(&player);
 
-    // 스킬은 기본적으로 없으므로 직접 추가해주는 부분이 필요합니다. 제가 지속적으로 해당 코드를 업데이트 할 것이지만 여러분이 원하신다면 얼마든지 새로 추가할 수 있을 겁니다.
-    // Skill fireball_skill = {"화염구", 20, 50, fireball}; // 스킬의 예시로 추가했습니다.
-    // addSkill(&player, &fireball_skill);
+    // 스킬을 동적으로 할당하고 추가합니다.
+    Skill* fireball_skill = (Skill*)malloc(sizeof(Skill));
+    strcpy(fireball_skill->name, "화염구");
+    fireball_skill->mp_cost = 20;
+    fireball_skill->power = 50;
+    fireball_skill->effect = fireball; // 스킬 효과 함수
+    addSkill(&player, fireball_skill);
+
+    Skill* healing_skill = (Skill*)malloc(sizeof(Skill));
+    strcpy(healing_skill->name, "치유");
+    healing_skill->mp_cost = 15;
+    healing_skill->power = 40;
+    healing_skill->effect = healing; // 스킬 효과 함수
+    addSkill(&player, healing_skill);
 
     char choice;
     do
@@ -371,5 +386,12 @@ int main()
     } while (choice == 'y' || choice == 'Y');
 
     printf("게임을 종료합니다.\n");
+
+    // 동적으로 할당한 메모리를 해제합니다.
+    for (int i = 0; i < player.skill_count; i++)
+    {
+        free(player.skills[i]);
+    }
+
     return 0;
 }
