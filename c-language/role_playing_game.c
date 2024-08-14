@@ -13,15 +13,13 @@
 typedef struct Character Character;
 typedef struct Enemy Enemy;
 
-typedef struct 
-{
+typedef struct {
     char name[50];
     int mp_cost;
     void (*effect)(Character*, Enemy*);
 } Skill;
 
-struct Character 
-{
+struct Character {
     char name[50];
     int level;
     int hp;
@@ -39,8 +37,7 @@ struct Character
     Skill* skills[10];
 };
 
-struct Enemy 
-{
+struct Enemy {
     char name[50];
     int hp;
     int max_hp;
@@ -53,8 +50,7 @@ struct Enemy
     int drop_potion_chance;
 };
 
-void clearScreen() 
-{
+void clearScreen() {
 #ifdef _WIN32
     system("cls");
 #else
@@ -62,16 +58,14 @@ void clearScreen()
 #endif
 }
 
-void explainWorld() 
-{
+void explainWorld() {
     clearScreen();
     printf("======================================\n");
     printf("푸른 녹음과 맑고 청명한 물줄기가 가로지르는 아름다운 땅, 엘라\n\n");
     printf("======================================\n\n");
 }
 
-void createCharacter(Character* player) 
-{
+void createCharacter(Character* player) {
     clearScreen();
     printf("캐릭터 이름을 입력하세요: ");
     fgets(player->name, 50, stdin);
@@ -98,8 +92,7 @@ void createCharacter(Character* player)
     clearScreen();
 }
 
-void createEnemy(Enemy* enemy, int player_level) 
-{
+void createEnemy(Enemy* enemy, int player_level) {
     strcpy(enemy->name, "고블린");
     enemy->max_hp = 50 + rand() % 20 + player_level * 5;
     enemy->hp = enemy->max_hp;
@@ -112,10 +105,8 @@ void createEnemy(Enemy* enemy, int player_level)
     enemy->drop_potion_chance = 20;
 }
 
-void levelUp(Character* player) 
-{
-    if (player->experience >= player->level * 100) 
-    {
+void levelUp(Character* player) {
+    if (player->experience >= player->level * 100) {
         player->level++;
         player->max_hp += 20;
         player->max_mp += 10;
@@ -132,10 +123,8 @@ void levelUp(Character* player)
     }
 }
 
-void usePotion(Character* player) 
-{
-    if (player->potions > 0) 
-    {
+void usePotion(Character* player) {
+    if (player->potions > 0) {
         int heal_amount = player->intelligence * 10;
         player->hp += heal_amount;
         if (player->hp > player->max_hp) player->hp = player->max_hp;
@@ -143,14 +132,12 @@ void usePotion(Character* player)
         printf("%s이(가) 포션을 사용하여 %d의 HP를 회복했습니다! 남은 포션: %d\n",
             player->name, heal_amount, player->potions);
     }
-    else 
-    {
+    else {
         printf("포션이 없습니다!\n");
     }
 }
 
-void attackEnemy(Character* player, Enemy* enemy) 
-{
+void attackEnemy(Character* player, Enemy* enemy) {
     int damage = player->attack - enemy->defense;
     if (damage < 0) damage = 0;
     enemy->hp -= damage;
@@ -158,8 +145,7 @@ void attackEnemy(Character* player, Enemy* enemy)
         player->name, enemy->name, damage, enemy->name, enemy->hp, enemy->max_hp);
 }
 
-void defend(Character* player, Enemy* enemy) 
-{
+void defend(Character* player, Enemy* enemy) {
     int reduced_damage = enemy->attack - player->defense * 2;
     if (reduced_damage < 0) reduced_damage = 0;
     player->hp -= reduced_damage;
@@ -167,15 +153,12 @@ void defend(Character* player, Enemy* enemy)
         player->name, enemy->name, reduced_damage, player->hp, player->max_hp);
 }
 
-void dodge(Character* player, Enemy* enemy) 
-{
+void dodge(Character* player, Enemy* enemy) {
     int dodge_chance = player->agility * 5;
-    if (rand() % 100 < dodge_chance) 
-    {
+    if (rand() % 100 < dodge_chance) {
         printf("%s이(가) %s의 공격을 회피했습니다!\n", player->name, enemy->name);
     }
-    else 
-    {
+    else {
         int damage = enemy->attack - player->defense;
         if (damage < 0) damage = 0;
         player->hp -= damage;
@@ -184,121 +167,80 @@ void dodge(Character* player, Enemy* enemy)
     }
 }
 
-void fireball(Character* player, Enemy* enemy) 
-{
-    if (player->mp >= 20) 
-    {
+void fireball(Character* player, Enemy* enemy) {
+    if (player->mp >= 20) {
         player->mp -= 20;
         int damage = player->intelligence * 3 - enemy->defense;
         if (damage < 0) damage = 0;
         enemy->hp -= damage;
-        printf("%s이(가) 화염구를 사용하여 %d의 피해를 입혔습니다! %s의 HP: %d/%d\n",
-            player->name, damage, enemy->name, enemy->hp, enemy->max_hp);
+        printf("%s이(가) 화염구를 사용하여 %s에게 %d의 피해를 입혔습니다! 남은 MP: %d\n",
+            player->name, enemy->name, damage, player->mp);
     }
-    else 
-    {
+    else {
         printf("MP가 부족합니다!\n");
     }
 }
 
-void healing(Character* player, Enemy* enemy) 
-{
-    if (player->mp >= 15) 
-    {
+void healing(Character* player, Enemy* enemy) {
+    if (player->mp >= 15) {
         player->mp -= 15;
-        int heal_amount = player->intelligence * 4;
+        int heal_amount = player->intelligence * 5;
         player->hp += heal_amount;
         if (player->hp > player->max_hp) player->hp = player->max_hp;
-        printf("%s이(가) 치유를 사용하여 %d의 HP를 회복했습니다! 현재 HP: %d/%d\n",
-            player->name, heal_amount, player->hp, player->max_hp);
+        printf("%s이(가) 회복 주문을 사용하여 %d의 HP를 회복했습니다! 남은 MP: %d\n",
+            player->name, heal_amount, player->mp);
     }
-    else 
-    {
+    else {
         printf("MP가 부족합니다!\n");
     }
 }
 
-void skillMenu(Character* player, Enemy* enemy) 
-{
-    if (player->skill_count == 0) 
-    {
-        printf("사용 가능한 스킬이 없습니다!\n");
+void useSkill(Character* player, Enemy* enemy) {
+    if (player->skill_count == 0) {
+        printf("사용할 수 있는 스킬이 없습니다!\n");
         return;
     }
 
-    printf("\n[스킬 메뉴]\n");
-    for (int i = 0; i < player->skill_count; i++) 
-    {
-        printf("%d. %s (필요 MP: %d)\n", i + 1, player->skills[i]->name, player->skills[i]->mp_cost);
+    printf("사용할 스킬을 선택하세요:\n");
+    for (int i = 0; i < player->skill_count; i++) {
+        printf("%d. %s (MP 소모: %d)\n", i + 1, player->skills[i]->name, player->skills[i]->mp_cost);
     }
-    int skill_choice;
-    printf("스킬 선택: ");
-    scanf("%d", &skill_choice);
+
+    int choice;
+    printf("선택: ");
+    scanf("%d", &choice);
     getchar();
 
-    if (skill_choice > 0 && skill_choice <= player->skill_count) 
-    {
-        Skill* chosen_skill = player->skills[skill_choice - 1];
-        if (player->mp >= chosen_skill->mp_cost) 
-        {
-            printf("%s이(가) %s을(를) 사용했습니다!\n", player->name, chosen_skill->name);
-            chosen_skill->effect(player, enemy);
-        }
-        else 
-        {
-            printf("MP가 부족합니다!\n");
-        }
+    if (choice < 1 || choice > player->skill_count) {
+        printf("잘못된 선택입니다!\n");
+        return;
     }
-    else 
-    {
-        printf("잘못된 선택입니다.\n");
-    }
+
+    Skill* skill = player->skills[choice - 1];
+    skill->effect(player, enemy);
 }
 
-void addSkill(Character* player, Skill* new_skill) 
-{
-    if (player->skill_count < 10) 
-    {
-        player->skills[player->skill_count++] = new_skill;
-        printf("%s 스킬을 배웠습니다!\n", new_skill->name);
+void addSkill(Character* player, Skill* skill) {
+    if (player->skill_count < 10) {
+        player->skills[player->skill_count++] = skill;
+        printf("%s이(가) 스킬 '%s'을(를) 배웠습니다!\n", player->name, skill->name);
     }
-    else 
-    {
+    else {
         printf("더 이상 스킬을 배울 수 없습니다!\n");
     }
 }
 
-void flee(Character* player, Enemy* enemy) 
-{
-    int flee_chance = player->agility * 3;
-    if (rand() % 100 < flee_chance) {
-        printf("%s이(가) 전투에서 도망쳤습니다!\n", player->name);
-    }
-    else 
-    {
-        int damage = enemy->attack - player->defense;
-        if (damage < 0) damage = 0;
-        player->hp -= damage;
-        printf("도망치지 못했습니다! %s이(가) %s에게 %d의 피해를 입었습니다! HP: %d/%d\n",
-            player->name, enemy->name, damage, player->hp, player->max_hp);
-    }
-}
-
-void battle(Character* player, Enemy* enemy) 
-{
-    clearScreen();
-    printf("\n전투 시작! %s vs %s\n", player->name, enemy->name);
-
-    while (player->hp > 0 && enemy->hp > 0) 
-    {
-        printf("\n[플레이어 상태] HP: %d/%d, MP: %d/%d\n", player->hp, player->max_hp, player->mp, player->max_mp);
-        printf("1. 공격\n2. 방어\n3. 회피\n4. 스킬\n5. 포션 사용\n6. 도망\n선택: ");
+void battle(Character* player, Enemy* enemy) {
+    printf("전투가 시작됩니다! 상대: %s (HP: %d, 공격력: %d)\n", enemy->name, enemy->hp, enemy->attack);
+    while (enemy->hp > 0 && player->hp > 0) {
+        printf("\n1. 공격\n2. 방어\n3. 회피\n4. 스킬 사용\n5. 포션 사용\n선택: ");
         int choice;
         scanf("%d", &choice);
-        getchar();
 
-        switch (choice) 
-        {
+        // 개행 문자 제거
+        while (getchar() != '\n');
+
+        switch (choice) {
         case 1:
             attackEnemy(player, enemy);
             break;
@@ -309,91 +251,77 @@ void battle(Character* player, Enemy* enemy)
             dodge(player, enemy);
             break;
         case 4:
-            skillMenu(player, enemy);
+            useSkill(player, enemy);
             break;
         case 5:
             usePotion(player);
             break;
-        case 6:
-            flee(player, enemy);
-            return; // 도망쳤을 경우 전투를 종료합니다.
         default:
-            printf("잘못된 선택입니다.\n");
+            printf("잘못된 선택입니다!\n");
             continue;
         }
 
-        if (enemy->hp > 0) 
-        {
+        if (enemy->hp > 0) {
             int damage = enemy->attack - player->defense;
             if (damage < 0) damage = 0;
             player->hp -= damage;
-            printf("%s이(가) %s에게 %d의 피해를 입혔습니다! %s의 HP: %d/%d\n", enemy->name, player->name, damage, player->name, player->hp, player->max_hp);
+            printf("%s이(가) %s의 공격을 받아 %d의 피해를 입었습니다! HP: %d/%d\n",
+                player->name, enemy->name, damage, player->hp, player->max_hp);
         }
     }
 
-    if (player->hp > 0) 
-    {
-        clearScreen();
-        printf("\n%s이(가) 승리했습니다!\n", player->name);
+    if (player->hp <= 0) {
+        printf("\n%s이(가) 쓰러졌습니다...\n", player->name);
+    }
+    else if (enemy->hp <= 0) {
+        printf("\n%s이(가) %s을(를) 물리쳤습니다!\n", player->name, enemy->name);
         player->experience += enemy->experience_reward;
         player->gold += enemy->gold_reward;
-        if (rand() % 100 < enemy->drop_potion_chance) 
-        {
+        if (rand() % 100 < enemy->drop_potion_chance) {
             player->potions++;
-            printf("포션을 획득했습니다! 현재 포션 개수: %d\n", player->potions);
+            printf("전리품으로 포션을 얻었습니다! 포션: %d\n", player->potions);
         }
         levelUp(player);
     }
-    else 
-    {
-        clearScreen();
-        printf("\n%s이(가) 패배했습니다...\n", player->name);
-    }
-
-    sleep(2); // 잠시 대기
 }
 
-int main() 
-{
-    srand((unsigned int)time(0));
+
+int main() {
+    srand(time(NULL));
 
     Character player;
     Enemy enemy;
 
-    explainWorld();
+    Skill fireball_skill = { "화염구", 20, fireball };
+    Skill healing_skill = { "회복 주문", 15, healing };
+
     createCharacter(&player);
+    addSkill(&player, &fireball_skill);
+    addSkill(&player, &healing_skill);
 
-    // 스킬을 동적으로 할당하고 추가합니다.
-    Skill* fireball_skill = (Skill*)malloc(sizeof(Skill));
-    strcpy(fireball_skill->name, "화염구");
-    fireball_skill->mp_cost = 20;
-    fireball_skill->effect = fireball;
-    addSkill(&player, fireball_skill);
+    explainWorld();
 
-    Skill* healing_skill = (Skill*)malloc(sizeof(Skill));
-    strcpy(healing_skill->name, "치유");
-    healing_skill->mp_cost = 15;
-    healing_skill->effect = healing;
-    addSkill(&player, healing_skill);
-
-    char choice;
-    do 
-    {
+    while (player.hp > 0) {
         createEnemy(&enemy, player.level);
         battle(&player, &enemy);
 
-        printf("계속하시겠습니까? (y/n): ");
-        choice = getchar();
-        getchar();
-    } while (choice == 'y' || choice == 'Y');
+        if (player.hp > 0) {
+            printf("\n모험을 계속하시겠습니까? (y/n): ");
+            char choice;
+            scanf("%c", &choice);
+            getchar();
 
-    printf("게임을 종료합니다.\n");
-
-    // 동적으로 할당한 메모리를 해제합니다.
-    for (int i = 0; i < player.skill_count; i++) 
-    {
-        free(player.skills[i]);
+            if (choice == 'n' || choice == 'N') {
+                printf("모험을 마칩니다...\n");
+                break;
+            }
+        }
+        else {
+            printf("모험이 끝났습니다...\n");
+        }
     }
+
+    printf("게임을 종료합니다. 감사합니다!\n");
 
     return 0;
 }
