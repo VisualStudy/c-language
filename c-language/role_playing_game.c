@@ -245,6 +245,7 @@ void flee(Character* player, Enemy* enemy)
     if (rand() % 100 < flee_chance)
     {
         printf("%s이(가) 전투에서 도망쳤습니다!\n", player->name);
+        exit(0); // 도망치면 게임을 종료합니다.
     }
     else
     {
@@ -252,6 +253,7 @@ void flee(Character* player, Enemy* enemy)
         if (damage < 0) damage = 0;
         player->hp -= damage;
         printf("도망치지 못했습니다! %s이(가) %s에게 %d의 피해를 입었습니다! HP: %d/%d\n", player->name, enemy->name, damage, player->hp, player->max_hp);
+        // 도망치지 못했을 때 y/n을 묻지 않고 전투를 이어갑니다.
     }
 }
 
@@ -286,7 +288,8 @@ void battle(Character* player, Enemy* enemy)
             break;
         case 6:
             flee(player, enemy);
-            return; // 도망쳤을 경우 전투를 종료합니다.
+            if (player->hp <= 0 || enemy->hp <= 0) return; // 도망 성공 시 함수 종료
+            break;
         default:
             printf("잘못된 선택입니다.\n");
             continue;
