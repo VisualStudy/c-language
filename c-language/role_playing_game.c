@@ -332,6 +332,14 @@ int main()
     explainWorld();
     createCharacter(&player);
 
+    // 첫 전투 전, 튜토리얼 메시지 출력
+    printf("=====================================\n");
+    printf("튜토리얼을 시작합니다.\n\n");
+    printf("=====================================\n");
+
+    createEnemy(&enemy, player.level);
+    battle(&player, &enemy);
+
     // 스킬은 기본적으로 없으므로 직접 추가해주는 부분이 필요
     // Skill fireball_skill = {"화염구", 20, 50, fireball}; // 스킬을 나중에 배울 수 있도록 예시로 추가했습니다.
     // addSkill(&player, &fireball_skill);
