@@ -11,11 +11,11 @@ int main(void)
 
     // 사용자로부터 첫 번째 문자열 입력 받기
     printf("첫 번째 문자열을 입력하세요: ");
-    scanf("%s", str1);
+    _ = scanf("%s", str1);
 
     // 사용자로부터 두 번째 문자열 입력 받기
     printf("두 번째 문자열을 입력하세요: ");
-    scanf("%s", str2);
+    _ = scanf("%s", str2);
 
     // 문자열 비교
     int result = strcmp(str1, str2);
