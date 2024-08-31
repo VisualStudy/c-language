@@ -191,6 +191,7 @@
     <ClCompile Include="maze.c" />
     <ClCompile Include="gambler.c" />
     <ClCompile Include="role_playing_game.c" />
+    <ClCompile Include="strcmp.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
