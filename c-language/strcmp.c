@@ -5,6 +5,7 @@
 int main(void)
 {
     int _;
+
     char str1[100];
     char str2[100];
 
