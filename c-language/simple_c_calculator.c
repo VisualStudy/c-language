@@ -10,7 +10,7 @@ float divide(float a, float b);
 int main(voide)
 {
     float num1, num2, result;
-    int choice;
+    int choice, _;
 
     while (1)
     {
