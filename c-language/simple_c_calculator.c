@@ -80,3 +80,8 @@ void printMenu()
     printf("4. ³ª´©±â\n");
     printf("==========================================\n");
 }
+
+float add(float a, float b)
+{
+    return a + b;
+}
