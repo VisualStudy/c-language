@@ -69,3 +69,5 @@ int main(voide)
 
     return 0;
 }
+
+// 함수 정의
