@@ -17,7 +17,7 @@ int main(voide)
         printMenu(); // 메뉴 출력
 
         printf("원하는 연산을 선택하시오 (1-4) 또는 0을 입력하여 종료:  ");
-        scanf("%d", &choice);
+        _ = scanf("%d", &choice);
 
         if (choice == 0)
         {
@@ -26,9 +26,9 @@ int main(voide)
         }
 
         printf("첫 번째 숫자를 입력하세요: ");
-        scanf("%f", &num1);
+        _ = scanf("%f", &num1);
         printf("두 번째 숫자를 입력하세요: ");
-        scanf("%f", &num2);
+        _ = scanf("%f", &num2);
 
        // 선택된 연산 수행
         switch (choice)
