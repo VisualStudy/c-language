@@ -30,6 +30,37 @@ int main(voide)
         printf("두 번째 숫자를 입력하세요: ");
         scanf("%f", &num2);
 
-        
+       // 선택된 연산 수행
+        switch (choice)
+        {
+            case 1:
+                result = add(num1, num2);
+                printf("결과: %.2f\n", result);
+                break;
+            case 2:
+                result = subtract(num1, num2);
+                printf("결과: %.2f\n", result);
+                break;
+            case 3:
+                result = multiply(num1, num2);
+                printf("결과: %.2f\n", result);
+                break;
+            case 4:
+                if (num2 != 0)
+                {
+                    result = divide(num1, num2);
+                    printf("결과: %.2f\n", result);
+                }
+                else
+                {
+                    printf("오류: 0으로 나눌 수 없습니다.\n");
+                }
+                break;
+            default:
+                printf("잘못된 선택입니다. 다시 선택하세요.\n");
+                break;
+        }
     }
+
+    return 0;
 }
