@@ -194,6 +194,7 @@
     <ClCompile Include="strcmp.c" />
     <ClCompile Include="simple_c_calculator.c" />
     <ClCompile Include="ddadan.c" />
+    <ClCompile Include="self_testing.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
