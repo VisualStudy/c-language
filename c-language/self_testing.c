@@ -6,5 +6,6 @@ int main(void)
     printf("----------------------------------");
     printf("Let's go~");
     printf("dori");
+    printf("dodori");
     return 0;
 }
