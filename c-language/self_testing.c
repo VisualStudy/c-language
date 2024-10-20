@@ -7,5 +7,6 @@ int main(void)
     printf("Let's go~");
     printf("dori");
     printf("dodori");
+    printf("godori");
     return 0;
 }
