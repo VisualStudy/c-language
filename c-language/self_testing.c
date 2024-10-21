@@ -8,5 +8,6 @@ int main(void)
     printf("dori");
     printf("dodori");
     printf("godori");
+    printf("apt");
     return 0;
 }
