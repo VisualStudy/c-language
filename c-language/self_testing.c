@@ -9,5 +9,6 @@ int main(void)
     printf("dodori");
     printf("godori");
     printf("apt");
+    printf("hello, world!");
     return 0;
 }
