@@ -12,5 +12,6 @@ int main(void)
     printf("hello, world!");
     printf("raba");
     printf("rata");
+    printf("rabarata");
     return 0;
 }
