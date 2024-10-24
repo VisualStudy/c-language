@@ -11,5 +11,6 @@ int main(void)
     printf("apt");
     printf("hello, world!");
     printf("raba");
+    printf("rata");
     return 0;
 }
