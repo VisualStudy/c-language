@@ -10,8 +10,6 @@ int main(void)
     printf("godori");
     printf("apt");
     printf("hello, world!");
-    printf("raba");
-    printf("rata");
-    printf("rabarata");
+    
     return 0;
 }
