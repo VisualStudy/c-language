@@ -10,7 +10,7 @@ int main(void)
     printf("godori");
     printf("apt");
     printf("hello, world!");
-    printf("run, jump, fight");
+    
 
     return 0;
 }
