@@ -11,6 +11,7 @@ int main(void)
     printf("apt");
     printf("hello, world!");
     printf("bba ba bam");
+    printf("lala");
 
     return 0;
 }
