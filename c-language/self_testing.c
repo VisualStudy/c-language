@@ -12,6 +12,7 @@ int main(void)
     printf("hello, world!");
     printf("bba ba bam");
     printf("lala");
+    printf("hello~ how are you~ how are you today!");
 
     return 0;
 }
