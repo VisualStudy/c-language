@@ -7,7 +7,7 @@ int main(void)
 
     if ()
     {
-
+        printf("");
     }
 
     return 0;
