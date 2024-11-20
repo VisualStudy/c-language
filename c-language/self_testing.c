@@ -6,6 +6,7 @@ int main(void)
     printf("----------------------------------");
     printf("a");
     printf("b");
+    printf("c");
 
     return 0;
 }
