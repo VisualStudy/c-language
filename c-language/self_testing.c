@@ -11,6 +11,5 @@ int main(void)
     printf("c");
     printf("%c", a);
 
-
     return 0;
 }
