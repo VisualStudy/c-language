@@ -197,6 +197,7 @@
     <ClCompile Include="self_testing.c" />
     <ClCompile Include="I_return\1_input_output.c" />
     <ClCompile Include="I_return\2_input_output_with_user.c" />
+    <ClCompile Include="I_return\3_input_output_sum.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
