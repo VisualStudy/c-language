@@ -195,6 +195,7 @@
     <ClCompile Include="simple_c_calculator.c" />
     <ClCompile Include="ddadan.c" />
     <ClCompile Include="self_testing.c" />
+    <ClCompile Include="I_return\1_input_output.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
