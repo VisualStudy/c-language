@@ -200,6 +200,7 @@
     <ClCompile Include="I_return\3_input_output_sum.c" />
     <ClCompile Include="I_return\4_input_output_odd_even.c" />
     <ClCompile Include="I_return\5_input_output_string.c" />
+    <ClCompile Include="I_return\6_format_specifier.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />

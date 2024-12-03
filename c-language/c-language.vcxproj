@@ -217,7 +217,10 @@
     <ClCompile Include="I_return\4_input_output_odd_even.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="I_return\5_input_output_string.c" />
+    <ClCompile Include="I_return\5_input_output_string.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="I_return\6_format_specifier.c" />
     <ClCompile Include="maze.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
