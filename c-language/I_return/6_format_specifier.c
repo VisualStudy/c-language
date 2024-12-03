@@ -9,9 +9,12 @@ int main(void)
 
     printf("Integer: %d\n", num);
     printf("Unsigned Integer: %u\n", num);
+
     printf("Hexadecimal (lowercase): %x\n", num);
     printf("Hexadceimal (uppercase): %X\n", num);
+
     printf("Floating point: %f\n", pi);
+
     printf("character: %c\n", letter);
     printf("String: %s\n", str);
 
