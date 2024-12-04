@@ -10,8 +10,8 @@ int main(void)
     printf("Integer: %d\n", num); // %d 정수
     printf("Unsigned Integer: %u\n", num); // %u 부호 없는 정수
 
-    printf("Hexadecimal (lowercase): %x\n", num); // %x 16진수 소문자
-    printf("Hexadceimal (uppercase): %X\n", num); // %X 16진수 대문자
+    printf("Hexadecimal (lowercase): %x\n", num); // %x 16진수 소문자 (x를 소문자로 적기)
+    printf("Hexadceimal (uppercase): %X\n", num); // %X 16진수 대문자 (X 즉, x를 대문자로 적기)
 
     printf("Floating point: %f\n", pi); // %f: 부동소수점(float, double)
 
