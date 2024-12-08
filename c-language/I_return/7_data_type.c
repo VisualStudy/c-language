@@ -14,7 +14,7 @@ int main(void)
     printf("Float: %.2f\n", c); // 소수 2 번째 자리까지 
 
     printf("Double: %.9f\n", d); // 소수 9 번째 자리까지
-    printf("Character: %c\n", e); // 문자(문자열 아님)
+    printf("Character: %c\n", e); // 문자(문자열 아님; 문자열 %s)
     
     return 0;
 }
