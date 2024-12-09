@@ -16,10 +16,10 @@ int main(void)
     printf("a < b: %d\n\n", a < b);
 
     printf("Logical Operators(논리 연산자):\n");
-    printf("a > 0 && b > 0: %d\n", (a > 0 && b > 0));
-    printf("a > 0 || b < 0: %d\n\n", (a > 0 || b < 0));
+    printf("a > 0 && b > 0: %d\n", (a > 0 && b > 0)); // a > 0 && b > 0: a는 0보다 크다 그리고 b도 0보다 크다
+    printf("a > 0 || b < 0: %d\n\n", (a > 0 || b < 0)); // a > 0 || b < 0: a는 0보다 크다 또는 b는 0보다 작다
 
-    printf("Bitwise Operators(비트 연산자):\n");
+    printf("Bitwise Operators(비트 연산자):\n"); // 비트 연산자 설명 추가 예정
     printf("Bitwise AND: %d\n", a & b);
     printf("Bitwise OR: %d\n", a | b);
     printf("Bitwise XOR: %d\n", a ^ b);

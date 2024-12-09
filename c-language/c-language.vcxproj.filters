@@ -202,7 +202,7 @@
     <ClCompile Include="I_return\5_input_output_string.c" />
     <ClCompile Include="I_return\6_format_specifier.c" />
     <ClCompile Include="I_return\7_data_type.c" />
-    <ClCompile Include="I_return\8_arithmetic_operators.c" />
+    <ClCompile Include="I_return\8_operators.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
