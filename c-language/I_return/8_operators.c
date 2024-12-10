@@ -20,10 +20,10 @@ int main(void)
     printf("a > 0 || b < 0: %d\n\n", (a > 0 || b < 0)); // a > 0 || b < 0: a는 0보다 크다 또는 b는 0보다 작다
 
     printf("Bitwise Operators(비트 연산자):\n"); // 비트 연산자 설명 추가 예정
-    printf("Bitwise AND: %d\n", a & b);
-    printf("Bitwise OR: %d\n", a | b);
-    printf("Bitwise XOR: %d\n", a ^ b);
-    printf("Bitwise NOT (a): %d\n", ~a);
+    printf("Bitwise AND: %d\n", a & b); //
+    printf("Bitwise OR: %d\n", a | b); //
+    printf("Bitwise XOR: %d\n", a ^ b); //
+    printf("Bitwise NOT (a): %d\n", ~a); //
 
     return 0;
 }
