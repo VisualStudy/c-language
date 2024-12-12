@@ -25,5 +25,5 @@ int main(void)
     printf("Bitwise XOR: %d\n", a ^ b); // 비트 XOR: 2진수 변환 후 두 수의 비트가 다를 때만 1 -> 비트값 계산
     printf("Bitwise NOT (a): %d\n", ~a); // 비트 NOT: 2진수 변환 후 1을 0으로, 0을 1로 -> 비트값 계산
 
-    return 0;
+    return 0; // 반환값 0으로 마무리
 }
