@@ -203,6 +203,7 @@
     <ClCompile Include="I_return\6_format_specifier.c" />
     <ClCompile Include="I_return\7_data_type.c" />
     <ClCompile Include="I_return\8_operators.c" />
+    <ClCompile Include="I_return\9_if_else.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
