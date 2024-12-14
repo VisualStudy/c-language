@@ -21,7 +21,7 @@ int main(void)
         printf("The number is zero.\n");
     }
 
-    // 삼항 연산자
+    // +추가) 삼항 연산자
     printf("The number is %s.\n", (num % 2 == 0) ? "even" : "odd");
 
     return 0;
