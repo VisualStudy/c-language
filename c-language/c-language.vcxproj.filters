@@ -206,6 +206,7 @@
     <ClCompile Include="I_return\9_if_else.c" />
     <ClCompile Include="I_return\space.c" />
     <ClCompile Include="I_return\10_for_while_do_while.c" />
+    <ClCompile Include="I_return\11_array.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
