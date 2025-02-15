@@ -209,6 +209,7 @@
     <ClCompile Include="I_return\11_array.c" />
     <ClCompile Include="I_return\1_1_input_output.c" />
     <ClCompile Include="I_return\2_1_input_output_with_user.c" />
+    <ClCompile Include="I_return\legendary_code.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
