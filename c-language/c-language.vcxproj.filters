@@ -67,7 +67,7 @@
     <ClCompile Include="Operators\increment_operator.c" />
     <ClCompile Include="input_real_number.c" />
     <ClCompile Include="input_two_integer_.c" />
-    <ClCompile Include="integear_type.c" />
+    <ClCompile Include="Numbers\integear_type.c" />
     <ClCompile Include="integer_overflow.c" />
     <ClCompile Include="integer_size.c" />
     <ClCompile Include="literal.c" />
