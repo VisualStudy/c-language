@@ -71,7 +71,7 @@
     <ClCompile Include="integer_overflow.c" />
     <ClCompile Include="integer_size.c" />
     <ClCompile Include="literal.c" />
-    <ClCompile Include="logical_and.c" />
+    <ClCompile Include="Operators\logical_and.c" />
     <ClCompile Include="logical_not.c" />
     <ClCompile Include="logical_or.c" />
     <ClCompile Include="logical_test.c" />
