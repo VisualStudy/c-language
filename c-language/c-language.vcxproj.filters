@@ -64,7 +64,7 @@
     <ClCompile Include="If\if.c" />
     <ClCompile Include="If\if_not.c" />
     <ClCompile Include="increment_number.c" />
-    <ClCompile Include="increment_operator.c" />
+    <ClCompile Include="Operators\increment_operator.c" />
     <ClCompile Include="input_real_number.c" />
     <ClCompile Include="input_two_integer_.c" />
     <ClCompile Include="integear_type.c" />
