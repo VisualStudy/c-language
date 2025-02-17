@@ -81,7 +81,7 @@
     <ClCompile Include="rectangle_area.c" />
     <ClCompile Include="relational_operator.c" />
     <ClCompile Include="relational_test.c" />
-    <ClCompile Include="remainder.c" />
+    <ClCompile Include="Operators\remainder.c" />
     <ClCompile Include="scanf.c" />
     <ClCompile Include="scanf_arithmetic.c" />
     <ClCompile Include="scanf_multi_line.c" />
