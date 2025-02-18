@@ -145,7 +145,7 @@
     <ClCompile Include="Arrays\ArrayOne2.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ArrayOne3.c">
+    <ClCompile Include="Arrays\ArrayOne3.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Arrays\array_description.c">
