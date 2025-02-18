@@ -43,7 +43,7 @@
     <ClCompile Include="Operators\bitwise_assignment.c" />
     <ClCompile Include="signed_integer.c" />
     <ClCompile Include="slash_n.c" />
-    <ClCompile Include="sum_algorithm.c" />
+    <ClCompile Include="Algorithms\sum_algorithm.c" />
     <ClCompile Include="tests\character_and_integer_outputs.c" />
     <ClCompile Include="character_demo.c" />
     <ClCompile Include="character_escape_sequence.c" />
