@@ -145,7 +145,7 @@
     <ClCompile Include="While\why_array.c" />
     <ClCompile Include="Arrays\array_description.c" />
     <ClCompile Include="Arrays\ArrayOne1.c" />
-    <ClCompile Include="ArrayOne2.c" />
+    <ClCompile Include="Arrays\ArrayOne2.c" />
     <ClCompile Include="ArrayOne3.c" />
     <ClCompile Include="Arrays\array_init.c" />
     <ClCompile Include="character_array.c" />
