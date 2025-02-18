@@ -60,7 +60,7 @@
     <ClCompile Include="getchar_putchar.c" />
     <ClCompile Include="gets_puts.c" />
     <ClCompile Include="goto_demo.c" />
-    <ClCompile Include="HelloWorld\hello_world.c" />
+    <ClCompile Include="03_HelloWorld\hello_world.c" />
     <ClCompile Include="If\if.c" />
     <ClCompile Include="If\if_not.c" />
     <ClCompile Include="increment_number.c" />
