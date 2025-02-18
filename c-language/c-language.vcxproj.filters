@@ -82,7 +82,7 @@
     <ClCompile Include="relational_operator.c" />
     <ClCompile Include="relational_test.c" />
     <ClCompile Include="Operators\remainder.c" />
-    <ClCompile Include="scanf.c" />
+    <ClCompile Include="Scanf\scanf.c" />
     <ClCompile Include="scanf_arithmetic.c" />
     <ClCompile Include="scanf_multi_line.c" />
     <ClCompile Include="shortcut_operator.c" />
