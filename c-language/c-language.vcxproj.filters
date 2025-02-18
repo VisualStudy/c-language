@@ -179,7 +179,7 @@
     <ClCompile Include="CW\c_cw_semester_one.c" />
     <ClCompile Include="CW\c_cw_semester_one_with_blackwall.c" />
     <ClCompile Include="sigma.c" />
-    <ClCompile Include="max_of_three.c" />
+    <ClCompile Include="Functions\max_of_three.c" />
     <ClCompile Include="CW\all_in_one.c" />
     <ClCompile Include="Functions\function_add.c" />
     <ClCompile Include="CW\test_semester_one_last.c" />

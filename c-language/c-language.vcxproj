@@ -431,7 +431,7 @@
     <ClCompile Include="int_average_not_negative.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="max_of_three.c">
+    <ClCompile Include="Functions\max_of_three.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="minus_one.c">
