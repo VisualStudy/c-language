@@ -425,7 +425,7 @@
     <ClCompile Include="If\if_nested.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="increment_decrement_operation.c">
+    <ClCompile Include="10_AssignmentIncrement\increment_decrement_operation.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="int_average_not_negative.c">
@@ -584,7 +584,7 @@
     <ClCompile Include="If\if_not.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="increment_number.c">
+    <ClCompile Include="10_AssignmentIncrement\increment_number.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="10_AssignmentIncrement\increment_operator.c">
