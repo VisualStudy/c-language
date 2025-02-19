@@ -109,7 +109,7 @@
     <ClCompile Include="twice.c" />
     <ClCompile Include="unsigned_int.c" />
     <ClCompile Include="unsigned_integer_type.c" />
-    <ClCompile Include="variable.c" />
+    <ClCompile Include="05_Variables\variable.c" />
     <ClCompile Include="variable_operations_and_output.c" />
     <ClCompile Include="variable_same_value.c" />
     <ClCompile Include="_.c" />
