@@ -9,8 +9,8 @@
     <ClCompile Include="assignment_operator.c" />
     <ClCompile Include="binary_to_decimal.c" />
     <ClCompile Include="binary_to_integer_output.c" />
-    <ClCompile Include="Operators\bitwise_and_operation.c" />
-    <ClCompile Include="Operators\bitwise_right_shift_operation.c" />
+    <ClCompile Include="09_Operators\bitwise_and_operation.c" />
+    <ClCompile Include="09_Operators\bitwise_right_shift_operation.c" />
     <ClCompile Include="bool_demo.c" />
     <ClCompile Include="break_demo.c" />
     <ClCompile Include="break_for.c" />
@@ -40,7 +40,7 @@
     <ClCompile Include="prime_factor_max.c" />
     <ClCompile Include="return_value.c" />
     <ClCompile Include="bit_and.c" />
-    <ClCompile Include="Operators\bitwise_assignment.c" />
+    <ClCompile Include="09_Operators\bitwise_assignment.c" />
     <ClCompile Include="signed_integer.c" />
     <ClCompile Include="slash_n.c" />
     <ClCompile Include="Algorithms\sum_algorithm.c" />
@@ -64,14 +64,14 @@
     <ClCompile Include="If\if.c" />
     <ClCompile Include="If\if_not.c" />
     <ClCompile Include="increment_number.c" />
-    <ClCompile Include="Operators\increment_operator.c" />
+    <ClCompile Include="09_Operators\increment_operator.c" />
     <ClCompile Include="input_real_number.c" />
     <ClCompile Include="input_two_integer_.c" />
     <ClCompile Include="06_Numbers\integear_type.c" />
     <ClCompile Include="integer_overflow.c" />
     <ClCompile Include="integer_size.c" />
     <ClCompile Include="literal.c" />
-    <ClCompile Include="Operators\logical_and.c" />
+    <ClCompile Include="09_Operators\logical_and.c" />
     <ClCompile Include="logical_not.c" />
     <ClCompile Include="logical_or.c" />
     <ClCompile Include="logical_test.c" />
@@ -81,7 +81,7 @@
     <ClCompile Include="rectangle_area.c" />
     <ClCompile Include="relational_operator.c" />
     <ClCompile Include="relational_test.c" />
-    <ClCompile Include="Operators\remainder.c" />
+    <ClCompile Include="09_Operators\remainder.c" />
     <ClCompile Include="08_Scanf\scanf.c" />
     <ClCompile Include="scanf_arithmetic.c" />
     <ClCompile Include="scanf_multi_line.c" />
