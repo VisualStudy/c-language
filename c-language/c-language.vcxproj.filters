@@ -122,7 +122,7 @@
     <ClCompile Include="single_multiple.c" />
     <ClCompile Include="code_block.c" />
     <ClCompile Include="code_block_single_multiple.c" />
-    <ClCompile Include="else.c" />
+    <ClCompile Include="If\else.c" />
     <ClCompile Include="else_note.c" />
     <ClCompile Include="If\if_and.c" />
     <ClCompile Include="If\if_demo.c" />
