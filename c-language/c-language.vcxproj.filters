@@ -214,4 +214,7 @@
   <ItemGroup>
     <ClInclude Include="twice.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="22_Struct\Struct.txt" />
+  </ItemGroup>
 </Project>
