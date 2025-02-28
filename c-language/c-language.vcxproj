@@ -139,49 +139,49 @@
     <ClCompile Include="arithmetic_sequence.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\ArrayOne1.c">
+    <ClCompile Include="18_Arrays\ArrayOne1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\ArrayOne2.c">
+    <ClCompile Include="18_Arrays\ArrayOne2.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\ArrayOne3.c">
+    <ClCompile Include="18_Arrays\ArrayOne3.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_description.c">
+    <ClCompile Include="18_Arrays\array_description.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_element_circulation.c">
+    <ClCompile Include="18_Arrays\array_element_circulation.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_index.c">
+    <ClCompile Include="18_Arrays\array_index.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_init.c">
+    <ClCompile Include="18_Arrays\array_init.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_initializer.c">
+    <ClCompile Include="18_Arrays\array_initializer.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_one1.c">
+    <ClCompile Include="18_Arrays\array_one1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_one2.c">
+    <ClCompile Include="18_Arrays\array_one2.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_one3.c">
+    <ClCompile Include="18_Arrays\array_one3.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_student.c">
+    <ClCompile Include="18_Arrays\array_student.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_total_avg.c">
+    <ClCompile Include="18_Arrays\array_total_avg.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_two_description.c">
+    <ClCompile Include="18_Arrays\array_two_description.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\array_while.c">
+    <ClCompile Include="18_Arrays\array_while.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="assignment_operator.c">
@@ -275,7 +275,7 @@
     <ClCompile Include="change.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Arrays\character_array.c">
+    <ClCompile Include="18_Arrays\character_array.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="char_type_overflow.c">
