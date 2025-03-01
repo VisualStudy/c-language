@@ -79,7 +79,7 @@
     <ClCompile Include="postfix_operator.c" />
     <ClCompile Include="print_format_demo.c" />
     <ClCompile Include="rectangle_area.c" />
-    <ClCompile Include="relational_operator.c" />
+    <ClCompile Include="11_RelationalLogical\relational_operator.c" />
     <ClCompile Include="relational_test.c" />
     <ClCompile Include="09_Operators\remainder.c" />
     <ClCompile Include="08_Scanf\scanf.c" />
