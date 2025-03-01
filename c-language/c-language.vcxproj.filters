@@ -12,8 +12,8 @@
     <ClCompile Include="09_Operators\bitwise_and_operation.c" />
     <ClCompile Include="09_Operators\bitwise_right_shift_operation.c" />
     <ClCompile Include="bool_demo.c" />
-    <ClCompile Include="break_demo.c" />
-    <ClCompile Include="break_for.c" />
+    <ClCompile Include="17_BreakContinueGo\break_demo.c" />
+    <ClCompile Include="17_BreakContinueGo\break_for.c" />
     <ClCompile Include="calculate_cube.c" />
     <ClCompile Include="casting_operator.c" />
     <ClCompile Include="change.c" />
