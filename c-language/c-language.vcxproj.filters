@@ -217,4 +217,7 @@
   <ItemGroup>
     <Text Include="22_Struct\Struct.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="14_Switch\c-language-switch.md" />
+  </ItemGroup>
 </Project>
