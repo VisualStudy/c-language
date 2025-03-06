@@ -763,6 +763,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="14_Switch\c-language-switch.md" />
+    <None Include="20_Exam\c-language-exam.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
