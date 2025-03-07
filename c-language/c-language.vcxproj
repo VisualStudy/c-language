@@ -767,6 +767,7 @@
     <None Include="21_API\c-language-api.md" />
     <None Include="23_Enum\c-language-enumeration.md" />
     <None Include="24_Pointer\c-language-pointer.md" />
+    <None Include="25_String\c-language-string.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
