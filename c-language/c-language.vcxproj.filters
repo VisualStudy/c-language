@@ -225,5 +225,6 @@
     <None Include="24_Pointer\c-language-pointer.md" />
     <None Include="25_String\c-language-string.md" />
     <None Include="26_Exception\c-language-exception.md" />
+    <None Include="01_Start\c-language-start.md" />
   </ItemGroup>
 </Project>

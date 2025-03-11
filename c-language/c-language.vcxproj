@@ -762,6 +762,7 @@
     <Text Include="22_Struct\Struct.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="01_Start\c-language-start.md" />
     <None Include="14_Switch\c-language-switch.md" />
     <None Include="20_Exam\c-language-exam.md" />
     <None Include="21_API\c-language-api.md" />
