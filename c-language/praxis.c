@@ -19,5 +19,10 @@ int main(void)
     printf("* * * * *");
     printf("* * * * *");
 
+    for (int i = 0; i < 6; i++)
+    {
+        printf("@@@@@\n");
+    }
+
     return 0;
 }
