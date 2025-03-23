@@ -11,7 +11,7 @@ int main(void)
     
     int summer;
     summer = sum + sum;
-    printf("賣該 賣該 等檜: %10d\n", summer);;
+    printf("賣該 賣該 等檜: %10d\n\n", summer);;
 
     printf("* * * * *\n");
     printf("* * * * *\n");
