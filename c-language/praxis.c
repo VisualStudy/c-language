@@ -24,5 +24,11 @@ int main(void)
         printf("\n@@@@@");
     }
 
+    printf("\n\n\n");
+
+    for (int i = 0; i < 6; i++)
+    {
+        printf("*****");
+    }
     return 0;
 }
