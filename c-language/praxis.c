@@ -13,11 +13,11 @@ int main(void)
     summer = sum + sum;
     printf("ΩÊ∏” ΩÊ∏” µ•¿Ã: %10d\n", summer);;
 
-    printf("* * * * *");
-    printf("* * * * *");
-    printf("* * * * *");
-    printf("* * * * *");
-    printf("* * * * *");
+    printf("* * * * *\n");
+    printf("* * * * *\n");
+    printf("* * * * *\n");
+    printf("* * * * *\n");
+    printf("* * * * *\n");
 
     for (int i = 0; i < 6; i++)
     {
