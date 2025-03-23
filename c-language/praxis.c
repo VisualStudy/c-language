@@ -21,7 +21,7 @@ int main(void)
 
     for (int i = 0; i < 6; i++)
     {
-        printf("@@@@@\n");
+        printf("\n@@@@@");
     }
 
     return 0;
