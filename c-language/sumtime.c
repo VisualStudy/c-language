@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    int n, i, sum = 0;
+    int _, n, i, sum = 0;
 
     printf("정수 입력: ");
     scanf("%d", &n);
