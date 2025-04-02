@@ -33,8 +33,8 @@ int main(void)
 
     for (int i = 0; i < 2; i++)
     {
-        printf("어라? 왜 2번씩 적히지?");;
-    };
+        printf("어라? 왜 2번씩 적히지?");
+    }
 
     return 0;
-};
+}
