@@ -211,6 +211,7 @@
     <ClCompile Include="I_return\2_1_input_output_with_user.c" />
     <ClCompile Include="I_return\legendary_code.c" />
     <ClCompile Include="praxis.c" />
+    <ClCompile Include="original_for.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
