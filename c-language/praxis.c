@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+void para(void)
+{
+    printf("이건 para() 함수입니다.\n");
+}
+
 int main(void)
 {
     int x = 2550;
