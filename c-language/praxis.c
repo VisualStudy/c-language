@@ -3,6 +3,8 @@
 void para(void)
 {
     printf("이건 para() 함수입니다.\n");
+    printf("*\n");
+    printf("asterisk\n");
 }
 
 int main(void)
