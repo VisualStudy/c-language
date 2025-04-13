@@ -1,6 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+void sumsum(void)
+{
+    printf("이건 sumsum() 함수입니다.\n");
+    printf("*\n");
+    printf("asterisk\n");
+}
+
 int main(void)
 {
     int _, n, i, sum = 0;
