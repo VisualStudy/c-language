@@ -21,6 +21,7 @@ int main(void)
     }
 
     printf("1부터 %d까지의 합은 %d입니다.\n", n, sum);
+    printf("END\n");
 
     return 0;
 };
