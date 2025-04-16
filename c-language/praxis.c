@@ -43,7 +43,7 @@ int main(void)
         printf("어라? 왜 2번씩 적히지?");
     }
 
-    printf("\n\n\n");
+    printf("\n\n\n");;
 
     return 0;
 }
