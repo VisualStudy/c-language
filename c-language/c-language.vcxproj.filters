@@ -214,6 +214,7 @@
     <ClCompile Include="sumtime.c" />
     <ClCompile Include="add_two_numbers.c" />
     <ClCompile Include="add_two_numbers_with_function.c" />
+    <ClCompile Include="add_two_numbers_with_function_prototype.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
