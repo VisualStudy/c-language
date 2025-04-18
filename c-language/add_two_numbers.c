@@ -8,7 +8,7 @@ int main(void)
 
     result = x + y;
 
-    printf("두 수의 합: %d", result);
+    printf("두 수의 합: %d\n", result);
 
     return 0;
 }
