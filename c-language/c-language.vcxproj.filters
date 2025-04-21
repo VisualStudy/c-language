@@ -218,6 +218,7 @@
     <ClCompile Include="add_two_numbers_with_prototype_using_scanf.c" />
     <ClCompile Include="do_while_exam.c" />
     <ClCompile Include="grade_with_if.c" />
+    <ClCompile Include="while_integer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
