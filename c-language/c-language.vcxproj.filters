@@ -219,6 +219,7 @@
     <ClCompile Include="do_while_exam.c" />
     <ClCompile Include="grade_with_if.c" />
     <ClCompile Include="while_integer.c" />
+    <ClCompile Include="double_function_add.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
