@@ -11,7 +11,7 @@ int main(void)
     {
         sum += sum_array[i];
     }
-    printf("오와!! 최종 합계는 %d이다.", sum);
+    printf("오와!! 최종 합계는 %d이ㄷr.", sum);
 
     return 0;
 }
