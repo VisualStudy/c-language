@@ -221,6 +221,7 @@
     <ClCompile Include="while_integer.c" />
     <ClCompile Include="double_function_add.c" />
     <ClCompile Include="array_save_point.c" />
+    <ClCompile Include="array_sum.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
