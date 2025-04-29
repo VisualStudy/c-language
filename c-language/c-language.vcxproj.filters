@@ -224,6 +224,7 @@
     <ClCompile Include="array_sum.c" />
     <ClCompile Include="array_sum_operator.c" />
     <ClCompile Include="local_variable.c" />
+    <ClCompile Include="local_variable_with_function.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />

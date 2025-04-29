@@ -1,10 +1,6 @@
 #include <stdio.h>
 
-void PrintNumber()
-{
-    int num = 10;  // 지역 변수
-    printf("print_number 안에서 num = %d\n", num);
-}
+void PrintNumber();
 
 int main(void)
 {
@@ -16,4 +12,10 @@ int main(void)
     printf("main 안에서 num = %d\n", num);
 
     return 0;
+}
+
+void PrintNumber()
+{
+    int num = 10;  // 지역 변수
+    printf("print_number 안에서 num = %d\n", num);
 }
