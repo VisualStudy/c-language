@@ -223,6 +223,7 @@
     <ClCompile Include="array_save_point.c" />
     <ClCompile Include="array_sum.c" />
     <ClCompile Include="array_sum_operator.c" />
+    <ClCompile Include="local_variable.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
