@@ -227,6 +227,7 @@
     <ClCompile Include="while_integer.c" />
     <ClCompile Include="_.c" />
     <ClCompile Include="array_pointer_example.c" />
+    <ClCompile Include="pointer_operator.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
