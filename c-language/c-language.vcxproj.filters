@@ -230,6 +230,7 @@
     <ClCompile Include="pointer_operator.c" />
     <ClCompile Include="array_pointer_sizeof.c" />
     <ClCompile Include="sizeof.c" />
+    <ClCompile Include="array_pointer_pointer_array.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />

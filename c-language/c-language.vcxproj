@@ -199,6 +199,7 @@
     <ClCompile Include="array_pointer_example.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="array_pointer_pointer_array.c" />
     <ClCompile Include="array_pointer_sizeof.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
