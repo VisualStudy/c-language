@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include <stdio.h>   
 
-int main(void)
+int main(void)   //말장난 파트: 포인터 배열 vs 배열 포인터
 {
     // 포인터 배열: int* 3개짜리 배열
     int a = 10;
