@@ -232,6 +232,10 @@
     <ClCompile Include="sizeof.c" />
     <ClCompile Include="array_pointer_pointer_array.c" />
     <ClCompile Include="pointer_file.c" />
+    <ClCompile Include="escape_sequence.c" />
+    <ClCompile Include="file.c" />
+    <ClCompile Include="file_pointer_if_null.c" />
+    <ClCompile Include="struct.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
