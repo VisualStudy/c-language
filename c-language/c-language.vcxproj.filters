@@ -238,6 +238,7 @@
     <ClCompile Include="struct.c" />
     <ClCompile Include="struct_score.c" />
     <ClCompile Include="swap.c" />
+    <ClCompile Include="selection_sort.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
