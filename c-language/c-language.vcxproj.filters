@@ -240,6 +240,7 @@
     <ClCompile Include="swap.c" />
     <ClCompile Include="selection_sort.c" />
     <ClCompile Include="selection_sort_with_function.c" />
+    <ClCompile Include="selection_sort_algorithm.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
