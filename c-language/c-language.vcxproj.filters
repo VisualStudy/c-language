@@ -243,6 +243,7 @@
     <ClCompile Include="selection_sort_algorithm.c" />
     <ClCompile Include="bit_right.c" />
     <ClCompile Include="local_variable_with_garbage.c" />
+    <ClCompile Include="local_variable_function.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
