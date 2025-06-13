@@ -13,3 +13,5 @@ int main(void)
     printf("함수 종료 후: i = %d\n", i); // i는 여전히 10. 변경 X
     return 0;
 }
+
+// pass by value 값 전달: 변수의 값만 복사해서 전달
