@@ -245,6 +245,7 @@
     <ClCompile Include="local_variable_with_garbage.c" />
     <ClCompile Include="local_variable_function.c" />
     <ClCompile Include="function_create.c" />
+    <ClCompile Include="global_local_variable.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
