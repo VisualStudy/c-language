@@ -248,6 +248,7 @@
     <ClCompile Include="global_local_variable.c" />
     <ClCompile Include="local_function.c" />
     <ClCompile Include="pass_by_value.c" />
+    <ClCompile Include="variable_hide_shadow.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
