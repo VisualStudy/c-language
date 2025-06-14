@@ -250,6 +250,7 @@
     <ClCompile Include="pass_by_value.c" />
     <ClCompile Include="variable_hide_shadow.c" />
     <ClCompile Include="facotrial_recursion.c" />
+    <ClCompile Include="function_prototype_definition.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
