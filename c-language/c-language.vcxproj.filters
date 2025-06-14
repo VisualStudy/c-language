@@ -253,6 +253,7 @@
     <ClCompile Include="function_prototype_definition.c" />
     <ClCompile Include="array_concept.c" />
     <ClCompile Include="symbolic_constant.c" />
+    <ClCompile Include="address_operator_comparison.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
