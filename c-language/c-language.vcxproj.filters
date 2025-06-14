@@ -251,6 +251,7 @@
     <ClCompile Include="variable_hide_shadow.c" />
     <ClCompile Include="facotrial_recursion.c" />
     <ClCompile Include="function_prototype_definition.c" />
+    <ClCompile Include="array_concept.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
