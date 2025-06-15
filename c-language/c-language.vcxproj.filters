@@ -265,6 +265,7 @@
     <ClCompile Include="conversion.c" />
     <ClCompile Include="array_element_access_expression.c" />
     <ClCompile Include="struct_c.c" />
+    <ClCompile Include="struct_strcpy.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
