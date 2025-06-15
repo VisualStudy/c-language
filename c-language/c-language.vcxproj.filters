@@ -271,6 +271,8 @@
     <ClCompile Include="lowercase_uppercase_ascii.c" />
     <ClCompile Include="typedef.c" />
     <ClCompile Include="typedef_basic.c" />
+    <ClCompile Include="typedef_struct_name.c" />
+    <ClCompile Include="typedef_later.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
