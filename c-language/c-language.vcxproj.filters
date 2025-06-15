@@ -269,6 +269,7 @@
     <ClCompile Include="nested_struct.c" />
     <ClCompile Include="struct_array.c" />
     <ClCompile Include="lowercase_uppercase_ascii.c" />
+    <ClCompile Include="typedef.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
