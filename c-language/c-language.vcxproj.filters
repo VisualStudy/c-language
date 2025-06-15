@@ -266,6 +266,8 @@
     <ClCompile Include="array_element_access_expression.c" />
     <ClCompile Include="struct_c.c" />
     <ClCompile Include="struct_strcpy.c" />
+    <ClCompile Include="nested_struct.c" />
+    <ClCompile Include="struct_array.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
