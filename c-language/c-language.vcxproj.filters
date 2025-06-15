@@ -258,6 +258,7 @@
     <ClCompile Include="file_pointer_fputc_fgetc.c" />
     <ClCompile Include="file_pointer_stdlib.c" />
     <ClCompile Include="temp_c.c" />
+    <ClCompile Include="array_copy.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
