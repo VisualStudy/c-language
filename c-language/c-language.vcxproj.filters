@@ -263,6 +263,7 @@
     <ClCompile Include="function_parameter_array.c" />
     <ClCompile Include="call_function_in_while.c" />
     <ClCompile Include="conversion.c" />
+    <ClCompile Include="array_element_access_expression.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
