@@ -34,7 +34,7 @@ int main(void)
         putchar(ch); // 화면에 출력
     }
     fclose(fp);
-
+    
     // 3. 줄 단위로 읽기 (fgets)
     fp = fopen("sample.txt", "r");
     if (fp == NULL)
