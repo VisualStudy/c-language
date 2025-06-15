@@ -262,6 +262,7 @@
     <ClCompile Include="file_pointer_if_null.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="file_pointer_stdlib.c" />
     <ClCompile Include="function_create.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

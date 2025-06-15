@@ -256,6 +256,7 @@
     <ClCompile Include="address_operator_comparison.c" />
     <ClCompile Include="file_pointer_fprintf_fscanf.c" />
     <ClCompile Include="file_pointer_fputc_fgetc.c" />
+    <ClCompile Include="file_pointer_stdlib.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
