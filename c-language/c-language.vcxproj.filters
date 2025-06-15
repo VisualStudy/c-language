@@ -261,6 +261,7 @@
     <ClCompile Include="array_copy.c" />
     <ClCompile Include="symbolic_function_array.c" />
     <ClCompile Include="function_parameter_array.c" />
+    <ClCompile Include="call_function_in_while.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
