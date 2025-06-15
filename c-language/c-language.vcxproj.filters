@@ -268,6 +268,7 @@
     <ClCompile Include="struct_strcpy.c" />
     <ClCompile Include="nested_struct.c" />
     <ClCompile Include="struct_array.c" />
+    <ClCompile Include="lowercase_uppercase_ascii.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
