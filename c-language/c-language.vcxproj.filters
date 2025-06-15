@@ -270,6 +270,7 @@
     <ClCompile Include="struct_array.c" />
     <ClCompile Include="lowercase_uppercase_ascii.c" />
     <ClCompile Include="typedef.c" />
+    <ClCompile Include="typedef_basic.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
