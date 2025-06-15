@@ -259,6 +259,7 @@
     <ClCompile Include="file_pointer_stdlib.c" />
     <ClCompile Include="temp_c.c" />
     <ClCompile Include="array_copy.c" />
+    <ClCompile Include="symbolic_function_array.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
