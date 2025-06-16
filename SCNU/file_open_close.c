@@ -1,21 +1,57 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
+    char name[100];
+    char naming[100];
+    int age;
+    char getname[100];
+    int getage;
+
     FILE *fp;
     fp = fopen("scnu_file.txt", "w");
     if(fp == NULL)
     {
-        printf("ë§í•¨ì„ ê°ì§€. ê¸´ê¸‰ ì¢…ë£Œ!\n");
+        printf("¸ÁÇÔÀ» °¨Áö. ±ä±Ş Á¾·á!\n");
 
         return 1;
     }
-    fprintf(fp, "ì´ê²ƒì€ ë¬¸ìì—´ ì‘ì„±ì´ã„·r\n");
-    fprintf(fp, "ë‹¤ìŒ ì¤„ ëŒ€ê¸°í•˜ë¼ì´!");
+    fprintf(fp, "ÀÌ°ÍÀº ¹®ÀÚ¿­ ÀÛ¼ºÀÌ¤§r\n");
+    fprintf(fp, "´ÙÀ½ ÁÙ ´ë±âÇÏ¶óÀÌ!");
+
+    while(1)
+    {
+        printf("Áö±İºÎÅÍ ÀÔ·Â ¹ŞÀ» °Í. Å»Ãâ ¿øÇÏ¸é 0 ÀÔ·Â\n");
+        printf("Àü¼³ÀûÀÎ Á¸ÀçÀÇ ÀÌ¸§ ÀÔ·Â: \n");
+        strcpy(name, "¶ó¹Ù¶óÅ¸");
+        printf("È¦¸®! strcpy°¡ Ä§°ø! ³Ê°¡ Á÷Á¢ ÀÌ¸§ ÀÔ·Â: ");
+        scanf("%s", naming);
+        printf("À½, ÀÌ¸§ ÀÔ·Â ÀÚ¾Ë~ ¹Ş¾Ò´Ù. ³ªÀÌ ÀÔ·Â: ");
+        scanf("%d", &age);
+
+        fprintf(fp, "\n ³× ³ğÀÌ ³ÖÀº Á¤º¸ %s, %d\n", naming, age);
+
+        if(age == 0)
+        {
+            break;
+        }
+    }
 
     fputc('a', fp);
     fputc('b', fp);
     fputc('c', fp);
+
+    fclose(fp);
+
+    fp = fopen("scnu_file.txt", "r");
+
+    while(!feof(fp))
+    {
+        fscanf(fp, "%s, %d", getname, &age);
+        printf("ºÎ¾Æ¾Æ¾Æ¾Ç! ¹®ÀÚ ¿ì¿À¾Æ¾Æ: %s\n", getname);
+        printf("¿ì¾î¾î¾ï, ±×¾î¾î¾ï ¼ıÀÚ: %d\n", age);
+    }
 
     fclose(fp);
 
