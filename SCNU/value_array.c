@@ -4,7 +4,11 @@ void shiftArr(int array[]);
 
 int main(void)
 {
-    int a[3] = {10, 20, 30};
+    int a[3];
+    a[0] = 10;
+    a[1] = 20;
+    a[2] = 30;
+
 
     printf("초기 배열의 값: a[0] = %d, a[1] = %d, a[2] = %d\n\n", a[0], a[1], a[2]);
 
