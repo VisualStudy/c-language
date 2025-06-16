@@ -274,6 +274,7 @@
     <ClCompile Include="typedef_struct_name.c" />
     <ClCompile Include="typedef_later.c" />
     <ClCompile Include="struct_pointer.c" />
+    <ClCompile Include="call_by_value.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
