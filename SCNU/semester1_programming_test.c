@@ -2,7 +2,7 @@
 
 void function(int arr[], int *a, int arr2[])
 {
-    arr = *a + *b;
+    ;
 }
 
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
     int *pa = arr;
     int *pb = &arr[1];
 
-    function(*pa, *p, *pb);
+    function(pa, p, pb);
     
     printf("%d", arr[0]);
 
