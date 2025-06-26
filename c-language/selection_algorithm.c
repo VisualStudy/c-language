@@ -1,13 +1,15 @@
 #include <stdio.h>
+#define N 8
+
 
 int main(void)
 {
-    int arr[8] = { 5, 10, 192, 141, 1444, 999, 0, 1};
+    int arr[N] = { 5, 10, 192, 141, 1444, 999, 0, 1};
     int i, j, temp;
 
-    for (i = 0; i < 7; i++)
+    for (i = 0; i < N - 1; i++)
     {
-        for (j = i + 1; j < 8; j++)
+        for (j = i + 1; j < N; j++)
         {
             if (arr[i] > arr[j])
             {
@@ -18,7 +20,7 @@ int main(void)
         }
 
     }
-    for (i = 0; i < 8; i++)
+    for (i = 0; i < N; i++)
     {
         printf("%d  ", arr[i]);
     }
