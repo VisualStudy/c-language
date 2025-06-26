@@ -3,23 +3,20 @@
 int main(void)
 {
     int arr[8] = { 5, 10, 192, 141, 1444, 999, 0, 1};
-    int i, j, min, temp;
+    int i, j, temp;
 
     for (i = 0; i < 7; i++)
     {
-        min = i;
-
         for (j = i + 1; j < 8; j++)
         {
-            if (arr[min] > arr[j])
+            if (arr[i] > arr[j])
             {
-               min = j;
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
 
-        temp = arr[min];
-        arr[min] = arr[i];
-        arr[i] = temp;
     }
     for (i = 0; i < 8; i++)
     {
