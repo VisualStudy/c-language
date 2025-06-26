@@ -276,6 +276,7 @@
     <ClCompile Include="struct_pointer.c" />
     <ClCompile Include="call_by_value.c" />
     <ClCompile Include="call_by_value_array.c" />
+    <ClCompile Include="selection_algorithm.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
