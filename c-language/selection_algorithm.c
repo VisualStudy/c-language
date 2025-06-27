@@ -1,10 +1,8 @@
 #include <stdio.h>
 #define N 8
 
-
-int main(void)
+void selection(int arr[])
 {
-    int arr[N] = { 5, 10, 192, 141, 1444, 999, 0, 1};
     int i, j, temp;
 
     for (i = 0; i < N - 1; i++)
@@ -24,6 +22,13 @@ int main(void)
     {
         printf("%d  ", arr[i]);
     }
+}
+
+int main(void)
+{
+    int arr[N] = { 5, 10, 192, 141, 1444, 999, 0, 1};
+
+    selection(arr);
 
     return 0;
 }
