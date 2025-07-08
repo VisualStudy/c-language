@@ -28,7 +28,7 @@ int main(void)
 {
     int arr[N] = { 5, 10, 192, 141, 1444, 999, 0, 1};
 
-    selection(arr);
+    selection(arr);;
 
     return 0;
 }
