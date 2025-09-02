@@ -39,5 +39,12 @@ int main(void)
     printf("%d\n", z);
     printf("%c\n", z);
 
+    printf("----------------------\n");
+
+    y = y - 31;
+
+    printf("%d\n", y);
+    printf("%c\n", y);
+
     return 0;
 }
