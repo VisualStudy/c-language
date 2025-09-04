@@ -279,6 +279,7 @@
     <ClCompile Include="selection_algorithm.c" />
     <ClCompile Include="print_parkour.c" />
     <ClCompile Include="ASCII.c" />
+    <ClCompile Include="sum_1_100.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />

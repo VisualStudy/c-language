@@ -694,6 +694,7 @@
     <ClCompile Include="sumtime.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="sum_1_100.c" />
     <ClCompile Include="sum_of_arithmetic_sequences.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
