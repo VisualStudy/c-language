@@ -280,6 +280,7 @@
     <ClCompile Include="print_parkour.c" />
     <ClCompile Include="ASCII.c" />
     <ClCompile Include="sum_1_100.c" />
+    <ClCompile Include="sum_1_100_even.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
