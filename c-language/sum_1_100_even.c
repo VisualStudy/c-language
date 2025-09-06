@@ -5,9 +5,12 @@ int main(void)
     int i;
     int sum = 0;
 
-    for (i = 2; i <= 100; i + 2)
+    for (i = 1; i <= 100; i++)
     {
-        sum = sum + i;
+        if (i % 2 == 0)   // 짝수인지 확인
+        {
+            sum += i;
+        }
     }
 
     printf("1~100 중 짝수만 더한 값: %d\n", sum);
