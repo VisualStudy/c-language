@@ -282,6 +282,7 @@
     <ClCompile Include="sum_1_100.c" />
     <ClCompile Include="sum_1_100_even.c" />
     <ClCompile Include="intersection.c" />
+    <ClCompile Include="ascii_a.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
