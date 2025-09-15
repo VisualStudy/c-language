@@ -12,6 +12,7 @@ int main(void)
     char str[3] = {"abcdef"};      // 오버플로
     char str[4] = {"abc\0"};
     char str[4] = {"abc"};
+    char str[7] = {"abcd e"};
 
     printf("97을 문자로: %c\n", x);
     printf("문자 a를 숫자로: %d\n", y);
