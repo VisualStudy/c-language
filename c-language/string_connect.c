@@ -7,11 +7,12 @@ int main(void)
     char src[20];
     int i;
     int j;
+    int _ = 0;
 
     printf("문자열 배열 dst에 저장할 과일: ");
-    scanf("%s", dst);
+    _ = scanf("%s", dst);
     printf("문자열 배열 src에 저장할 과일: ");
-    scanf("%s", src);
+    _ = scanf("%s", src);
 
     for (i = 0; dst[i] != '\0'; i++)
     {
