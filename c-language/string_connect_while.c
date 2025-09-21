@@ -4,7 +4,7 @@ int main(void)
 {
     char dst[40];
     char src[20];
-    int i = 0; // 교수님이 수업 시간 때 말씀하신 대로 변수는 변수끼리!
+    int i = 0; 
     int j;
 
     printf("문자열 배열 dst에 저장할 과일: ");
