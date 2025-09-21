@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define NULL '\0'
+#define NULLWORD '\0'
 
 void mystrcat(char a[], char b[]);
 
@@ -25,15 +25,15 @@ void mystrcat(char a[], char b[])
     int i = 0;
     int j;
 
-    while(a[i] != NULL)
+    while(a[i] != NULLWORD)
     {
         i++;
     }
 
-    for(j = 0; b[j] != NULL; j++)
+    for(j = 0; b[j] != NULLWORD; j++)
     {
         a[i + j] = b[j];
     }
 
-    a[i + j] = NULL;
+    a[i + j] = NULLWORD;
 }
