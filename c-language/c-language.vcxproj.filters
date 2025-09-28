@@ -286,6 +286,7 @@
     <ClCompile Include="string_connect.c" />
     <ClCompile Include="string_connect_while.c" />
     <ClCompile Include="percent_operator.c" />
+    <ClCompile Include="equival.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
