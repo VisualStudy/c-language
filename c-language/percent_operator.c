@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+void percent(a, b)
+{
+    int num1 = a;
+    int num2 = b;
+    int result = num1 % num2;
+
+    printf("매개 변수 두 수의 나머지 연산 결과: %d\n", result);
+}
+
 int main(void)
 {/*
     int num1 = 0;
@@ -15,6 +24,10 @@ int main(void)
     result = num1 % num2;
 
     printf("두 수의 연산 결과: %d\n", result);*/
+
+    //함수 사용 버전
+
+    
  
     return 0;
 }
