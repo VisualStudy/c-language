@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void)
-{
+{/*
     int num1 = 0;
     int num2 = 0;
 
@@ -14,7 +14,7 @@ int main(void)
     int result = 0;
     result = num1 % num2;
 
-    printf("두 수의 연산 결과: %d\n", result);
+    printf("두 수의 연산 결과: %d\n", result);*/
  
     return 0;
 }
