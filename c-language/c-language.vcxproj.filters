@@ -293,6 +293,7 @@
     <ClCompile Include="getchar.c" />
     <ClCompile Include="multiple.c" />
     <ClCompile Include="hundred.c" />
+    <ClCompile Include="plus_or_multiple.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
