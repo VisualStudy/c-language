@@ -291,6 +291,7 @@
     <ClCompile Include="equival_classes.c" />
     <ClCompile Include="operator_form.c" />
     <ClCompile Include="getchar.c" />
+    <ClCompile Include="multiple.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
