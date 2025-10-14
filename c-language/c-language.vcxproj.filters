@@ -295,6 +295,7 @@
     <ClCompile Include="hundred.c" />
     <ClCompile Include="plus_or_multiple.c" />
     <ClCompile Include="division_two_number.c" />
+    <ClCompile Include="dimension_two_string_array.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
