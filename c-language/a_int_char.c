@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int x;
+    x = 97;
+    char y;
+    y = 'a';
+
+    printf("97을 캐릭터로: %c\n", x);
+    printf("문자 a를 정수로: %d\n", y);
+    
+    return 0;
+}
