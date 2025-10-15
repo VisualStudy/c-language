@@ -7,7 +7,7 @@ int main(void)
     char y;
     y = 'a';
 
-    printf("97을 캐릭터로: %c\n", x);
+    printf("97을 문자로: %c\n", x);
     printf("문자 a를 정수로: %d\n", y);
     
     return 0;
