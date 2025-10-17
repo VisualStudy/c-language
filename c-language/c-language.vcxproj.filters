@@ -297,6 +297,7 @@
     <ClCompile Include="division_two_number.c" />
     <ClCompile Include="dimension_two_string_array.c" />
     <ClCompile Include="a_int_char.c" />
+    <ClCompile Include="printf_speci.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
