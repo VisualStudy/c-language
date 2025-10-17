@@ -302,6 +302,8 @@
     <ClCompile Include="percent_operator_extension.c" />
     <ClCompile Include="char_operation.c" />
     <ClCompile Include="array_operation.c" />
+    <ClCompile Include="for_skip_output.c" />
+    <ClCompile Include="float_percent_zero.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
