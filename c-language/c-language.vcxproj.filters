@@ -304,6 +304,7 @@
     <ClCompile Include="array_operation.c" />
     <ClCompile Include="for_skip_output.c" />
     <ClCompile Include="float_percent_zero.c" />
+    <ClCompile Include="int_float_extenstion.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
