@@ -305,6 +305,7 @@
     <ClCompile Include="for_skip_output.c" />
     <ClCompile Include="float_percent_zero.c" />
     <ClCompile Include="int_float_extenstion.c" />
+    <ClCompile Include="hexa_printf.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
