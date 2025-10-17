@@ -299,6 +299,8 @@
     <ClCompile Include="a_int_char.c" />
     <ClCompile Include="printf_speci.c" />
     <ClCompile Include="printf_division.c" />
+    <ClCompile Include="percent_operator_extension.c" />
+    <ClCompile Include="char_operation.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
