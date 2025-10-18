@@ -307,6 +307,8 @@
     <ClCompile Include="int_float_extenstion.c" />
     <ClCompile Include="hexa_printf.c" />
     <ClCompile Include="end_of_string.c" />
+    <ClCompile Include="type_casting.c" />
+    <ClCompile Include="prefix_postfix.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
