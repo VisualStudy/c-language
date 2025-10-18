@@ -309,6 +309,7 @@
     <ClCompile Include="end_of_string.c" />
     <ClCompile Include="type_casting.c" />
     <ClCompile Include="prefix_postfix.c" />
+    <ClCompile Include="coin_convert.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
