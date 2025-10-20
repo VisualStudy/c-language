@@ -312,6 +312,9 @@
     <ClCompile Include="coin_convert.c" />
     <ClCompile Include="two_dimension_array_strings.c" />
     <ClCompile Include="struct_origin.c" />
+    <ClCompile Include="string_array_printf.c" />
+    <ClCompile Include="string_two_dimension.c" />
+    <ClCompile Include="typedef_struct.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
