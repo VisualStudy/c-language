@@ -310,6 +310,8 @@
     <ClCompile Include="type_casting.c" />
     <ClCompile Include="prefix_postfix.c" />
     <ClCompile Include="coin_convert.c" />
+    <ClCompile Include="two_dimension_array_strings.c" />
+    <ClCompile Include="struct_origin.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
