@@ -9,7 +9,7 @@ struct dongnae {
 
 struct nae {
     struct dongnae don;
-    int a;
+    double a;
 };
 
 typedef struct nae NAE;
@@ -24,6 +24,7 @@ int main(void)
     printf("갯수: %d\n 크기: %.2f\n 이름: %s\n", dong.num, dong.size, dong.name);
 
     NAE n;
+    n.don.num = 30;
     printf("%d\n", n.don.num);
 
     return 0;
