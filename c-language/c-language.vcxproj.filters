@@ -315,6 +315,7 @@
     <ClCompile Include="string_array_printf.c" />
     <ClCompile Include="string_two_dimension.c" />
     <ClCompile Include="typedef_struct.c" />
+    <ClCompile Include="string_array_copy.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
