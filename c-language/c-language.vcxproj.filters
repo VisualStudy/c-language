@@ -319,6 +319,7 @@
     <ClCompile Include="string_connecting.c" />
     <ClCompile Include="temp_for.c" />
     <ClCompile Include="library_book_data.c" />
+    <ClCompile Include="sel_sort.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
