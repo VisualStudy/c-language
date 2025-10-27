@@ -320,6 +320,7 @@
     <ClCompile Include="temp_for.c" />
     <ClCompile Include="library_book_data.c" />
     <ClCompile Include="sel_sort.c" />
+    <ClCompile Include="bubble_sort.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
