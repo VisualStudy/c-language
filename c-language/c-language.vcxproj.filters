@@ -321,6 +321,7 @@
     <ClCompile Include="library_book_data.c" />
     <ClCompile Include="sel_sort.c" />
     <ClCompile Include="bubble_sort.c" />
+    <ClCompile Include="array_point_address.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
