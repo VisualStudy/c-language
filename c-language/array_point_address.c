@@ -3,7 +3,8 @@
 int main(void)
 {
     char x[5] = {"yaho"};
-    char str[3][20] = {
+    char str[3][20] = 
+    {
         "lets",
         "go",
         "together"
