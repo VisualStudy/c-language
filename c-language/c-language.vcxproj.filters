@@ -323,6 +323,7 @@
     <ClCompile Include="bubble_sort.c" />
     <ClCompile Include="array_point_address.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="struct_example.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
