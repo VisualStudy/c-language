@@ -325,6 +325,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="struct_example.c" />
     <ClCompile Include="integer_example.c" />
+    <ClCompile Include="point_example_typedef.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
