@@ -6,7 +6,7 @@ struct Point
     int y;
 };
 
-int main(int argc, char* argv[10])
+int main(void)
 {
     struct Point p1;
     p1.x = 10;
