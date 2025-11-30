@@ -8,5 +8,6 @@ int main(void)
     putchar(s[2]);
     putchar(s[3]);
     putchar('\n');
+
     return 0;
 }
