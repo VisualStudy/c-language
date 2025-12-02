@@ -328,6 +328,7 @@
     <ClCompile Include="point_example_typedef.c" />
     <ClCompile Include="anonymous_structure.c" />
     <ClCompile Include="CharArrayDemo.c" />
+    <ClCompile Include="mile_to_km.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
