@@ -332,6 +332,8 @@
     <ClCompile Include="pointers.c" />
     <ClCompile Include="array_vs_struct_copy.c" />
     <ClCompile Include="double_pointer.c" />
+    <ClCompile Include="macro.c" />
+    <ClCompile Include="function_like_macro.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
