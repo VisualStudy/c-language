@@ -331,6 +331,7 @@
     <ClCompile Include="mile_to_km.c" />
     <ClCompile Include="pointers.c" />
     <ClCompile Include="array_vs_struct_copy.c" />
+    <ClCompile Include="double_pointer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
