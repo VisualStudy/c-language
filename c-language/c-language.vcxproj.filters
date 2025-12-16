@@ -337,6 +337,7 @@
     <ClCompile Include="ifdef_endif.c" />
     <ClCompile Include="pointer_double.c" />
     <ClCompile Include="pointer_access.c" />
+    <ClCompile Include="pointer_structure.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
