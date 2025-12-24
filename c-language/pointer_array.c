@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
     int arr[] = {10, 20, 30, 40, 50};
     int *p = arr;
 
-    printf("UnderstandingPointer\n");
+    printf("Understanding Pointer\n");
     printf("%d\n", arr[1]);
     printf("%d\n", p[1]);
     printf("%d\n", *(p + 1));
