@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -10,5 +11,5 @@ int main(int argc, char *argv[])
     printf("%d\n", p[1]);
     printf("%d\n", *(p + 1));
 
-    return 0;
+    return EXIT_SUCCESS;
 }
