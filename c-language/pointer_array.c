@@ -16,5 +16,9 @@ int main(int argc, char *argv[])
     // double click: select word
     // triple click: select line
 
+    // 멀티 라인의 힘
+
+    // 멀티 라인의 힘
+
     return EXIT_SUCCESS;
 }
