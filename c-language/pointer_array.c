@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     // 멀티 라인의 힘
 
     // 멀티 라인의 힘
-
+    
+    // CTRL + DEL: 공백 제거 및 땡기기
     return EXIT_SUCCESS;
 }
