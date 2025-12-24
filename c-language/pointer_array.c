@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     printf("%d\n", arr[1]);
     printf("%d\n", p[1]);
     printf("%d\n", *(p + 1));
+    // CTRL + SHIFT + 방향키: 자기 자신 탐색
 
     return EXIT_SUCCESS;
 }
