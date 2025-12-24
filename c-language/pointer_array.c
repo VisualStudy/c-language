@@ -12,6 +12,9 @@ int main(int argc, char *argv[])
     printf_s("%d\n", p[1]);
     printf_s("%d\n", *(p + 1));
     // CTRL + SHIFT + 방향키: 자기 자신 탐색
+    // ALT + DRAG: MultiLine editing
+    // double click: select word
+    // triple click: select line
 
     return EXIT_SUCCESS;
 }
