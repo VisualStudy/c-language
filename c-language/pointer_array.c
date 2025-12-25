@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #define TITLE "Understanding Pointer"
 
+struct str {
+    char name[100];
+};
+
 int main(int argc, char *argv[])
 {
     int arr[] = {10, 20, 30, 40, 50};
