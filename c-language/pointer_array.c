@@ -11,6 +11,12 @@ int main(int argc, char *argv[])
     int arr[] = {10, 20, 30, 40, 50};
     int *p = arr;
 
+    int *px;
+    int str[] = {10, 20, 30, 40, 50};
+
+    px = str;
+    printf_s("%d\n", px[2]);
+
     printf_s("%s\n", TITLE);
     printf_s("%d\n", arr[1]);
     printf_s("%d\n", p[1]);
