@@ -13,6 +13,11 @@ int main(int argc, char *argv[])
 
     int *px;
     int str[] = {10, 20, 30, 40, 50};
+    struct str *spx;
+    struct str s;
+    spx = &s;
+
+    spx->name[0] = 'a';
 
     px = str;
     printf_s("%d\n", px[2]);
