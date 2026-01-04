@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     
     // CTRL + DEL: 공백 제거 및 땡기기
 
-    printf_s("%d\n", argc);;
+    printf_s("%d\n", argc);
 
     return EXIT_SUCCESS;
 }
