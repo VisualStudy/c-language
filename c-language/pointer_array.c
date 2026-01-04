@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     spx = &s;
 
     spx->name[0] = 'a';
+    spx->name[1] = '\0';
 
     px = str;
     printf_s("%d\n", px[2]);
