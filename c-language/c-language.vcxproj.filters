@@ -339,6 +339,7 @@
     <ClCompile Include="pointer_access.c" />
     <ClCompile Include="pointer_structure.c" />
     <ClCompile Include="pointer_array.c" />
+    <ClCompile Include="fibonacci_series.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="twice.h" />
