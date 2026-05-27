@@ -171,7 +171,35 @@ int main(void)
 }
 ```
 
+# 함수(Function)를 이용한 뺄셈 프로그램
 
+## 📌 프로그램 설명
+
+이 프로그램은 사용자 정의 함수 `myfun()`을 사용하여 두 정수의 차를 계산하고 출력하는 간단한 C 언어 예제입니다.
+
+---
+
+## 📄 전체 코드
+
+```c
+#include <stdio.h>
+
+int myfun(int a, int b) {
+    int result = 0;
+    result = a - b;
+    return result;
+}
+
+int main(void)
+{
+    int a;
+
+    a = myfun(5, 2);
+
+    printf("%d", a);
+
+    return 0;
+}
 
 
 
